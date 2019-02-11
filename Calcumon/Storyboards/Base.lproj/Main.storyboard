@@ -32,14 +32,26 @@
                                                 <constraint firstAttribute="height" constant="280" id="bmT-Xm-cVZ"/>
                                             </constraints>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzR-Hz-dMw">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="AEM-se-MbI" secondAttribute="trailing" id="JQ1-Qw-hLh"/>
+                                    <constraint firstAttribute="bottom" secondItem="mzR-Hz-dMw" secondAttribute="bottom" id="JTs-wu-DR2"/>
                                     <constraint firstItem="AEM-se-MbI" firstAttribute="leading" secondItem="cSM-Uf-6Xz" secondAttribute="leading" id="Wor-mh-xGF"/>
                                     <constraint firstItem="AEM-se-MbI" firstAttribute="centerY" secondItem="cSM-Uf-6Xz" secondAttribute="centerY" id="fVX-Jb-wGZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="mzR-Hz-dMw" secondAttribute="trailing" id="iRH-lp-RcO"/>
+                                    <constraint firstItem="mzR-Hz-dMw" firstAttribute="leading" secondItem="cSM-Uf-6Xz" secondAttribute="leading" id="uqG-ap-YTz"/>
+                                    <constraint firstItem="mzR-Hz-dMw" firstAttribute="top" secondItem="cSM-Uf-6Xz" secondAttribute="top" id="yzw-L2-N3l"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="200"/>
+                                <connections>
+                                    <outlet property="imageCoverView" destination="mzR-Hz-dMw" id="IJP-dD-v3D"/>
+                                    <outlet property="imageView" destination="AEM-se-MbI" id="hbh-3G-HRq"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
