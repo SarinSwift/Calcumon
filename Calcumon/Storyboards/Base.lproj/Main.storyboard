@@ -36,21 +36,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8Q-g2-emo">
+                                            <rect key="frame" x="0.0" y="78" width="200" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="6Hv-O5-pJH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="38"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="AEM-se-MbI" secondAttribute="trailing" id="JQ1-Qw-hLh"/>
                                     <constraint firstAttribute="bottom" secondItem="mzR-Hz-dMw" secondAttribute="bottom" id="JTs-wu-DR2"/>
+                                    <constraint firstItem="f8Q-g2-emo" firstAttribute="leading" secondItem="cSM-Uf-6Xz" secondAttribute="leading" id="TCI-Ai-Hyq"/>
                                     <constraint firstItem="AEM-se-MbI" firstAttribute="leading" secondItem="cSM-Uf-6Xz" secondAttribute="leading" id="Wor-mh-xGF"/>
+                                    <constraint firstAttribute="trailing" secondItem="f8Q-g2-emo" secondAttribute="trailing" id="aoP-WO-awm"/>
                                     <constraint firstItem="AEM-se-MbI" firstAttribute="centerY" secondItem="cSM-Uf-6Xz" secondAttribute="centerY" id="fVX-Jb-wGZ"/>
                                     <constraint firstAttribute="trailing" secondItem="mzR-Hz-dMw" secondAttribute="trailing" id="iRH-lp-RcO"/>
                                     <constraint firstItem="mzR-Hz-dMw" firstAttribute="leading" secondItem="cSM-Uf-6Xz" secondAttribute="leading" id="uqG-ap-YTz"/>
                                     <constraint firstItem="mzR-Hz-dMw" firstAttribute="top" secondItem="cSM-Uf-6Xz" secondAttribute="top" id="yzw-L2-N3l"/>
+                                    <constraint firstItem="f8Q-g2-emo" firstAttribute="centerY" secondItem="cSM-Uf-6Xz" secondAttribute="centerY" id="z64-mu-1cZ"/>
                                 </constraints>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
                                     <outlet property="imageCoverView" destination="mzR-Hz-dMw" id="IJP-dD-v3D"/>
                                     <outlet property="imageView" destination="AEM-se-MbI" id="hbh-3G-HRq"/>
+                                    <outlet property="titleLabel" destination="f8Q-g2-emo" id="65h-QB-19J"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
