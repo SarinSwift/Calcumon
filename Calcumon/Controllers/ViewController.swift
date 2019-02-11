@@ -22,6 +22,7 @@ class ViewController: UICollectionViewController {
         super.viewDidLoad()
         
         collectionView?.backgroundColor = .white
+        collectionView?.decelerationRate = .fast
     }
 }
 
@@ -38,5 +39,17 @@ extension ViewController {
         cell.imageView.image = images[indexPath.row]
         cell.titleLabel.text = categories[indexPath.row]
         return cell
+    }
+    
+    // tap to select a cell
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let layout = collectionViewLayout as? UltravisualLayout else {
+            return
+        }
+        
+        let offSet = layout.dragOffset * CGFloat(indexPath.item)
+        if collectionView.contentOffset.y != offSet {
+            collectionView.setContentOffset(CGPoint(x: 0, y: offSet), animated: true)
+        }
     }
 }

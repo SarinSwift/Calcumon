@@ -46,6 +46,13 @@ class UltravisualLayout: UICollectionViewLayout {
     var numberOfItems: Int {
         return collectionView!.numberOfItems(inSection: 0)
     }
+    
+    // similar to the page snapping effect
+    override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
+        let itemIndex = round(proposedContentOffset.y / dragOffset)
+        let yOffSet = itemIndex * dragOffset
+        return CGPoint(x: 0, y: yOffSet)
+    }
 }
 
 // MARK: UICollectionViewLayout
