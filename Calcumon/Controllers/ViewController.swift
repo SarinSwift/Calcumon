@@ -48,11 +48,25 @@ extension ViewController {
         }
         
         let offSet = layout.dragOffset * CGFloat(indexPath.item)
-        if collectionView.contentOffset.y != offSet {
-            collectionView.setContentOffset(CGPoint(x: 0, y: offSet), animated: true)
+        
+        // presenting the animation
+        selectAnimation(offset: offSet)
+        
+        // pauses
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // Change `2.0` to the desired number of seconds.
+            // Presenting a navController to the singleCategoryVC
+            self.pushToSecond()
         }
         
-        // Presenting a navController to the singleCategoryVC
+    }
+    
+    func selectAnimation(offset: CGFloat) {
+        if collectionView.contentOffset.y != offset {
+            collectionView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
+        }
+    }
+    
+    func pushToSecond() {
         let story = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let singleCategoryVC = story.instantiateViewController(withIdentifier: "singleCategoryView") as? SingleCategoryViewController else { return }
         let navController = UINavigationController(rootViewController: singleCategoryVC)
