@@ -51,5 +51,13 @@ extension ViewController {
         if collectionView.contentOffset.y != offSet {
             collectionView.setContentOffset(CGPoint(x: 0, y: offSet), animated: true)
         }
+        
+        // Presenting a navController to the singleCategoryVC
+        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let singleCategoryVC = story.instantiateViewController(withIdentifier: "singleCategoryView") as? SingleCategoryViewController else { return }
+        let navController = UINavigationController(rootViewController: singleCategoryVC)
+        navController.navigationItem.leftBarButtonItem?.title = "Back"
+        self.present(navController, animated: true, completion: nil)
     }
+    
 }

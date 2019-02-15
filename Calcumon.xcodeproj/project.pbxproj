@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0400B9C32217423800720075 /* SingleCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400B9C22217423800720075 /* SingleCategoryViewController.swift */; };
 		0400E962220E3F90009452C1 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E961220E3F90009452C1 /* CategoryCell.swift */; };
 		0400E966220E4555009452C1 /* UltravisualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E965220E4555009452C1 /* UltravisualLayout.swift */; };
 		0400E969220E45D9009452C1 /* MathCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E968220E45D9009452C1 /* MathCategory.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0400B9C22217423800720075 /* SingleCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCategoryViewController.swift; sourceTree = "<group>"; };
 		0400E961220E3F90009452C1 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		0400E965220E4555009452C1 /* UltravisualLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltravisualLayout.swift; sourceTree = "<group>"; };
 		0400E968220E45D9009452C1 /* MathCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathCategory.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				049956B4220B703300571DDC /* ViewController.swift */,
+				0400B9C22217423800720075 /* SingleCategoryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				049956B5220B703300571DDC /* ViewController.swift in Sources */,
 				049956B3220B703300571DDC /* AppDelegate.swift in Sources */,
 				0400E962220E3F90009452C1 /* CategoryCell.swift in Sources */,
+				0400B9C32217423800720075 /* SingleCategoryViewController.swift in Sources */,
 				0400E969220E45D9009452C1 /* MathCategory.swift in Sources */,
 				0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */,
 			);
