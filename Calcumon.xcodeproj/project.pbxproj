@@ -13,6 +13,7 @@
 		0400E969220E45D9009452C1 /* MathCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E968220E45D9009452C1 /* MathCategory.swift */; };
 		0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */; };
 		0400E972220E5E11009452C1 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400E971220E5E11009452C1 /* Inspirations.xcassets */; };
+		0488549022188A2C0075FDA9 /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488548F22188A2C0075FDA9 /* Equation.swift */; };
 		049956B3220B703300571DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049956B2220B703300571DDC /* AppDelegate.swift */; };
 		049956B5220B703300571DDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049956B4220B703300571DDC /* ViewController.swift */; };
 		049956B8220B703300571DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049956B6220B703300571DDC /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		0400E968220E45D9009452C1 /* MathCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathCategory.swift; sourceTree = "<group>"; };
 		0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		0400E971220E5E11009452C1 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
+		0488548F22188A2C0075FDA9 /* Equation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equation.swift; sourceTree = "<group>"; };
 		049956AF220B703300571DDC /* Calcumon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calcumon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049956B2220B703300571DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		049956B4220B703300571DDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				0400E968220E45D9009452C1 /* MathCategory.swift */,
+				0488548F22188A2C0075FDA9 /* Equation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				0400B9C32217423800720075 /* SingleCategoryViewController.swift in Sources */,
 				0400E969220E45D9009452C1 /* MathCategory.swift in Sources */,
 				0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */,
+				0488549022188A2C0075FDA9 /* Equation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
