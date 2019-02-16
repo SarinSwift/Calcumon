@@ -53,9 +53,16 @@ extension ViewController {
         selectAnimation(offset: offSet)
         
         // pauses
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // Change `2.0` to the desired number of seconds.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             // Presenting a navController to the singleCategoryVC
-            self.pushToSecond()
+            
+            let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+            guard let singleCategoryVC = story.instantiateViewController(withIdentifier: "singleCategoryView") as? SingleCategoryViewController else { return }
+            let navController = UINavigationController(rootViewController: singleCategoryVC)
+            navController.navigationItem.leftBarButtonItem?.title = "Back"
+            // setting the title to the specific math category
+            singleCategoryVC.title = self.categories[indexPath.row]
+            self.present(navController, animated: true, completion: nil)
         }
         
     }
@@ -64,14 +71,6 @@ extension ViewController {
         if collectionView.contentOffset.y != offset {
             collectionView.setContentOffset(CGPoint(x: 0, y: offset), animated: true)
         }
-    }
-    
-    func pushToSecond() {
-        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let singleCategoryVC = story.instantiateViewController(withIdentifier: "singleCategoryView") as? SingleCategoryViewController else { return }
-        let navController = UINavigationController(rootViewController: singleCategoryVC)
-        navController.navigationItem.leftBarButtonItem?.title = "Back"
-        self.present(navController, animated: true, completion: nil)
     }
     
 }
