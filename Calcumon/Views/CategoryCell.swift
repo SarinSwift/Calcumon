@@ -27,8 +27,8 @@ class CategoryCell: UICollectionViewCell {
         let delta = 1 - ((featuredHeight - frame.height) / (featuredHeight - standardHeight))
         
         // updates the alpha based on the cell's delta. Alpha is in the range of 0.3-0.75
-        let minAlpha: CGFloat = 0.3
-        let maxAlpha: CGFloat = 0.75
+        let minAlpha: CGFloat = 0.0
+        let maxAlpha: CGFloat = 0.6
         imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
         
         // scaling the titleLabel so it doesn't get smaller than half the size
