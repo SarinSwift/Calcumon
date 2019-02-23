@@ -90,7 +90,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="333.5"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="orR-Y3-ZCf">
-                                        <rect key="frame" x="15" y="116.5" width="345" height="100.5"/>
+                                        <rect key="frame" x="15" y="86.5" width="345" height="100.5"/>
                                         <color key="backgroundColor" red="0.31372549019607843" green="0.64313725490196083" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -107,14 +107,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(44 / 36) x (49 / 10)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiX-9l-pZd">
-                                        <rect key="frame" x="20" y="126.5" width="335" height="80.5"/>
+                                        <rect key="frame" x="20" y="96.5" width="335" height="80.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solve for x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-eL-bRU">
-                                        <rect key="frame" x="138" y="74.5" width="99" height="30"/>
+                                        <rect key="frame" x="138" y="44.5" width="99" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ToW-K7-r3N"/>
                                         </constraints>
@@ -134,83 +134,9 @@
                                     <constraint firstItem="YiX-9l-pZd" firstAttribute="leading" secondItem="orR-Y3-ZCf" secondAttribute="leading" constant="5" id="miA-qm-lqT"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="bottom" secondItem="YiX-9l-pZd" secondAttribute="bottom" constant="10" id="pps-vp-lVk"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="trailing" secondItem="YiX-9l-pZd" secondAttribute="trailing" constant="5" id="tqg-9Z-56w"/>
-                                    <constraint firstItem="orR-Y3-ZCf" firstAttribute="centerY" secondItem="ezh-F3-L4L" secondAttribute="centerY" id="zY2-Bm-loB"/>
+                                    <constraint firstItem="orR-Y3-ZCf" firstAttribute="centerY" secondItem="ezh-F3-L4L" secondAttribute="centerY" constant="-30" id="zY2-Bm-loB"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Hob-Mt-bQv">
-                                <rect key="frame" x="30" y="293.5" width="315" height="260"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pY-zl-gxZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
-                                        <color key="backgroundColor" red="0.84950083623892458" green="0.74891906651544671" blue="0.87331706285476685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="QfC-Cc-45L"/>
-                                        </constraints>
-                                        <state key="normal" title="Choice 1">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4w-rU-hl8">
-                                        <rect key="frame" x="0.0" y="55" width="315" height="40"/>
-                                        <color key="backgroundColor" red="0.84950083623892458" green="0.74891906651544671" blue="0.87331706285476685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Choice 2">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocv-Is-fuI">
-                                        <rect key="frame" x="0.0" y="110" width="315" height="40"/>
-                                        <color key="backgroundColor" red="0.84950083623892458" green="0.74891906651544671" blue="0.87331706285476685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Choice 3">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yi-7C-6dT">
-                                        <rect key="frame" x="0.0" y="165" width="315" height="40"/>
-                                        <color key="backgroundColor" red="0.84950083623892458" green="0.74891906651544671" blue="0.87331706285476685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Choice 4">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UR-Kz-rVN">
-                                        <rect key="frame" x="0.0" y="220" width="315" height="40"/>
-                                        <color key="backgroundColor" red="0.84950083623892458" green="0.74891906651544671" blue="0.87331706285476685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Choice 5">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="7pY-zl-gxZ" firstAttribute="height" secondItem="3yi-7C-6dT" secondAttribute="height" id="LBv-x2-5dC"/>
-                                    <constraint firstItem="7pY-zl-gxZ" firstAttribute="height" secondItem="2UR-Kz-rVN" secondAttribute="height" id="hvr-kv-5t4"/>
-                                    <constraint firstItem="7pY-zl-gxZ" firstAttribute="height" secondItem="ocv-Is-fuI" secondAttribute="height" id="tOf-h7-f5j"/>
-                                    <constraint firstItem="7pY-zl-gxZ" firstAttribute="height" secondItem="h4w-rU-hl8" secondAttribute="height" id="zNv-9X-qif"/>
-                                </constraints>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-xw-zZf">
                                 <rect key="frame" x="283" y="617" width="62" height="30"/>
                                 <state key="normal" title="Continue">
@@ -224,13 +150,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="top" secondItem="h7s-vz-mX3" secondAttribute="top" id="2Iz-Yg-D5m"/>
-                            <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="Hob-Mt-bQv" secondAttribute="trailing" constant="30" id="Hda-Cq-fgd"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="ezh-F3-L4L" secondAttribute="trailing" id="Sbc-ew-mCc"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="height" secondItem="M8T-64-Gn7" secondAttribute="height" multiplier="0.5" id="W0K-WJ-lVv"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" id="WdG-ej-qUz"/>
-                            <constraint firstItem="Hob-Mt-bQv" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="XrM-5T-1lS"/>
-                            <constraint firstItem="Hob-Mt-bQv" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="bottom" constant="-60" id="YBO-pa-TT6"/>
-                            <constraint firstItem="Hob-Mt-bQv" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" constant="30" id="cUn-d1-Aeu"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="dkX-M0-UDj"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="bottom" secondItem="rBa-xw-zZf" secondAttribute="bottom" constant="20" id="htn-Kf-Ccb"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="rBa-xw-zZf" secondAttribute="trailing" constant="30" id="qkE-gn-Jue"/>
@@ -241,11 +163,6 @@
                         <barButtonItem key="backBarButtonItem" title="&quot;Back&quot;" id="dPi-bd-BRC"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="choice1" destination="7pY-zl-gxZ" id="wmk-sN-x2T"/>
-                        <outlet property="choice2" destination="h4w-rU-hl8" id="ve1-x2-2rY"/>
-                        <outlet property="choice3" destination="ocv-Is-fuI" id="PJ2-fU-gbh"/>
-                        <outlet property="choice4" destination="3yi-7C-6dT" id="ad2-mZ-ZBg"/>
-                        <outlet property="choice5" destination="2UR-Kz-rVN" id="OO3-bW-mx4"/>
                         <outlet property="continueButton" destination="rBa-xw-zZf" id="XvK-y6-BHL"/>
                         <outlet property="questionLabel" destination="YiX-9l-pZd" id="xIT-Xv-VI3"/>
                         <outlet property="solveView" destination="orR-Y3-ZCf" id="4Yc-ft-LW2"/>

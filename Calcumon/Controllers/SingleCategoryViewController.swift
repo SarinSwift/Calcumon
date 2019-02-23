@@ -9,29 +9,11 @@
 import UIKit
 
 class SingleCategoryViewController: UIViewController {
-    
-    // Data that is similar to what we get from the API
-    // TODO: When calling the API, we need to convert from mathML markup to the actual equation in text form
-//    var mockData: Equation = Equation(id: "pccnpg",
-//                                      question: "<mn>2<\\/mn><mi>x<\\/mi><mo> - <\\/mo><mn>1<\\/mn><mo> = <\\/mo><mn>5<\\/mn>",
-//                                      choice: ["<math><mo>-<\\/mo><mn>4<\\/mn><\\/math>",
-//                                                "<math><mn>4<\\/mn><\\/math>",
-//                                                "<math><mo>-<\\/mo><mn>10<\\/mn><\\/math>",
-//                                                "<math><mn>3<\\/mn><\\/math>",
-//                                                "<math><mn>1<\\/mn><\\/math>"
-//                                                ],
-//                                      correctChoice: 3,
-//                                      instruction: "Solve for x")
 
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var solveView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
     
-    @IBOutlet weak var choice1: UIButton!
-    @IBOutlet weak var choice2: UIButton!
-    @IBOutlet weak var choice3: UIButton!
-    @IBOutlet weak var choice4: UIButton!
-    @IBOutlet weak var choice5: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
@@ -52,13 +34,7 @@ class SingleCategoryViewController: UIViewController {
     
     // currently using mockData
     func getRandomQuestion() {
-        questionLabel.text = MathExpression(lhs: .Integer(value: 10), rhs: .Percentage(value: 20), operator: .minus).description
-        
-        choice1.setTitle("blah", for: .normal)
-        choice2.setTitle("blah", for: .normal)
-        choice3.setTitle("blah", for: .normal)
-        choice4.setTitle("blah", for: .normal)
-        choice5.setTitle("blah", for: .normal)
+        questionLabel.text = MathExpression.randomAddition().description
     }
 
     @IBAction func continueButtonPressed(_ sender: UIButton) {
