@@ -106,15 +106,15 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(44 / 36) x (49 / 10)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiX-9l-pZd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="equation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiX-9l-pZd">
                                         <rect key="frame" x="20" y="96.5" width="335" height="80.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solve for x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-eL-bRU">
-                                        <rect key="frame" x="138" y="44.5" width="99" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solve the following equation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-eL-bRU">
+                                        <rect key="frame" x="54" y="44.5" width="267" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ToW-K7-r3N"/>
                                         </constraints>
@@ -146,16 +146,28 @@
                                     <action selector="continueButtonPressed:" destination="Zle-33-ki0" eventType="touchUpInside" id="MTP-4S-sOR"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMk-8r-MG1">
+                                <rect key="frame" x="16" y="353.5" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5Ld-Ly-MIt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="YMk-8r-MG1" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" constant="16" id="1zj-GE-GbK"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="top" secondItem="h7s-vz-mX3" secondAttribute="top" id="2Iz-Yg-D5m"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="ezh-F3-L4L" secondAttribute="trailing" id="Sbc-ew-mCc"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="height" secondItem="M8T-64-Gn7" secondAttribute="height" multiplier="0.5" id="W0K-WJ-lVv"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" id="WdG-ej-qUz"/>
+                            <constraint firstItem="YMk-8r-MG1" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="bottom" id="a8x-Am-MPj"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="dkX-M0-UDj"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="bottom" secondItem="rBa-xw-zZf" secondAttribute="bottom" constant="20" id="htn-Kf-Ccb"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="rBa-xw-zZf" secondAttribute="trailing" constant="30" id="qkE-gn-Jue"/>
+                            <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="YMk-8r-MG1" secondAttribute="trailing" constant="16" id="u3U-CM-mDg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h7s-vz-mX3"/>
                     </view>
@@ -163,6 +175,7 @@
                         <barButtonItem key="backBarButtonItem" title="&quot;Back&quot;" id="dPi-bd-BRC"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="answerTextField" destination="YMk-8r-MG1" id="taB-Q7-hd9"/>
                         <outlet property="continueButton" destination="rBa-xw-zZf" id="XvK-y6-BHL"/>
                         <outlet property="questionLabel" destination="YiX-9l-pZd" id="xIT-Xv-VI3"/>
                         <outlet property="solveView" destination="orR-Y3-ZCf" id="4Yc-ft-LW2"/>
