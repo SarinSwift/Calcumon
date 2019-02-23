@@ -17,13 +17,29 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="edy-M7-9ch">
+                                <rect key="frame" x="23" y="210" width="329" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="329" id="IBx-FC-LtU"/>
+                                    <constraint firstAttribute="height" constant="267" id="VA8-CS-Jds"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.32835649355925012" blue="0.27237962294197626" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="edy-M7-9ch" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cn0-6G-54I"/>
+                            <constraint firstItem="edy-M7-9ch" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="NDg-eG-hhO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="1726" height="1224"/>
+    </resources>
 </document>
