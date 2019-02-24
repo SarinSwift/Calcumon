@@ -11,8 +11,9 @@ import Foundation
 enum MathOperator: String {
     case plus = "+"
     case minus = "-"
-    case multiply = "X"
+    case multiply = "*"
     case divide = "/"
+    case root = "√"
     
     // random function to return a random operator
     static func random() -> MathOperator {

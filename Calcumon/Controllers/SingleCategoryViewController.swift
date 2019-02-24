@@ -34,13 +34,17 @@ class SingleCategoryViewController: UIViewController {
             getRandomMul()
         } else if self.title == "Division" {
             getRandomDiv()
-        } else if self.title == "Addtion & Subtraction" {
+        } else if self.title == "Addition & Subtraction" {
             getRandomAddSub()
         } else if self.title == "Division & Mulitplication" {
             getRandomDivMul()
         } else if self.title == "Basic Math" {
             getRandomBasMath()
-        }
+        } else if self.title == "Square Root" {
+            getRandomRoot()
+        } else if self.title == "Linear Equation" {
+            getRandomLinearEq()
+        } 
     }
     
     func setupNavBar() {
@@ -51,8 +55,16 @@ class SingleCategoryViewController: UIViewController {
     }
     
     func getRandomAdd() {
-        let randomEquation = MathExpression.randomAddition().description
-        questionLabel.text = randomEquation
+        let randInt = Int.random(in: 0...1)
+        // chosing either 2 equations, or one simple equation
+        if randInt == 0 {
+            let randomEquation = MathExpression.randomAddition()
+            questionLabel.text = randomEquation.description
+        } else {
+            let randomEquation = MathExpression(lhs: .Expression(expression: MathExpression.randomAddition()), rhs: .Expression(expression: MathExpression.randomAddition()), operator: .plus)
+            questionLabel.text = randomEquation.description
+        }
+        
     }
     
     func getRandomSub() {
@@ -70,6 +82,11 @@ class SingleCategoryViewController: UIViewController {
         questionLabel.text = randomEquation
     }
     
+    func getRandomRoot() {
+        let randInd = Int.random(in: 1...30)
+        questionLabel.text = "√\(randInd)"
+    }
+    
     func getRandomAddSub() {
         let randomEquation = MathExpression.randomAddSubtract().description
         questionLabel.text = randomEquation
@@ -82,6 +99,11 @@ class SingleCategoryViewController: UIViewController {
     
     func getRandomBasMath() {
         let randomEquation = MathExpression.random().description
+        questionLabel.text = randomEquation
+    }
+    
+    func getRandomLinearEq() {
+        let randomEquation = MathExpression.randomLinear().descriptionLinear
         questionLabel.text = randomEquation
     }
     

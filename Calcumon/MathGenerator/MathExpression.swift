@@ -9,9 +9,7 @@
 import Foundation
 
 /*
- 
  randomly generates math problems
- 
 */
 
 // Main class
@@ -44,6 +42,26 @@ class MathExpression: CustomStringConvertible {
         return "\(leftString) \(self.operator.rawValue) \(rightString)"
     }
     
+    var descriptionLinear: String {
+        var leftString = ""
+        var rightString = ""
+        let randInt = Int.random(in: 0...100)
+        
+        if case .Expression(_) = lhs {
+            leftString = "(\(lhs))"
+        } else {
+            leftString = lhs.description
+        }
+        if case .Expression(_) = rhs {
+            rightString = "(\(rhs))"
+        } else {
+            rightString = rhs.description
+        }
+        
+        return "\(leftString)X \(self.operator.rawValue) \(rightString) = \(randInt)"
+    }
+    
+    
     var result: Any? {
         let format = "\(lhs.nsExpressionFormatString) \(`operator`.rawValue) \(rhs.nsExpressionFormatString)"
         let expr = NSExpression(format: format)
@@ -55,8 +73,8 @@ class MathExpression: CustomStringConvertible {
     
     // returns random plus, minus, divide, mulitply equations
     static func random() -> MathExpression {
-        let lhs = MathElement.Integer(value: Int(arc4random_uniform(10)))
-        let rhs = MathElement.Integer(value: Int(arc4random_uniform(10)))
+        let lhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
+        let rhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .random())
     }
@@ -107,6 +125,14 @@ class MathExpression: CustomStringConvertible {
         let rhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .randomDivMul())
+    }
+    
+    // returns random plus, minus, divide, mulitply equations
+    static func randomLinear() -> MathExpression {
+        let lhs = MathElement.Integer(value: Int(arc4random_uniform(30)))
+        let rhs = MathElement.Integer(value: Int(arc4random_uniform(30)))
+        
+        return MathExpression.init(lhs: lhs, rhs: rhs, operator: .random())
     }
     
 }
