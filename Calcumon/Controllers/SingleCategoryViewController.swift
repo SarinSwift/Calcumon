@@ -10,11 +10,13 @@ import UIKit
 
 class SingleCategoryViewController: UIViewController {
 
+    @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var solveView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet weak var answerTextField: UITextField!
+    @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
@@ -23,6 +25,25 @@ class SingleCategoryViewController: UIViewController {
         
         setupNavBar()
         callingEquations()
+    }
+    
+    @IBAction func submitButtonTapped(_ sender: UIButton) {
+        guard let answerInput = answerTextField.text else {
+            // TODO: check the answer with Wolfram API
+            return print("no answer yet")
+        }
+        if answerInput == "" {
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
+            vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+            // Not hiding the navBar??
+            vc.navigationController?.navigationBar.isHidden = true
+            self.addChild(vc)
+            self.view.addSubview(vc.view)
+            
+        } else {
+            print(answerInput)
+        }
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
@@ -50,8 +71,11 @@ class SingleCategoryViewController: UIViewController {
         } else if self.title == "Square Root" {
             getRandomRoot()
         } else if self.title == "Linear Equation" {
+            instructionsLabel.text = "Solve for X"
             getRandomLinearEq()
-        } 
+        } else if self.title == "Radicals" {
+            getRandomRad()
+        }
     }
     
     func setupNavBar() {
@@ -90,8 +114,8 @@ class SingleCategoryViewController: UIViewController {
     }
     
     func getRandomRoot() {
-        let randInd = Int.random(in: 1...30)
-        questionLabel.text = "√\(randInd)"
+        let randInt = MathElement.Root(value: Int.random(in: 1...30))
+        questionLabel.text = randInt.nsExpressionFormatString
     }
     
     func getRandomAddSub() {
@@ -112,6 +136,11 @@ class SingleCategoryViewController: UIViewController {
     func getRandomLinearEq() {
         let randomEquation = MathExpression.randomLinear().descriptionLinear
         questionLabel.text = randomEquation
+    }
+    
+    func getRandomRad() {
+        let randomEquation = MathExpression.randomAddRadicals()
+        questionLabel.text = randomEquation.description
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {

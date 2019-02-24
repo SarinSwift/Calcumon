@@ -135,4 +135,12 @@ class MathExpression: CustomStringConvertible {
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .random())
     }
     
+    // returns random Adding radicals
+    static func randomAddRadicals() -> MathExpression {
+        let lhs = MathElement.Root(value: Int.random(in: 1...30))
+        let rhs = MathElement.Root(value: Int.random(in: 1...30))
+        
+        return MathExpression.init(lhs: lhs, rhs: rhs, operator: .plus)
+    }
+    
 }
