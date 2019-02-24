@@ -29,8 +29,7 @@ class SingleCategoryViewController: UIViewController {
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
         guard let answerInput = answerTextField.text else {
-            // TODO: check the answer with Wolfram API
-            return print("no answer yet")
+            return 
         }
         if answerInput == "" {
             
@@ -42,7 +41,44 @@ class SingleCategoryViewController: UIViewController {
             self.view.addSubview(vc.view)
             
         } else {
-            print(answerInput)
+            // TODO: Check if answer is correct
+            print("answer user inputted: \(answerInput)")
+            print(questionLabel.text!)
+            if let theQuestion = questionLabel.text {
+                CheckAnswerApi(value: theQuestion)
+            }
+        }
+    }
+    
+    func CheckAnswerApi(value: String) {
+        let trimmedSpaces = value.filter { (char) -> Bool in
+            char != " "
+        }
+        if let url = URL(string: "http://api.wolframalpha.com/v1/result?appid=\(appIdString)&i=\(trimmedSpaces)%3f") {
+            let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if error == nil {
+                    if let data = data {
+                        let str = String(data: data, encoding: String.Encoding.utf8)
+                        print("the request says: \(str ?? "nothing")")
+                        
+                        DispatchQueue.main.async {
+                            if str == self.answerTextField.text {
+                                // TODO: alert that was the correct answer
+                                print("correct answer")
+                            } else {
+                                // TODO: alert that was the wrong answer
+                                print("incorrect answer")
+                            }
+                        }
+                        
+                    }
+                } else {
+                    print(error! as Any)
+                }
+            }
+            dataTask.resume()
+        } else {
+            print("wrong http request")
         }
     }
     
@@ -95,7 +131,6 @@ class SingleCategoryViewController: UIViewController {
             let randomEquation = MathExpression(lhs: .Expression(expression: MathExpression.randomAddition()), rhs: .Expression(expression: MathExpression.randomAddition()), operator: .plus)
             questionLabel.text = randomEquation.description
         }
-        
     }
     
     func getRandomSub() {

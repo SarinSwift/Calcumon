@@ -10,10 +10,10 @@ import Foundation
 
 // struct defining variables we want to get out of Mth.ly API
 
-struct Equation {
-    let id: String
-    let question: String
-    let choice: [String]
-    let correctChoice: Int
-    let instruction: String
-}
+//struct Equation {
+//    let id: String
+//    let question: String
+//    let choice: [String]
+//    let correctChoice: Int
+//    let instruction: String
+//}
