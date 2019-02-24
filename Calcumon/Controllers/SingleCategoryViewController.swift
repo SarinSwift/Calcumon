@@ -25,6 +25,13 @@ class SingleCategoryViewController: UIViewController {
         callingEquations()
     }
     
+    @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
+        self.answerTextField.resignFirstResponder()
+    }
+    @IBAction func swipeToHideKeyboard(_ sender: UISwipeGestureRecognizer) {
+        self.answerTextField.resignFirstResponder()
+    }
+    
     func callingEquations() {
         if self.title == "Addition" {
             getRandomAdd()
@@ -106,8 +113,6 @@ class SingleCategoryViewController: UIViewController {
         let randomEquation = MathExpression.randomLinear().descriptionLinear
         questionLabel.text = randomEquation
     }
-    
-    
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         // Update the questionLabel to another problem

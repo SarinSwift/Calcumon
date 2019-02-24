@@ -147,9 +147,9 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMk-8r-MG1">
-                                <rect key="frame" x="16" y="353.5" width="343" height="60"/>
+                                <rect key="frame" x="16" y="313.5" width="343" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="5Ld-Ly-MIt"/>
+                                    <constraint firstAttribute="height" constant="90" id="5Ld-Ly-MIt"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -157,19 +157,24 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="YMk-8r-MG1" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" constant="16" id="1zj-GE-GbK"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="top" secondItem="h7s-vz-mX3" secondAttribute="top" id="2Iz-Yg-D5m"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="ezh-F3-L4L" secondAttribute="trailing" id="Sbc-ew-mCc"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="height" secondItem="M8T-64-Gn7" secondAttribute="height" multiplier="0.5" id="W0K-WJ-lVv"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" id="WdG-ej-qUz"/>
-                            <constraint firstItem="YMk-8r-MG1" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="bottom" id="a8x-Am-MPj"/>
+                            <constraint firstItem="YMk-8r-MG1" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="bottom" constant="-40" id="a8x-Am-MPj"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="dkX-M0-UDj"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="bottom" secondItem="rBa-xw-zZf" secondAttribute="bottom" constant="20" id="htn-Kf-Ccb"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="rBa-xw-zZf" secondAttribute="trailing" constant="30" id="qkE-gn-Jue"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="YMk-8r-MG1" secondAttribute="trailing" constant="16" id="u3U-CM-mDg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h7s-vz-mX3"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="x6t-c6-dPa" appends="YES" id="T9X-m2-0cU"/>
+                            <outletCollection property="gestureRecognizers" destination="qhS-s3-jtj" appends="YES" id="Y4a-49-E71"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="MathCategor" id="EEp-Lx-xbf">
                         <barButtonItem key="backBarButtonItem" title="&quot;Back&quot;" id="dPi-bd-BRC"/>
@@ -183,6 +188,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rG-jL-wKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="x6t-c6-dPa">
+                    <connections>
+                        <action selector="tapToHideKeyboard:" destination="Zle-33-ki0" id="4BE-RL-wwg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="qhS-s3-jtj">
+                    <connections>
+                        <action selector="swipeToHideKeyboard:" destination="Zle-33-ki0" id="SaD-wM-dRq"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1088.8" y="-39.130434782608695"/>
         </scene>
