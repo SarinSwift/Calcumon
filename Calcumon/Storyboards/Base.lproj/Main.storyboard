@@ -114,7 +114,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solve the following equation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djl-eL-bRU">
-                                        <rect key="frame" x="54" y="44.5" width="267" height="30"/>
+                                        <rect key="frame" x="54.5" y="44.5" width="266.5" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ToW-K7-r3N"/>
                                         </constraints>
@@ -146,24 +146,58 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuB-7u-rmY">
-                                <rect key="frame" x="53" y="479" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="95" translatesAutoresizingMaskIntoConstraints="NO" id="hWK-Qe-MzQ">
+                                <rect key="frame" x="40" y="473.5" width="295" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuB-7u-rmY">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                        <color key="backgroundColor" red="0.79872923635589288" green="0.31129908142742679" blue="0.25611109248181235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="s9O-cn-hdO"/>
+                                            <constraint firstAttribute="height" constant="44" id="ydy-7V-8vd"/>
+                                        </constraints>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="submitButtonTapped:" destination="Zle-33-ki0" eventType="touchUpInside" id="Ll1-C0-hkw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-xw-zZf">
+                                        <rect key="frame" x="195" y="0.0" width="100" height="44"/>
+                                        <color key="backgroundColor" red="0.48666456083289694" green="0.37078993751833961" blue="0.83217887376165633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Zeh-f1-Jgp"/>
+                                            <constraint firstAttribute="width" constant="100" id="h4B-eu-9dJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Skip">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="continueButtonPressed:" destination="Zle-33-ki0" eventType="touchUpInside" id="MTP-4S-sOR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpe-3n-e5i">
+                                <rect key="frame" x="107.5" y="453.5" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xpe-3n-e5i" secondAttribute="height" multiplier="1:1" id="5go-rt-EoZ"/>
+                                    <constraint firstAttribute="width" constant="160" id="SLQ-Iw-Mdh"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Continue"/>
                                 <connections>
-                                    <action selector="submitButtonTapped:" destination="Zle-33-ki0" eventType="touchUpInside" id="Ll1-C0-hkw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-xw-zZf">
-                                <rect key="frame" x="268" y="479" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="continueButtonPressed:" destination="Zle-33-ki0" eventType="touchUpInside" id="MTP-4S-sOR"/>
+                                    <action selector="splashButtonTapped:" destination="Zle-33-ki0" eventType="touchUpInside" id="vgA-y6-VpR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -172,12 +206,16 @@
                         <constraints>
                             <constraint firstItem="YMk-8r-MG1" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" constant="16" id="1zj-GE-GbK"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="top" secondItem="h7s-vz-mX3" secondAttribute="top" id="2Iz-Yg-D5m"/>
+                            <constraint firstItem="hWK-Qe-MzQ" firstAttribute="top" secondItem="YMk-8r-MG1" secondAttribute="bottom" constant="70" id="LaU-bu-90m"/>
+                            <constraint firstItem="xpe-3n-e5i" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="OgM-KW-9lX"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="ezh-F3-L4L" secondAttribute="trailing" id="Sbc-ew-mCc"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="height" secondItem="M8T-64-Gn7" secondAttribute="height" multiplier="0.5" id="W0K-WJ-lVv"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" id="WdG-ej-qUz"/>
                             <constraint firstItem="YMk-8r-MG1" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="bottom" constant="-40" id="a8x-Am-MPj"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="dkX-M0-UDj"/>
+                            <constraint firstItem="hWK-Qe-MzQ" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="tjQ-gK-KVp"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="YMk-8r-MG1" secondAttribute="trailing" constant="16" id="u3U-CM-mDg"/>
+                            <constraint firstItem="xpe-3n-e5i" firstAttribute="top" secondItem="YMk-8r-MG1" secondAttribute="bottom" constant="50" id="wLr-hx-YRw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h7s-vz-mX3"/>
                         <connections>
@@ -194,6 +232,7 @@
                         <outlet property="instructionsLabel" destination="djl-eL-bRU" id="K8m-yf-BRa"/>
                         <outlet property="questionLabel" destination="YiX-9l-pZd" id="xIT-Xv-VI3"/>
                         <outlet property="solveView" destination="orR-Y3-ZCf" id="4Yc-ft-LW2"/>
+                        <outlet property="splashContinueButton" destination="xpe-3n-e5i" id="ddI-mM-0th"/>
                         <outlet property="submitButton" destination="yuB-7u-rmY" id="FVn-ao-2ml"/>
                         <outlet property="topContainerView" destination="ezh-F3-L4L" id="VRn-JK-L5f"/>
                     </connections>
@@ -221,10 +260,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8f-O1-alA">
-                                <rect key="frame" x="47" y="210" width="281" height="267"/>
+                                <rect key="frame" x="47" y="227" width="281" height="233"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slo-hh-X0t">
-                                        <rect key="frame" x="20" y="217" width="241" height="35"/>
+                                        <rect key="frame" x="20" y="171" width="241" height="35"/>
                                         <color key="backgroundColor" red="0.31372549020000001" green="0.64313725489999995" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="pc4-5R-RUy"/>
@@ -243,7 +282,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add an answer before you submit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzK-6M-am1">
-                                        <rect key="frame" x="40.5" y="108.5" width="200" height="50"/>
+                                        <rect key="frame" x="40.5" y="91.5" width="200" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="4Pd-nJ-tTw"/>
                                             <constraint firstAttribute="height" constant="50" id="MQm-Q1-dCe"/>
@@ -255,7 +294,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.84950083620000005" green="0.74891906649999995" blue="0.8733170629" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Slo-hh-X0t" secondAttribute="bottom" constant="15" id="5gZ-jP-KLD"/>
+                                    <constraint firstAttribute="bottom" secondItem="Slo-hh-X0t" secondAttribute="bottom" constant="27" id="5gZ-jP-KLD"/>
                                     <constraint firstAttribute="trailing" secondItem="Slo-hh-X0t" secondAttribute="trailing" constant="20" id="IE8-3e-3Dc"/>
                                     <constraint firstItem="owO-pM-SUx" firstAttribute="leading" secondItem="t8f-O1-alA" secondAttribute="leading" constant="89" id="IlR-xa-3Y4"/>
                                     <constraint firstItem="Slo-hh-X0t" firstAttribute="leading" secondItem="t8f-O1-alA" secondAttribute="leading" constant="20" id="MJA-xi-jGg"/>
@@ -266,7 +305,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -274,7 +313,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="t8f-O1-alA" firstAttribute="width" secondItem="Ywo-sS-eFI" secondAttribute="width" multiplier="0.75" id="1en-lh-Yjq"/>
-                            <constraint firstItem="t8f-O1-alA" firstAttribute="height" secondItem="Ywo-sS-eFI" secondAttribute="height" multiplier="0.4" id="COg-l7-bvF"/>
+                            <constraint firstItem="t8f-O1-alA" firstAttribute="height" secondItem="Ywo-sS-eFI" secondAttribute="height" multiplier="0.35" id="COg-l7-bvF"/>
                             <constraint firstItem="t8f-O1-alA" firstAttribute="centerY" secondItem="c0I-CK-NI8" secondAttribute="centerY" id="cBn-ha-Xgc"/>
                             <constraint firstItem="t8f-O1-alA" firstAttribute="centerX" secondItem="c0I-CK-NI8" secondAttribute="centerX" id="xfZ-WY-F5J"/>
                         </constraints>
@@ -289,4 +328,7 @@
             <point key="canvasLocation" x="1944.8" y="-39.130434782608695"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Continue" width="185" height="178"/>
+    </resources>
 </document>

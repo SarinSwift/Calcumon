@@ -18,13 +18,16 @@ class SingleCategoryViewController: UIViewController {
     @IBOutlet weak var answerTextField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var splashContinueButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
+        print(answerTextField.layer.cornerRadius)
         setupNavBar()
         callingEquations()
+        splashContinueButton.isHidden = true
     }
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
@@ -42,8 +45,6 @@ class SingleCategoryViewController: UIViewController {
             
         } else {
             // TODO: Check if answer is correct
-            print("answer user inputted: \(answerInput)")
-            print(questionLabel.text!)
             if let theQuestion = questionLabel.text {
                 CheckAnswerApi(value: theQuestion)
             }
@@ -63,14 +64,21 @@ class SingleCategoryViewController: UIViewController {
                         
                         DispatchQueue.main.async {
                             if str == self.answerTextField.text {
-                                // TODO: alert that was the correct answer
-                                print("correct answer")
+                                // Answer was correct
+                                // TODO: animate the popup of splash button
+                                self.splashContinueButton.isHidden = false
+                                self.submitButton.isHidden = true
+                                self.continueButton.isHidden = true
                             } else {
-                                // TODO: alert that was the wrong answer
-                                print("incorrect answer")
+                                // Answer was incorrect
+                                // TODO: animate the answerTextField to shake
+                                self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+                                self.answerTextField.layer.cornerRadius = 4.5
+                                self.answerTextField.layer.borderWidth = 2.0
+                                self.answerTextField.text = ""
+                                self.answerTextField.placeholder = "Answer"
                             }
                         }
-                        
                     }
                 } else {
                     print(error! as Any)
@@ -87,6 +95,14 @@ class SingleCategoryViewController: UIViewController {
     }
     @IBAction func swipeToHideKeyboard(_ sender: UISwipeGestureRecognizer) {
         self.answerTextField.resignFirstResponder()
+    }
+    @IBAction func splashButtonTapped(_ sender: UIButton) {
+        callingEquations()
+        splashContinueButton.isHidden = true
+        continueButton.isHidden = false
+        submitButton.isHidden = false
+        answerTextField.text = ""
+        answerTextField.placeholder = "Answer"
     }
     
     func callingEquations() {
@@ -181,6 +197,8 @@ class SingleCategoryViewController: UIViewController {
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         // Update the questionLabel to another problem
         callingEquations()
+        answerTextField.layer.borderColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
+        answerTextField.layer.borderWidth = 1
     }
     
 }
