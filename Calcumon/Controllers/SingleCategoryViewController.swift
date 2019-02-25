@@ -71,7 +71,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             char != " "
         }
         if let url = URL(string: "http://api.wolframalpha.com/v1/result?appid=\(appIdString)&i=\(trimmedSpaces)%3f") {
-            let dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            let dataTask = URLSession.shared.dataTask(with: url) { [unowned self] (data, response, error) in
                 if error == nil {
                     if let data = data {
                         let str = String(data: data, encoding: String.Encoding.utf8)

@@ -146,14 +146,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="95" translatesAutoresizingMaskIntoConstraints="NO" id="hWK-Qe-MzQ">
-                                <rect key="frame" x="40" y="473.5" width="295" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hWK-Qe-MzQ">
+                                <rect key="frame" x="37.5" y="473.5" width="300" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuB-7u-rmY">
-                                        <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="44"/>
                                         <color key="backgroundColor" red="0.79872923635589288" green="0.31129908142742679" blue="0.25611109248181235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="s9O-cn-hdO"/>
+                                            <constraint firstAttribute="width" constant="140" id="s9O-cn-hdO"/>
                                             <constraint firstAttribute="height" constant="44" id="ydy-7V-8vd"/>
                                         </constraints>
                                         <state key="normal" title="Submit">
@@ -169,11 +169,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-xw-zZf">
-                                        <rect key="frame" x="195" y="0.0" width="100" height="44"/>
+                                        <rect key="frame" x="160" y="0.0" width="140" height="44"/>
                                         <color key="backgroundColor" red="0.48666456083289694" green="0.37078993751833961" blue="0.83217887376165633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Zeh-f1-Jgp"/>
-                                            <constraint firstAttribute="width" constant="100" id="h4B-eu-9dJ"/>
+                                            <constraint firstAttribute="width" constant="140" id="h4B-eu-9dJ"/>
                                         </constraints>
                                         <state key="normal" title="Skip">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -12,10 +12,6 @@ class ViewController: UICollectionViewController {
     
     let images = [#imageLiteral(resourceName: "Inspiration-01"), #imageLiteral(resourceName: "Inspiration-02"), #imageLiteral(resourceName: "Inspiration-03"), #imageLiteral(resourceName: "Inspiration-04"), #imageLiteral(resourceName: "Inspiration-05"), #imageLiteral(resourceName: "Inspiration-06"), #imageLiteral(resourceName: "Inspiration-07"), #imageLiteral(resourceName: "Inspiration-08"), #imageLiteral(resourceName: "Inspiration-09"), #imageLiteral(resourceName: "Inspiration-10"), #imageLiteral(resourceName: "Inspiration-11"), #imageLiteral(resourceName: "Inspiration-08"), #imageLiteral(resourceName: "Inspiration-13")]
     let categories = ["Basic Math", "Addition", "Subtraction", "Multiplication", "Division", "Addition & Subtraction", "Division & Mulitplication", "Square Root", "Linear Equation", "Radicals", "Derivatives", "• Linear Algebra", "Vectors", "Matrices", "• Statistics", "Lists"]
-    
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return UIStatusBarStyle.lightContent
-//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +30,6 @@ extension ViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.reuseIdentifier, for: indexPath) as? CategoryCell else {
             return UICollectionViewCell()
         }
-//        cell.contentView.backgroundColor = colors[indexPath.row]
         cell.imageView.image = images[indexPath.row]
         cell.titleLabel.text = categories[indexPath.row]
         return cell
