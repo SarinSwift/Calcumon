@@ -9,6 +9,8 @@
 import UIKit
 
 class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
+    
+    var result: NSNumber = 0
 
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var topContainerView: UIView!
@@ -49,6 +51,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         guard let answerInput = answerTextField.text else {
             return 
         }
+        print(result)
         if answerInput == "" {
             
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
@@ -59,51 +62,72 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             self.view.addSubview(vc.view)
             
         } else {
-            // TODO: Check if answer is correct
-            if let theQuestion = questionLabel.text {
-                CheckAnswerApi(value: theQuestion)
+            // Check if answer is correct
+            if answerInput == "\(self.result)" {
+                // Answer was correct
+                // TODO: animate the popup of splash button
+                self.answerTextField.layer.borderColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+                self.answerTextField.layer.cornerRadius = 4.5
+                self.answerTextField.layer.borderWidth = 2.0
+                self.splashContinueButton.isHidden = false
+                self.submitButton.isHidden = true
+                self.continueButton.isHidden = true
+            } else {
+                // Answer was incorrect
+                // TODO: animate the answerTextField to shake
+                self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+                self.answerTextField.layer.cornerRadius = 4.5
+                self.answerTextField.layer.borderWidth = 2.0
+                self.answerTextField.text = ""
+                self.answerTextField.placeholder = "Answer"
             }
+//            if let theQuestion = questionLabel.text {
+//                CheckAnswerApi(value: theQuestion)
+//            }
         }
     }
     
-    func CheckAnswerApi(value: String) {
-        let trimmedSpaces = value.filter { (char) -> Bool in
-            char != " "
-        }
-        if let url = URL(string: "http://api.wolframalpha.com/v1/result?appid=\(appIdString)&i=\(trimmedSpaces)%3f") {
-            let dataTask = URLSession.shared.dataTask(with: url) { [unowned self] (data, response, error) in
-                if error == nil {
-                    if let data = data {
-                        let str = String(data: data, encoding: String.Encoding.utf8)
-                        print("the request says: \(str ?? "nothing")")
-                        
-                        DispatchQueue.main.async {
-                            if str == self.answerTextField.text {
-                                // Answer was correct
-                                // TODO: animate the popup of splash button
-                                self.splashContinueButton.isHidden = false
-                                self.submitButton.isHidden = true
-                                self.continueButton.isHidden = true
-                            } else {
-                                // Answer was incorrect
-                                // TODO: animate the answerTextField to shake
-                                self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
-                                self.answerTextField.layer.cornerRadius = 4.5
-                                self.answerTextField.layer.borderWidth = 2.0
-                                self.answerTextField.text = ""
-                                self.answerTextField.placeholder = "Answer"
-                            }
-                        }
-                    }
-                } else {
-                    print(error! as Any)
-                }
-            }
-            dataTask.resume()
-        } else {
-            print("wrong http request")
-        }
-    }
+//    func CheckAnswerApi(value: String) {
+//        let trimmedSpaces = value.filter { (char) -> Bool in
+//            char != " "
+//        }
+//        if let url = URL(string: "http://api.wolframalpha.com/v1/result?appid=\(appIdString)&i=\(trimmedSpaces)%3f") {
+//            let dataTask = URLSession.shared.dataTask(with: url) { [unowned self] (data, response, error) in
+//                if error == nil {
+//                    if let data = data {
+//                        let str = String(data: data, encoding: String.Encoding.utf8)
+//                        print("the request says: \(str ?? "nothing")")
+//
+//                        DispatchQueue.main.async {
+//                            if str == self.answerTextField.text {
+//                                // Answer was correct
+//                                // TODO: animate the popup of splash button
+//                                self.answerTextField.layer.borderColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+//                                self.answerTextField.layer.cornerRadius = 4.5
+//                                self.answerTextField.layer.borderWidth = 2.0
+//                                self.splashContinueButton.isHidden = false
+//                                self.submitButton.isHidden = true
+//                                self.continueButton.isHidden = true
+//                            } else {
+//                                // Answer was incorrect
+//                                // TODO: animate the answerTextField to shake
+//                                self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+//                                self.answerTextField.layer.cornerRadius = 4.5
+//                                self.answerTextField.layer.borderWidth = 2.0
+//                                self.answerTextField.text = ""
+//                                self.answerTextField.placeholder = "Answer"
+//                            }
+//                        }
+//                    }
+//                } else {
+//                    print(error! as Any)
+//                }
+//            }
+//            dataTask.resume()
+//        } else {
+//            print("wrong http request")
+//        }
+//    }
     
     @objc func keyboardWillChange(notification: Notification) {
         guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
@@ -125,6 +149,8 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func splashButtonTapped(_ sender: UIButton) {
         callingEquations()
+        answerTextField.layer.borderColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
+        answerTextField.layer.borderWidth = 1
         splashContinueButton.isHidden = true
         continueButton.isHidden = false
         submitButton.isHidden = false
@@ -165,50 +191,60 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     }
     
     func getRandomAdd() {
-        let randInt = Int.random(in: 0...1)
+        let randomEquation = MathExpression.randomAddition()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
+        
+//        let randInt = Int.random(in: 0...1)
         // chosing either 2 equations, or one simple equation
-        if randInt == 0 {
-            let randomEquation = MathExpression.randomAddition()
-            questionLabel.text = randomEquation.description
-        } else {
-            let randomEquation = MathExpression(lhs: .Expression(expression: MathExpression.randomAddition()), rhs: .Expression(expression: MathExpression.randomAddition()), operator: .plus)
-            questionLabel.text = randomEquation.description
-        }
+//        if randInt == 0 {
+//        } else {
+//            let randomEquation = MathExpression(lhs: .Expression(expression: MathExpression.randomAddition()), rhs: .Expression(expression: MathExpression.randomAddition()), operator: .plus)
+//            questionLabel.text = randomEquation.description
+//        }
     }
     
     func getRandomSub() {
-        let randomEquation = MathExpression.randomSubtract().description
-        questionLabel.text = randomEquation
+        let randomEquation = MathExpression.randomSubtract()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
     }
     
     func getRandomMul() {
-        let randomEquation = MathExpression.randomMultiply().description
-        questionLabel.text = randomEquation
+        let randomEquation = MathExpression.randomMultiply()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
     }
     
     func getRandomDiv() {
-        let randomEquation = MathExpression.randomDivide().description
-        questionLabel.text = randomEquation
+        let randomEquation = MathExpression.randomDivide()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
     }
     
     func getRandomRoot() {
-        let randInt = MathElement.Root(value: Int.random(in: 1...30))
+        let value = Int.random(in: 1...30)
+        let randInt = MathElement.Root(value: value)
+        result = sqrt(Double(value)) as NSNumber
         questionLabel.text = randInt.nsExpressionFormatString
     }
     
     func getRandomAddSub() {
-        let randomEquation = MathExpression.randomAddSubtract().description
-        questionLabel.text = randomEquation
+        let randomEquation = MathExpression.randomAddSubtract()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
     }
     
     func getRandomDivMul() {
-        let randomEquation = MathExpression.randomDivMultiply().description
-        questionLabel.text = randomEquation
+        let randomEquation = MathExpression.randomDivMultiply()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
     }
     
     func getRandomBasMath() {
-        let randomEquation = MathExpression.random().description
-        questionLabel.text = randomEquation
+        let randomEquation = MathExpression.random()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
     }
     
     func getRandomLinearEq() {
