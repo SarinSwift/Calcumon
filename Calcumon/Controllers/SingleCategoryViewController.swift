@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SingleCategoryViewController: UIViewController {
+class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var topContainerView: UIView!
@@ -23,11 +23,26 @@ class SingleCategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        keyboardListenEvents()
         
-        print(answerTextField.layer.cornerRadius)
         setupNavBar()
         callingEquations()
         splashContinueButton.isHidden = true
+    }
+    
+    func keyboardListenEvents() {
+        // listen for keyboard events
+        answerTextField.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+    
+    deinit {
+        // stop listen from keyboard hide/show events
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
@@ -87,6 +102,18 @@ class SingleCategoryViewController: UIViewController {
             dataTask.resume()
         } else {
             print("wrong http request")
+        }
+    }
+    
+    @objc func keyboardWillChange(notification: Notification) {
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+            return
+        }
+        if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
+            
+            view.frame.origin.y = -keyboardRect.height
+        } else {
+            view.frame.origin.y = 0
         }
     }
     
