@@ -29,6 +29,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         
         setupNavBar()
         callingEquations()
+        print(result)
         splashContinueButton.isHidden = true
     }
     
@@ -218,33 +219,48 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     
     func getRandomDiv() {
         let randomEquation = MathExpression.randomDivide()
-        result = randomEquation.result as! NSNumber
+        let longNumber = randomEquation.result as! Double
+        result = longNumber.roundTo(places: 2) as NSNumber
         questionLabel.text = randomEquation.description
     }
     
     func getRandomRoot() {
         let value = Int.random(in: 1...30)
         let randInt = MathElement.Root(value: value)
-        result = sqrt(Double(value)) as NSNumber
+        let sqrtNumber = sqrt(Double(value))
+        result = Double(sqrtNumber).roundTo(places: 2) as NSNumber
         questionLabel.text = randInt.nsExpressionFormatString
     }
     
     func getRandomAddSub() {
-        let randomEquation = MathExpression.randomAddSubtract()
-        result = randomEquation.result as! NSNumber
-        questionLabel.text = randomEquation.description
+        let randomInt = Int.random(in: 1...2)
+        if randomInt == 1 {
+            getRandomAdd()
+        } else {
+            getRandomSub()
+        }
     }
     
     func getRandomDivMul() {
-        let randomEquation = MathExpression.randomDivMultiply()
-        result = randomEquation.result as! NSNumber
-        questionLabel.text = randomEquation.description
+        let randomInt = Int.random(in: 1...2)
+        if randomInt == 1 {
+            getRandomDiv()
+        } else {
+            getRandomMul()
+        }
     }
     
     func getRandomBasMath() {
-        let randomEquation = MathExpression.random()
-        result = randomEquation.result as! NSNumber
-        questionLabel.text = randomEquation.description
+        let randomInt = Int.random(in: 1...4)
+        if randomInt == 1 {
+            getRandomAdd()
+        } else if randomInt == 2 {
+            getRandomSub()
+        } else if randomInt == 3 {
+            getRandomMul()
+        } else {
+            getRandomDiv()
+        }
     }
     
     func getRandomLinearEq() {

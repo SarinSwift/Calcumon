@@ -17,6 +17,7 @@
 		047DA54E2221CA4F00ACA52E /* MathOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54D2221CA4F00ACA52E /* MathOperator.swift */; };
 		047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54F2222677200ACA52E /* CustomAlertViewController.swift */; };
 		047DA554222331A700ACA52E /* AppId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA553222331A700ACA52E /* AppId.swift */; };
+		047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */; };
 		0499441222212148008A0427 /* MathExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499441122212148008A0427 /* MathExpression.swift */; };
 		049956B3220B703300571DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049956B2220B703300571DDC /* AppDelegate.swift */; };
 		049956B5220B703300571DDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049956B4220B703300571DDC /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		047DA54D2221CA4F00ACA52E /* MathOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathOperator.swift; sourceTree = "<group>"; };
 		047DA54F2222677200ACA52E /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		047DA553222331A700ACA52E /* AppId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppId.swift; sourceTree = "<group>"; };
+		047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificDecimalPlaces.swift; sourceTree = "<group>"; };
 		0499441122212148008A0427 /* MathExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathExpression.swift; sourceTree = "<group>"; };
 		049956AF220B703300571DDC /* Calcumon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calcumon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049956B2220B703300571DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */,
+				047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				0405F34C221CBB8700B6C70F /* NetworkManager.swift in Sources */,
 				0499441222212148008A0427 /* MathExpression.swift in Sources */,
+				047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */,
 				047DA54C2221CA3800ACA52E /* MathElement.swift in Sources */,
 				0400E966220E4555009452C1 /* UltravisualLayout.swift in Sources */,
 				049956B5220B703300571DDC /* ViewController.swift in Sources */,
