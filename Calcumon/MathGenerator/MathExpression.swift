@@ -18,6 +18,8 @@ class MathExpression: CustomStringConvertible {
     var rhs: MathElement
     var `operator`: MathOperator
     
+    var afterEqSign = 0
+    
     init(lhs: MathElement, rhs: MathElement, operator: MathOperator) {
         self.rhs = rhs
         self.lhs = lhs
@@ -46,6 +48,9 @@ class MathExpression: CustomStringConvertible {
         var leftString = ""
         var rightString = ""
         let randInt = Int.random(in: 0...100)
+        // reassigned the afterEqSign to the random integer we get after the equal sign
+        afterEqSign = randInt
+        print("afterEqSign MathExpression: \(afterEqSign)")
         
         if case .Expression(_) = lhs {
             leftString = "(\(lhs))"
@@ -68,6 +73,7 @@ class MathExpression: CustomStringConvertible {
         
         return expr.expressionValue(with: nil, context: nil)
     }
+    
     
     
     
@@ -127,12 +133,12 @@ class MathExpression: CustomStringConvertible {
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .randomDivMul())
     }
     
-    // returns random plus, minus, divide, mulitply equations
+    // returns random plus eq to find x
     static func randomLinear() -> MathExpression {
         let lhs = MathElement.Integer(value: Int(arc4random_uniform(30)))
         let rhs = MathElement.Integer(value: Int(arc4random_uniform(30)))
         
-        return MathExpression.init(lhs: lhs, rhs: rhs, operator: .random())
+        return MathExpression.init(lhs: lhs, rhs: rhs, operator: .plus)
     }
     
     // returns random Adding radicals

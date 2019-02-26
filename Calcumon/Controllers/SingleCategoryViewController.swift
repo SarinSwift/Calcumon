@@ -29,7 +29,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         
         setupNavBar()
         callingEquations()
-        print(result)
+        print("viewdidload method result is: \(result)")
         splashContinueButton.isHidden = true
     }
     
@@ -262,8 +262,15 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     }
     
     func getRandomLinearEq() {
-        let randomEquation = MathExpression.randomLinear().descriptionLinear
-        questionLabel.text = randomEquation
+        let randomEquation = MathExpression.randomLinear()
+        // order of setting the question label must be here! before we find the result with the following method
+        questionLabel.text = randomEquation.descriptionLinear
+        
+        // This linear equation only works if it is the plus operator not other operators!!
+        let resultOfX = (Double(randomEquation.afterEqSign) - Double(randomEquation.rhs.description)!) / Double(randomEquation.lhs.description)!
+        print("result of x: \(resultOfX)")
+        result = NSNumber(value: resultOfX.roundTo(places: 2))
+        
     }
     
     func getRandomRad() {
