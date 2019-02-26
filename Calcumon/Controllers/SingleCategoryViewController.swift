@@ -276,6 +276,13 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     func getRandomRad() {
         let randomEquation = MathExpression.randomAddRadicals()
         questionLabel.text = randomEquation.description
+        
+        let afterRoot = randomEquation.lhs.description.range(of: "√")
+        let leftAfter = randomEquation.lhs.description[(afterRoot?.upperBound...)!]  // prints ints after the √
+        let rightAfter = randomEquation.rhs.description[(afterRoot?.upperBound...)!]
+        let sqrtNumberLeft = sqrt(Double(leftAfter)!)
+        let sqrtNumberRight = sqrt(Double(rightAfter)!)
+        result = (sqrtNumberLeft + sqrtNumberRight).roundTo(places: 2) as NSNumber
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {

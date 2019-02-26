@@ -75,16 +75,6 @@ class MathExpression: CustomStringConvertible {
     }
     
     
-    
-    
-    // returns random plus, minus, divide, mulitply equations
-    static func random() -> MathExpression {
-        let lhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
-        let rhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
-        
-        return MathExpression.init(lhs: lhs, rhs: rhs, operator: .random())
-    }
-    
     // returns random Adding equations
     static func randomAddition() -> MathExpression {
         let lhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
@@ -104,15 +94,15 @@ class MathExpression: CustomStringConvertible {
     // returns random Dividing equations
     static func randomDivide() -> MathExpression {
         let lhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
-        let rhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
+        let rhs = MathElement.Integer(value: Int.random(in: 1...15))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .divide)
     }
     
     // returns random Multiplying equations
     static func randomMultiply() -> MathExpression {
-        let lhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
-        let rhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
+        let lhs = MathElement.Integer(value: Int(arc4random_uniform(50)))
+        let rhs = MathElement.Integer(value: Int(arc4random_uniform(50)))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .multiply)
     }
@@ -127,15 +117,15 @@ class MathExpression: CustomStringConvertible {
     
     // returns random Multiply/Division equations
     static func randomDivMultiply() -> MathExpression {
-        let lhs = MathElement.Integer(value: Int(arc4random_uniform(60)))
-        let rhs = MathElement.Integer(value: Int(arc4random_uniform(60)))
+        let lhs = MathElement.Integer(value: Int(arc4random_uniform(50)))
+        let rhs = MathElement.Integer(value: Int(arc4random_uniform(50)))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .randomDivMul())
     }
     
     // returns random plus eq to find x
     static func randomLinear() -> MathExpression {
-        let lhs = MathElement.Integer(value: Int(arc4random_uniform(30)))
+        let lhs = MathElement.Integer(value: Int.random(in: 1...15))
         let rhs = MathElement.Integer(value: Int(arc4random_uniform(30)))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .plus)
