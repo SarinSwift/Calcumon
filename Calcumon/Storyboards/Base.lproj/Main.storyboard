@@ -37,10 +37,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8Q-g2-emo">
-                                            <rect key="frame" x="0.0" y="78" width="200" height="44"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8Q-g2-emo">
+                                            <rect key="frame" x="0.0" y="20" width="200" height="160"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="6Hv-O5-pJH"/>
+                                                <constraint firstAttribute="height" constant="160" id="6Hv-O5-pJH"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="38"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,17 +137,17 @@
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="centerY" secondItem="ezh-F3-L4L" secondAttribute="centerY" constant="-30" id="zY2-Bm-loB"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMk-8r-MG1">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMk-8r-MG1" customClass="ShakingTextField" customModule="Calcumon" customModuleProvider="target">
                                 <rect key="frame" x="16" y="313.5" width="343" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="5Ld-Ly-MIt"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hWK-Qe-MzQ">
-                                <rect key="frame" x="37.5" y="473.5" width="300" height="44"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="hWK-Qe-MzQ">
+                                <rect key="frame" x="30" y="473.5" width="315" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuB-7u-rmY">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="44"/>
@@ -156,6 +156,7 @@
                                             <constraint firstAttribute="width" constant="140" id="s9O-cn-hdO"/>
                                             <constraint firstAttribute="height" constant="44" id="ydy-7V-8vd"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -169,12 +170,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-xw-zZf">
-                                        <rect key="frame" x="160" y="0.0" width="140" height="44"/>
+                                        <rect key="frame" x="175" y="0.0" width="140" height="44"/>
                                         <color key="backgroundColor" red="0.48666456083289694" green="0.37078993751833961" blue="0.83217887376165633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Zeh-f1-Jgp"/>
                                             <constraint firstAttribute="width" constant="140" id="h4B-eu-9dJ"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Skip">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -190,12 +192,20 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpe-3n-e5i">
-                                <rect key="frame" x="107.5" y="453.5" width="160" height="160"/>
+                                <rect key="frame" x="117.5" y="473.5" width="140" height="44"/>
+                                <color key="backgroundColor" red="0.3411764705882353" green="0.62352941176470589" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="xpe-3n-e5i" secondAttribute="height" multiplier="1:1" id="5go-rt-EoZ"/>
-                                    <constraint firstAttribute="width" constant="160" id="SLQ-Iw-Mdh"/>
+                                    <constraint firstAttribute="height" constant="44" id="0BU-zI-sTz"/>
+                                    <constraint firstAttribute="width" constant="140" id="ZUd-f2-daM"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Continue"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="splashButtonTapped:" destination="Zle-33-ki0" eventType="touchUpInside" id="vgA-y6-VpR"/>
                                 </connections>
@@ -215,7 +225,7 @@
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="dkX-M0-UDj"/>
                             <constraint firstItem="hWK-Qe-MzQ" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="tjQ-gK-KVp"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="YMk-8r-MG1" secondAttribute="trailing" constant="16" id="u3U-CM-mDg"/>
-                            <constraint firstItem="xpe-3n-e5i" firstAttribute="top" secondItem="YMk-8r-MG1" secondAttribute="bottom" constant="50" id="wLr-hx-YRw"/>
+                            <constraint firstItem="xpe-3n-e5i" firstAttribute="top" secondItem="YMk-8r-MG1" secondAttribute="bottom" constant="70" id="wLr-hx-YRw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h7s-vz-mX3"/>
                         <connections>
@@ -268,7 +278,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="pc4-5R-RUy"/>
                                         </constraints>
-                                        <state key="normal" title="Close">
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Ok">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -325,6 +336,7 @@
                         <viewLayoutGuide key="safeArea" id="c0I-CK-NI8"/>
                     </view>
                     <connections>
+                        <outlet property="alertView" destination="t8f-O1-alA" id="XUX-kJ-U6j"/>
                         <outlet property="closeButton" destination="Slo-hh-X0t" id="EEk-1d-Pqp"/>
                     </connections>
                 </viewController>
@@ -333,7 +345,4 @@
             <point key="canvasLocation" x="1944.8" y="-39.130434782608695"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Continue" width="185" height="178"/>
-    </resources>
 </document>

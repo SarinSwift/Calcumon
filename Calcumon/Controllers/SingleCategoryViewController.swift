@@ -17,7 +17,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var solveView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
     
-    @IBOutlet weak var answerTextField: UITextField!
+    @IBOutlet weak var answerTextField: ShakingTextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     @IBOutlet weak var splashContinueButton: UIButton!
@@ -66,7 +66,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             // Check if answer is correct
             if answerInput == "\(self.result)" {
                 // Answer was correct
-                // TODO: animate the popup of splash button
+                // TODO: animate the popup splashContinueButton button
                 self.answerTextField.layer.borderColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
                 self.answerTextField.layer.cornerRadius = 4.5
                 self.answerTextField.layer.borderWidth = 2.0
@@ -75,10 +75,10 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.continueButton.isHidden = true
             } else {
                 // Answer was incorrect
-                // TODO: animate the answerTextField to shake
                 self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
                 self.answerTextField.layer.cornerRadius = 4.5
                 self.answerTextField.layer.borderWidth = 2.0
+                self.answerTextField.shake()
                 self.answerTextField.text = ""
                 self.answerTextField.placeholder = "Answer"
             }
@@ -102,7 +102,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
 //                        DispatchQueue.main.async {
 //                            if str == self.answerTextField.text {
 //                                // Answer was correct
-//                                // TODO: animate the popup of splash button
 //                                self.answerTextField.layer.borderColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
 //                                self.answerTextField.layer.cornerRadius = 4.5
 //                                self.answerTextField.layer.borderWidth = 2.0
@@ -111,7 +110,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
 //                                self.continueButton.isHidden = true
 //                            } else {
 //                                // Answer was incorrect
-//                                // TODO: animate the answerTextField to shake
 //                                self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
 //                                self.answerTextField.layer.cornerRadius = 4.5
 //                                self.answerTextField.layer.borderWidth = 2.0

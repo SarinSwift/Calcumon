@@ -10,6 +10,7 @@ import UIKit
 
 class CustomAlertViewController: UIViewController {
 
+    @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var closeButton: UIButton!
     
     override func viewDidLoad() {

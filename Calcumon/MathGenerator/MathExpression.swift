@@ -121,8 +121,8 @@ class MathExpression: CustomStringConvertible {
     
     // returns random Multiply/Division equations
     static func randomDivMultiply() -> MathExpression {
-        let lhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
-        let rhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
+        let lhs = MathElement.Integer(value: Int(arc4random_uniform(60)))
+        let rhs = MathElement.Integer(value: Int(arc4random_uniform(60)))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .randomDivMul())
     }
