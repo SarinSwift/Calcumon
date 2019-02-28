@@ -10,10 +10,11 @@ import UIKit
 
 class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     
-    // results of the math equation
+    // results of the math equation, and total sum of points!!
     var result: NSNumber = 0
-    var viewCon = ViewController()
-
+    var pointsResult: Int = 0
+    
+    
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var topContainerView: UIView!
@@ -33,11 +34,11 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         pointsLabel.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Inspiration-10"))
         
         // Setting the points score
-        var pointsDefault = UserDefaults.standard
+        let pointsDefault = UserDefaults.standard
         if pointsDefault.value(forKey: "points") != nil {
-            pointsLabel.text = "Points: \(String(describing: pointsDefault.value(forKey: "points")!))"
+            pointsResult = pointsDefault.value(forKey: "points") as! Int
+            pointsLabel.text = "Points: \(pointsResult)"
         }
-        
         
         setupNavBar()
         callingEquations()
@@ -74,8 +75,15 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             self.addChild(vc)
             self.view.addSubview(vc.view)
             
-        } else {
-            // Check if answer is correct
+        } else if answerInput.isContainsLetters {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
+            vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+            vc.textBody.text = "Answer must only contain numbers!"
+            self.addChild(vc)
+            self.view.addSubview(vc.view)
+        }
+        else {
+            // Checking answer
             if answerInput == "\(self.result)" {
                 // Answer was correct
                 // TODO: animate the popup splashContinueButton button
@@ -85,15 +93,14 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.splashContinueButton.isHidden = false
                 self.submitButton.isHidden = true
                 self.continueButton.isHidden = true
-                self.viewCon.points += 10
+                self.pointsResult += 10
                 
-                
-                // Userdefaults to set pointsLabel
+                // Settign data in Userdefaults for the pointsLabel
                 // accessing the core data of our application and storing info inside of there
-                var pointsDefault = UserDefaults.standard
+                let pointsDefualt = UserDefaults.standard
                 // can grab this data later on with the "points" key
-                pointsDefault.set(viewCon.points, forKey: "points")
-                pointsDefault.synchronize()
+                pointsDefualt.set(pointsResult, forKey: "points")
+                pointsDefualt.synchronize()
                 
             } else {
                 // Answer was incorrect
@@ -103,21 +110,17 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.answerTextField.shake()
                 self.answerTextField.text = ""
                 self.answerTextField.placeholder = "Answer"
-                self.viewCon.points -= 5
+                self.pointsResult -= 5
                 
-                
-                // Userdefaults to set pointsLabel
-                var pointsDefault = UserDefaults.standard
-                // can grab this data later on with the "points" key
-                pointsDefault.set(viewCon.points, forKey: "points")
-                pointsDefault.synchronize()
-                
-                
+                // Settign data in Userdefaults for the pointsLabel
+                let pointsDefualt = UserDefaults.standard
+                pointsDefualt.set(pointsResult, forKey: "points")
+                pointsDefualt.synchronize()
             }
         }
         
-        print("Collected points: \(viewCon.points)")
-        pointsLabel.text = "Points: \(viewCon.points)"
+        print("Points: \(pointsResult)")
+        pointsLabel.text = "Points: \(pointsResult)"
     }
     
     @objc func keyboardWillChange(notification: Notification) {

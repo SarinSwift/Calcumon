@@ -25,6 +25,7 @@
 		049956BA220B703400571DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049956B9220B703400571DDC /* Assets.xcassets */; };
 		049956BD220B703400571DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049956BB220B703400571DDC /* LaunchScreen.storyboard */; };
 		04A9D2982225B9A9008D7CCD /* ShakingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9D2972225B9A9008D7CCD /* ShakingTextField.swift */; };
+		04B019DB222887A400B75555 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B019DA222887A400B75555 /* StringExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		049956BC220B703400571DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049956BE220B703400571DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A9D2972225B9A9008D7CCD /* ShakingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingTextField.swift; sourceTree = "<group>"; };
+		04B019DA222887A400B75555 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */,
 				047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */,
+				04B019DA222887A400B75555 /* StringExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				0499441222212148008A0427 /* MathExpression.swift in Sources */,
 				047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */,
 				04A9D2982225B9A9008D7CCD /* ShakingTextField.swift in Sources */,
+				04B019DB222887A400B75555 /* StringExt.swift in Sources */,
 				047DA54C2221CA3800ACA52E /* MathElement.swift in Sources */,
 				0400E966220E4555009452C1 /* UltravisualLayout.swift in Sources */,
 				049956B5220B703300571DDC /* ViewController.swift in Sources */,

@@ -317,7 +317,7 @@
                                             <constraint firstAttribute="width" constant="200" id="4Pd-nJ-tTw"/>
                                             <constraint firstAttribute="height" constant="50" id="MQm-Q1-dCe"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -352,6 +352,7 @@
                     <connections>
                         <outlet property="alertView" destination="t8f-O1-alA" id="XUX-kJ-U6j"/>
                         <outlet property="closeButton" destination="Slo-hh-X0t" id="EEk-1d-Pqp"/>
+                        <outlet property="textBody" destination="WzK-6M-am1" id="IvS-lq-KQW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzk-sa-oda" userLabel="First Responder" sceneMemberID="firstResponder"/>
