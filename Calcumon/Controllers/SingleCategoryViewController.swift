@@ -10,6 +10,7 @@ import UIKit
 
 class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     
+    // results of the math equation
     var result: NSNumber = 0
     var viewCon = ViewController()
 
@@ -30,6 +31,13 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         keyboardListenEvents()
         
         pointsLabel.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Inspiration-10"))
+        
+        // Setting the points score
+        var pointsDefault = UserDefaults.standard
+        if pointsDefault.value(forKey: "points") != nil {
+            pointsLabel.text = "Points: \(String(describing: pointsDefault.value(forKey: "points")!))"
+        }
+        
         
         setupNavBar()
         callingEquations()
@@ -78,6 +86,15 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.submitButton.isHidden = true
                 self.continueButton.isHidden = true
                 self.viewCon.points += 10
+                
+                
+                // Userdefaults to set pointsLabel
+                // accessing the core data of our application and storing info inside of there
+                var pointsDefault = UserDefaults.standard
+                // can grab this data later on with the "points" key
+                pointsDefault.set(viewCon.points, forKey: "points")
+                pointsDefault.synchronize()
+                
             } else {
                 // Answer was incorrect
                 self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
@@ -87,6 +104,15 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.answerTextField.text = ""
                 self.answerTextField.placeholder = "Answer"
                 self.viewCon.points -= 5
+                
+                
+                // Userdefaults to set pointsLabel
+                var pointsDefault = UserDefaults.standard
+                // can grab this data later on with the "points" key
+                pointsDefault.set(viewCon.points, forKey: "points")
+                pointsDefault.synchronize()
+                
+                
             }
         }
         

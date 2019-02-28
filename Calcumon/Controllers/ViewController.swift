@@ -19,6 +19,10 @@ class ViewController: UICollectionViewController {
         
         collectionView?.backgroundColor = .white
         collectionView?.decelerationRate = .fast
+        
+        
+        // TODO: Saving the current point to whatever it is
+
     }
 }
 
