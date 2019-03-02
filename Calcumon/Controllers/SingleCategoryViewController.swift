@@ -21,6 +21,8 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var solveView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
     
+    @IBOutlet weak var plusPoints: UILabel!
+    
     @IBOutlet weak var answerTextField: ShakingTextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
@@ -30,8 +32,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         keyboardListenEvents()
-        
-        pointsLabel.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "Inspiration-10"))
         
         // Setting the points score
         let pointsDefault = UserDefaults.standard
@@ -44,6 +44,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         callingEquations()
         print("viewdidload method result is: \(result)")
         splashContinueButton.isHidden = true
+        plusPoints.alpha = 0
     }
     
     func keyboardListenEvents() {
@@ -94,6 +95,18 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.submitButton.isHidden = true
                 self.continueButton.isHidden = true
                 self.pointsResult += 10
+                
+                // Animate the pointsLabel
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.plusPoints.alpha = 1
+                    self.plusPoints.transform = CGAffineTransform(scaleX: 2, y: 2)
+                }) { (_) in
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.plusPoints.transform = CGAffineTransform.identity
+                        self.plusPoints.alpha = 0
+                    })
+                }
+                
                 
                 // Settign data in Userdefaults for the pointsLabel
                 // accessing the core data of our application and storing info inside of there

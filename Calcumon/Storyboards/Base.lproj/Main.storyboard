@@ -123,14 +123,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqU-8C-q9c">
-                                        <rect key="frame" x="220" y="15" width="140" height="44"/>
+                                        <rect key="frame" x="235" y="0.0" width="140" height="44"/>
                                         <color key="backgroundColor" red="1" green="0.32835649360000002" blue="0.27237962290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="NU5-iz-3Fe"/>
+                                            <constraint firstAttribute="height" constant="44" id="NMz-30-jw2"/>
                                             <constraint firstAttribute="width" constant="140" id="qwE-va-FfA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7O7-Qp-6nb">
+                                        <rect key="frame" x="164" y="237.5" width="47.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                        <color key="textColor" red="0.27450980392156865" green="0.49411764705882355" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -138,15 +144,17 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="orR-Y3-ZCf" secondAttribute="trailing" constant="15" id="2Cu-Dh-3K8"/>
                                     <constraint firstItem="djl-eL-bRU" firstAttribute="centerX" secondItem="ezh-F3-L4L" secondAttribute="centerX" id="6a1-kq-1nP"/>
-                                    <constraint firstAttribute="trailing" secondItem="WqU-8C-q9c" secondAttribute="trailing" constant="15" id="DJm-rE-Xts"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="height" secondItem="ezh-F3-L4L" secondAttribute="height" multiplier="0.3" id="Etb-OP-XU6"/>
+                                    <constraint firstAttribute="bottom" secondItem="7O7-Qp-6nb" secondAttribute="bottom" constant="60" id="IdW-ue-hyx"/>
+                                    <constraint firstItem="WqU-8C-q9c" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="top" id="LKh-Ik-dVU"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="top" secondItem="djl-eL-bRU" secondAttribute="bottom" constant="12" id="Y7j-XP-8RT"/>
                                     <constraint firstItem="YiX-9l-pZd" firstAttribute="top" secondItem="orR-Y3-ZCf" secondAttribute="top" constant="10" id="iVF-B6-mUt"/>
-                                    <constraint firstItem="WqU-8C-q9c" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="top" constant="15" id="j4K-6h-rwl"/>
+                                    <constraint firstAttribute="trailing" secondItem="WqU-8C-q9c" secondAttribute="trailing" id="jC8-UG-xhS"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="centerX" secondItem="ezh-F3-L4L" secondAttribute="centerX" id="lT7-ZG-xpH"/>
                                     <constraint firstItem="YiX-9l-pZd" firstAttribute="leading" secondItem="orR-Y3-ZCf" secondAttribute="leading" constant="5" id="miA-qm-lqT"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="bottom" secondItem="YiX-9l-pZd" secondAttribute="bottom" constant="10" id="pps-vp-lVk"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="trailing" secondItem="YiX-9l-pZd" secondAttribute="trailing" constant="5" id="tqg-9Z-56w"/>
+                                    <constraint firstItem="7O7-Qp-6nb" firstAttribute="centerX" secondItem="ezh-F3-L4L" secondAttribute="centerX" id="vx2-q9-bjQ"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="centerY" secondItem="ezh-F3-L4L" secondAttribute="centerY" constant="-30" id="zY2-Bm-loB"/>
                                 </constraints>
                             </view>
@@ -253,6 +261,7 @@
                         <outlet property="answerTextField" destination="YMk-8r-MG1" id="taB-Q7-hd9"/>
                         <outlet property="continueButton" destination="rBa-xw-zZf" id="XvK-y6-BHL"/>
                         <outlet property="instructionsLabel" destination="djl-eL-bRU" id="K8m-yf-BRa"/>
+                        <outlet property="plusPoints" destination="7O7-Qp-6nb" id="AUm-FL-rwr"/>
                         <outlet property="pointsLabel" destination="WqU-8C-q9c" id="DiE-4o-ej8"/>
                         <outlet property="questionLabel" destination="YiX-9l-pZd" id="xIT-Xv-VI3"/>
                         <outlet property="solveView" destination="orR-Y3-ZCf" id="4Yc-ft-LW2"/>
