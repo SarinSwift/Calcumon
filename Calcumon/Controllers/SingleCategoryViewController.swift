@@ -13,7 +13,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     // results of the math equation, and total sum of points!!
     var result: NSNumber = 0
     var pointsResult: Int = 0
-    
+    var numberOfEquations: Int = 9
     
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UILabel!
@@ -117,6 +117,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 pointsDefualt.set(pointsResult, forKey: "points")
                 pointsDefualt.synchronize()
                 
+                numberOfEquations += 1
             } else {
                 // Answer was incorrect
                 self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
@@ -143,7 +144,20 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 let pointsDefualt = UserDefaults.standard
                 pointsDefualt.set(pointsResult, forKey: "points")
                 pointsDefualt.synchronize()
+                
+                numberOfEquations += 1
             }
+            
+            // When users have answered up to 10 times:
+            if numberOfEquations == 10 {
+                let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+                guard let profileVC = story.instantiateViewController(withIdentifier: "profileLog") as? ProfileLogViewController else { return }
+//                self.navigationController?.pushViewController(profileVC, animated: false)
+                self.present(profileVC, animated: false, completion: nil)
+                // set back to 0
+                numberOfEquations = 0
+            }
+            
         }
         
         print("Points: \(pointsResult)")
@@ -181,16 +195,16 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     
     func setupNavBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backToMainPage))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Pro", style: .plain, target: self, action: #selector(showMainPage))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Pro", style: .plain, target: self, action: #selector(showMainPage))
     }
     @objc func backToMainPage() {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
-    @objc func showMainPage() {
-        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let profileVC = story.instantiateViewController(withIdentifier: "profileLog") as? ProfileLogViewController else { return }
-        self.navigationController?.pushViewController(profileVC, animated: true)
-    }
+//    @objc func showMainPage() {
+//        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        guard let profileVC = story.instantiateViewController(withIdentifier: "profileLog") as? ProfileLogViewController else { return }
+//        self.navigationController?.pushViewController(profileVC, animated: true)
+//    }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         // Update the questionLabel to another problem

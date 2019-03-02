@@ -10,6 +10,9 @@ import UIKit
 
 class ProfileLogViewController: UIViewController {
 
+    @IBOutlet weak var downBtn: UIButton!
+    @IBOutlet weak var whiteView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +20,11 @@ class ProfileLogViewController: UIViewController {
     }
     
 
+    @IBAction func downBtnTapped(_ sender: UIButton) {
+        self.dismiss(animated: false, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
