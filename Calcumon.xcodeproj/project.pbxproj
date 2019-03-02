@@ -14,6 +14,7 @@
 		0400E972220E5E11009452C1 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400E971220E5E11009452C1 /* Inspirations.xcassets */; };
 		0405F34C221CBB8700B6C70F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F34B221CBB8700B6C70F /* NetworkManager.swift */; };
 		0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */; };
+		0452896E222B02D50072D3AC /* ProfileLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896D222B02D50072D3AC /* ProfileLogViewController.swift */; };
 		047DA54C2221CA3800ACA52E /* MathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54B2221CA3800ACA52E /* MathElement.swift */; };
 		047DA54E2221CA4F00ACA52E /* MathOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54D2221CA4F00ACA52E /* MathOperator.swift */; };
 		047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54F2222677200ACA52E /* CustomAlertViewController.swift */; };
@@ -37,6 +38,7 @@
 		0400E971220E5E11009452C1 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
 		0405F34B221CBB8700B6C70F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCatVCRandomEquations.swift; sourceTree = "<group>"; };
+		0452896D222B02D50072D3AC /* ProfileLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLogViewController.swift; sourceTree = "<group>"; };
 		047DA54B2221CA3800ACA52E /* MathElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathElement.swift; sourceTree = "<group>"; };
 		047DA54D2221CA4F00ACA52E /* MathOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathOperator.swift; sourceTree = "<group>"; };
 		047DA54F2222677200ACA52E /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				049956B4220B703300571DDC /* ViewController.swift */,
 				0400B9C22217423800720075 /* SingleCategoryViewController.swift */,
 				047DA54F2222677200ACA52E /* CustomAlertViewController.swift */,
+				0452896D222B02D50072D3AC /* ProfileLogViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				047DA54C2221CA3800ACA52E /* MathElement.swift in Sources */,
 				0400E966220E4555009452C1 /* UltravisualLayout.swift in Sources */,
 				049956B5220B703300571DDC /* ViewController.swift in Sources */,
+				0452896E222B02D50072D3AC /* ProfileLogViewController.swift in Sources */,
 				049956B3220B703300571DDC /* AppDelegate.swift in Sources */,
 				0400E962220E3F90009452C1 /* CategoryCell.swift in Sources */,
 				047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */,

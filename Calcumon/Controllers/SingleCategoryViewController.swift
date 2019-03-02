@@ -179,36 +179,17 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         answerTextField.placeholder = "Answer"
     }
     
-    func callingEquations() {
-        if self.title == "Addition" {
-            getRandomAdd()
-        } else if self.title == "Subtraction" {
-            getRandomSub()
-        } else if self.title == "Multiplication" {
-            getRandomMul()
-        } else if self.title == "Division" {
-            getRandomDiv()
-        } else if self.title == "Addition & Subtraction" {
-            getRandomAddSub()
-        } else if self.title == "Division & Mulitplication" {
-            getRandomDivMul()
-        } else if self.title == "Basic Math" {
-            getRandomBasMath()
-        } else if self.title == "Square Root" {
-            getRandomRoot()
-        } else if self.title == "Linear Equation" {
-            instructionsLabel.text = "Solve for X"
-            getRandomLinearEq()
-        } else if self.title == "Radicals" {
-            getRandomRad()
-        }
-    }
-    
     func setupNavBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backToMainPage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Pro", style: .plain, target: self, action: #selector(showMainPage))
     }
     @objc func backToMainPage() {
         self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    @objc func showMainPage() {
+        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let profileVC = story.instantiateViewController(withIdentifier: "profileLog") as? ProfileLogViewController else { return }
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {

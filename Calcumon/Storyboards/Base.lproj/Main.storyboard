@@ -76,9 +76,9 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q67-5W-VAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189.59999999999999" y="-39.130434782608695"/>
+            <point key="canvasLocation" x="-281" y="-39"/>
         </scene>
-        <!--MathCategor-->
+        <!--Single Category View Controller-->
         <scene sceneID="29x-tL-aEl">
             <objects>
                 <viewController storyboardIdentifier="singleCategoryView" id="Zle-33-ki0" customClass="SingleCategoryViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,13 +124,12 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqU-8C-q9c">
                                         <rect key="frame" x="235" y="0.0" width="140" height="44"/>
-                                        <color key="backgroundColor" red="1" green="0.32941176470588235" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="NMz-30-jw2"/>
                                             <constraint firstAttribute="width" constant="140" id="qwE-va-FfA"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7O7-Qp-6nb">
@@ -172,30 +171,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuB-7u-rmY">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="44"/>
-                                        <color key="backgroundColor" red="0.79872923635589288" green="0.31129908142742679" blue="0.25611109248181235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.48627450980392156" green="0.37254901960784315" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="s9O-cn-hdO"/>
                                             <constraint firstAttribute="height" constant="44" id="ydy-7V-8vd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Submit">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="submitButtonTapped:" destination="Zle-33-ki0" eventType="touchUpInside" id="Ll1-C0-hkw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-xw-zZf">
-                                        <rect key="frame" x="175" y="0.0" width="140" height="44"/>
-                                        <color key="backgroundColor" red="0.48666456083289694" green="0.37078993751833961" blue="0.83217887376165633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="Zeh-f1-Jgp"/>
-                                            <constraint firstAttribute="width" constant="140" id="h4B-eu-9dJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <state key="normal" title="Skip">
@@ -207,7 +186,27 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="continueButtonPressed:" destination="Zle-33-ki0" eventType="touchUpInside" id="MTP-4S-sOR"/>
+                                            <action selector="continueButtonPressed:" destination="Zle-33-ki0" eventType="touchUpInside" id="R3J-uU-xeR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBa-xw-zZf">
+                                        <rect key="frame" x="175" y="0.0" width="140" height="44"/>
+                                        <color key="backgroundColor" red="0.94901960784313721" green="0.69803921568627447" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Zeh-f1-Jgp"/>
+                                            <constraint firstAttribute="width" constant="140" id="h4B-eu-9dJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="submitButtonTapped:" destination="Zle-33-ki0" eventType="touchUpInside" id="c9L-sa-phe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -254,19 +253,16 @@
                             <outletCollection property="gestureRecognizers" destination="qhS-s3-jtj" appends="YES" id="Y4a-49-E71"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="MathCategor" id="EEp-Lx-xbf">
-                        <barButtonItem key="backBarButtonItem" title="&quot;Back&quot;" id="dPi-bd-BRC"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="answerTextField" destination="YMk-8r-MG1" id="taB-Q7-hd9"/>
-                        <outlet property="continueButton" destination="rBa-xw-zZf" id="XvK-y6-BHL"/>
+                        <outlet property="continueButton" destination="yuB-7u-rmY" id="l7O-v9-mnR"/>
                         <outlet property="instructionsLabel" destination="djl-eL-bRU" id="K8m-yf-BRa"/>
                         <outlet property="plusPoints" destination="7O7-Qp-6nb" id="AUm-FL-rwr"/>
                         <outlet property="pointsLabel" destination="WqU-8C-q9c" id="DiE-4o-ej8"/>
                         <outlet property="questionLabel" destination="YiX-9l-pZd" id="xIT-Xv-VI3"/>
                         <outlet property="solveView" destination="orR-Y3-ZCf" id="4Yc-ft-LW2"/>
                         <outlet property="splashContinueButton" destination="xpe-3n-e5i" id="ddI-mM-0th"/>
-                        <outlet property="submitButton" destination="yuB-7u-rmY" id="FVn-ao-2ml"/>
+                        <outlet property="submitButton" destination="rBa-xw-zZf" id="Gxb-Fk-7G2"/>
                         <outlet property="topContainerView" destination="ezh-F3-L4L" id="VRn-JK-L5f"/>
                     </connections>
                 </viewController>
@@ -283,6 +279,21 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1088.8" y="-39.130434782608695"/>
+        </scene>
+        <!--Profile Log View Controller-->
+        <scene sceneID="asD-Gk-D7q">
+            <objects>
+                <viewController storyboardIdentifier="profileLog" id="ZLT-Ap-3rt" customClass="ProfileLogViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RF9-TD-bpn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vZr-sM-lsM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eoR-U9-RAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2214" y="365"/>
         </scene>
         <!--Custom Alert View Controller-->
         <scene sceneID="nFU-PF-JA5">
@@ -366,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzk-sa-oda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944.8" y="-39.130434782608695"/>
+            <point key="canvasLocation" x="2215" y="-390"/>
         </scene>
     </scenes>
 </document>

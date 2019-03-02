@@ -10,6 +10,32 @@ import Foundation
 import UIKit
 
 extension SingleCategoryViewController {
+    
+    func callingEquations() {
+        if self.title == "Addition" {
+            getRandomAdd()
+        } else if self.title == "Subtraction" {
+            getRandomSub()
+        } else if self.title == "Multiplication" {
+            getRandomMul()
+        } else if self.title == "Division" {
+            getRandomDiv()
+        } else if self.title == "Addition & Subtraction" {
+            getRandomAddSub()
+        } else if self.title == "Division & Mulitplication" {
+            getRandomDivMul()
+        } else if self.title == "Basic Math" {
+            getRandomBasMath()
+        } else if self.title == "Square Root" {
+            getRandomRoot()
+        } else if self.title == "Linear Equation" {
+            instructionsLabel.text = "Solve for X"
+            getRandomLinearEq()
+        } else if self.title == "Radicals" {
+            getRandomRad()
+        }
+    }
+    
     func getRandomAdd() {
         let randomEquation = MathExpression.randomAddition()
         result = randomEquation.result as! NSNumber
