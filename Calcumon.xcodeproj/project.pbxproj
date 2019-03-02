@@ -13,6 +13,7 @@
 		0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */; };
 		0400E972220E5E11009452C1 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400E971220E5E11009452C1 /* Inspirations.xcassets */; };
 		0405F34C221CBB8700B6C70F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F34B221CBB8700B6C70F /* NetworkManager.swift */; };
+		0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */; };
 		047DA54C2221CA3800ACA52E /* MathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54B2221CA3800ACA52E /* MathElement.swift */; };
 		047DA54E2221CA4F00ACA52E /* MathOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54D2221CA4F00ACA52E /* MathOperator.swift */; };
 		047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54F2222677200ACA52E /* CustomAlertViewController.swift */; };
@@ -35,6 +36,7 @@
 		0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		0400E971220E5E11009452C1 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
 		0405F34B221CBB8700B6C70F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCatVCRandomEquations.swift; sourceTree = "<group>"; };
 		047DA54B2221CA3800ACA52E /* MathElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathElement.swift; sourceTree = "<group>"; };
 		047DA54D2221CA4F00ACA52E /* MathOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathOperator.swift; sourceTree = "<group>"; };
 		047DA54F2222677200ACA52E /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */,
 				047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */,
 				04B019DA222887A400B75555 /* StringExt.swift */,
+				0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */,
 				0405F34C221CBB8700B6C70F /* NetworkManager.swift in Sources */,
 				0499441222212148008A0427 /* MathExpression.swift in Sources */,
 				047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */,

@@ -1,0 +1,100 @@
+//
+//  SingleCatVCRandomEquations.swift
+//  Calcumon
+//
+//  Created by Sarin Swift on 3/1/19.
+//  Copyright © 2019 sarinswift. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+extension SingleCategoryViewController {
+    func getRandomAdd() {
+        let randomEquation = MathExpression.randomAddition()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
+    }
+    
+    func getRandomSub() {
+        let randomEquation = MathExpression.randomSubtract()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
+    }
+    
+    func getRandomMul() {
+        let randomEquation = MathExpression.randomMultiply()
+        result = randomEquation.result as! NSNumber
+        questionLabel.text = randomEquation.description
+    }
+    
+    func getRandomDiv() {
+        let randomEquation = MathExpression.randomDivide()
+        let longNumber = randomEquation.result as! Double
+        result = longNumber.roundTo(places: 2) as NSNumber
+        questionLabel.text = randomEquation.description
+    }
+    
+    func getRandomRoot() {
+        let value = Int.random(in: 1...30)
+        let randInt = MathElement.Root(value: value)
+        let sqrtNumber = sqrt(Double(value))
+        result = Double(sqrtNumber).roundTo(places: 2) as NSNumber
+        questionLabel.text = randInt.nsExpressionFormatString
+    }
+    
+    func getRandomAddSub() {
+        let randomInt = Int.random(in: 1...2)
+        if randomInt == 1 {
+            getRandomAdd()
+        } else {
+            getRandomSub()
+        }
+    }
+    
+    func getRandomDivMul() {
+        let randomInt = Int.random(in: 1...2)
+        if randomInt == 1 {
+            getRandomDiv()
+        } else {
+            getRandomMul()
+        }
+    }
+    
+    func getRandomBasMath() {
+        let randomInt = Int.random(in: 1...4)
+        if randomInt == 1 {
+            getRandomAdd()
+        } else if randomInt == 2 {
+            getRandomSub()
+        } else if randomInt == 3 {
+            getRandomMul()
+        } else {
+            getRandomDiv()
+        }
+    }
+    
+    func getRandomLinearEq() {
+        let randomEquation = MathExpression.randomLinear()
+        // order of setting the question label must be here! before we find the result with the following method
+        questionLabel.text = randomEquation.descriptionLinear
+        
+        // This linear equation only works if it is the plus operator not other operators!!
+        let resultOfX = (Double(randomEquation.afterEqSign) - Double(randomEquation.rhs.description)!) / Double(randomEquation.lhs.description)!
+        print("result of x: \(resultOfX)")
+        result = NSNumber(value: resultOfX.roundTo(places: 2))
+        
+    }
+    
+    func getRandomRad() {
+        let randomEquation = MathExpression.randomAddRadicals()
+        questionLabel.text = randomEquation.description
+        
+        let afterRoot = randomEquation.lhs.description.range(of: "√")
+        let leftAfter = randomEquation.lhs.description[(afterRoot?.upperBound...)!]  // prints ints after the √
+        let rightAfter = randomEquation.rhs.description[(afterRoot?.upperBound...)!]
+        let sqrtNumberLeft = sqrt(Double(leftAfter)!)
+        let sqrtNumberRight = sqrt(Double(rightAfter)!)
+        result = (sqrtNumberLeft + sqrtNumberRight).roundTo(places: 2) as NSNumber
+    }
+}

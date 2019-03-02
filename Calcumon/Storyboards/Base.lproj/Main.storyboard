@@ -124,7 +124,7 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqU-8C-q9c">
                                         <rect key="frame" x="235" y="0.0" width="140" height="44"/>
-                                        <color key="backgroundColor" red="1" green="0.32835649360000002" blue="0.27237962290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="1" green="0.32941176470588235" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="NMz-30-jw2"/>
                                             <constraint firstAttribute="width" constant="140" id="qwE-va-FfA"/>
@@ -134,8 +134,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7O7-Qp-6nb">
-                                        <rect key="frame" x="164" y="237.5" width="47.5" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                                        <rect key="frame" x="133" y="189.5" width="109" height="84"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="70"/>
                                         <color key="textColor" red="0.27450980392156865" green="0.49411764705882355" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>

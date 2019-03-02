@@ -99,6 +99,8 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 // Animate the pointsLabel
                 UIView.animate(withDuration: 0.3, animations: {
                     self.plusPoints.alpha = 1
+                    self.plusPoints.text = "+10"
+                    self.plusPoints.textColor = #colorLiteral(red: 0.2745098039, green: 0.4941176471, blue: 0.1411764706, alpha: 1)
                     self.plusPoints.transform = CGAffineTransform(scaleX: 2, y: 2)
                 }) { (_) in
                     UIView.animate(withDuration: 0.3, animations: {
@@ -124,6 +126,18 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.answerTextField.text = ""
                 self.answerTextField.placeholder = "Answer"
                 self.pointsResult -= 5
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.plusPoints.alpha = 1
+                    self.plusPoints.text = "-5"
+                    self.plusPoints.textColor = #colorLiteral(red: 1, green: 0.3294117647, blue: 0.2705882353, alpha: 1)
+                    self.plusPoints.transform = CGAffineTransform(scaleX: 2, y: 2)
+                }) { (_) in
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.plusPoints.transform = CGAffineTransform.identity
+                        self.plusPoints.alpha = 0
+                    })
+                }
                 
                 // Settign data in Userdefaults for the pointsLabel
                 let pointsDefualt = UserDefaults.standard
@@ -197,99 +211,13 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
-    func getRandomAdd() {
-        let randomEquation = MathExpression.randomAddition()
-        result = randomEquation.result as! NSNumber
-        questionLabel.text = randomEquation.description
-    }
-    
-    func getRandomSub() {
-        let randomEquation = MathExpression.randomSubtract()
-        result = randomEquation.result as! NSNumber
-        questionLabel.text = randomEquation.description
-    }
-    
-    func getRandomMul() {
-        let randomEquation = MathExpression.randomMultiply()
-        result = randomEquation.result as! NSNumber
-        questionLabel.text = randomEquation.description
-    }
-    
-    func getRandomDiv() {
-        let randomEquation = MathExpression.randomDivide()
-        let longNumber = randomEquation.result as! Double
-        result = longNumber.roundTo(places: 2) as NSNumber
-        questionLabel.text = randomEquation.description
-    }
-    
-    func getRandomRoot() {
-        let value = Int.random(in: 1...30)
-        let randInt = MathElement.Root(value: value)
-        let sqrtNumber = sqrt(Double(value))
-        result = Double(sqrtNumber).roundTo(places: 2) as NSNumber
-        questionLabel.text = randInt.nsExpressionFormatString
-    }
-    
-    func getRandomAddSub() {
-        let randomInt = Int.random(in: 1...2)
-        if randomInt == 1 {
-            getRandomAdd()
-        } else {
-            getRandomSub()
-        }
-    }
-    
-    func getRandomDivMul() {
-        let randomInt = Int.random(in: 1...2)
-        if randomInt == 1 {
-            getRandomDiv()
-        } else {
-            getRandomMul()
-        }
-    }
-    
-    func getRandomBasMath() {
-        let randomInt = Int.random(in: 1...4)
-        if randomInt == 1 {
-            getRandomAdd()
-        } else if randomInt == 2 {
-            getRandomSub()
-        } else if randomInt == 3 {
-            getRandomMul()
-        } else {
-            getRandomDiv()
-        }
-    }
-    
-    func getRandomLinearEq() {
-        let randomEquation = MathExpression.randomLinear()
-        // order of setting the question label must be here! before we find the result with the following method
-        questionLabel.text = randomEquation.descriptionLinear
-        
-        // This linear equation only works if it is the plus operator not other operators!!
-        let resultOfX = (Double(randomEquation.afterEqSign) - Double(randomEquation.rhs.description)!) / Double(randomEquation.lhs.description)!
-        print("result of x: \(resultOfX)")
-        result = NSNumber(value: resultOfX.roundTo(places: 2))
-        
-    }
-    
-    func getRandomRad() {
-        let randomEquation = MathExpression.randomAddRadicals()
-        questionLabel.text = randomEquation.description
-        
-        let afterRoot = randomEquation.lhs.description.range(of: "√")
-        let leftAfter = randomEquation.lhs.description[(afterRoot?.upperBound...)!]  // prints ints after the √
-        let rightAfter = randomEquation.rhs.description[(afterRoot?.upperBound...)!]
-        let sqrtNumberLeft = sqrt(Double(leftAfter)!)
-        let sqrtNumberRight = sqrt(Double(rightAfter)!)
-        result = (sqrtNumberLeft + sqrtNumberRight).roundTo(places: 2) as NSNumber
-    }
-    
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         // Update the questionLabel to another problem
         callingEquations()
         answerTextField.layer.borderColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
         answerTextField.layer.borderWidth = 1
+        answerTextField.text = ""
+        answerTextField.placeholder = "Answer"
     }
     
 }
