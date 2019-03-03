@@ -13,7 +13,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     // results of the math equation, and total sum of points!!
     var result: NSNumber = 0
     var pointsResult: Int = 0
-    var numberOfEquations: Int = 0
+    var numberOfEquations: Int = 9
     var correctAnswers: Int = 0
     
     @IBOutlet weak var pointsLabel: UILabel!
@@ -155,7 +155,8 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 let story = UIStoryboard(name: "Main", bundle: Bundle.main)
                 guard let profileVC = story.instantiateViewController(withIdentifier: "profileLog") as? ProfileLogViewController else { return }
                 profileVC.allCorrect = correctAnswers
-                self.present(profileVC, animated: false, completion: nil)
+                profileVC.modalPresentationStyle = .overCurrentContext
+                self.present(profileVC, animated: true, completion: nil)
                 numberOfEquations = 0
             }
             

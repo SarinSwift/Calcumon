@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import PullToDismiss
 
 class ProfileLogViewController: UIViewController {
-    
+
+    private var pullToDismiss: PullToDismiss?
     var allCorrect: Int = 0
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var whiteView: UIView!
     
@@ -26,6 +29,15 @@ class ProfileLogViewController: UIViewController {
         scoreOutOfTenLabel.text = "\(allCorrect)/10"
         setupMainLabel()
         setupCommentsLabel()
+        
+        pullToDismiss = PullToDismiss(scrollView: tableView)
+        pullToDismiss?.backgroundEffect = BlurEffect.extraLight
+        pullToDismiss?.dismissableHeightPercentage = 0.5
+        pullToDismiss?.delegate = self as? UIScrollViewDelegate
+        
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+        
     }
     
     func setupBgGradient() {
@@ -64,6 +76,6 @@ class ProfileLogViewController: UIViewController {
     }
     
     @IBAction func menuBtnTapped(_ sender: UIButton) {
-        self.dismiss(animated: false, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

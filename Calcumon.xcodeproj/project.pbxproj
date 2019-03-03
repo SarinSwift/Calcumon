@@ -30,6 +30,7 @@
 		049956BD220B703400571DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049956BB220B703400571DDC /* LaunchScreen.storyboard */; };
 		04A9D2982225B9A9008D7CCD /* ShakingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9D2972225B9A9008D7CCD /* ShakingTextField.swift */; };
 		04B019DB222887A400B75555 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B019DA222887A400B75555 /* StringExt.swift */; };
+		D9D8A007ADC81CC685F24FD9 /* Pods_Calcumon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,9 @@
 		049956BE220B703400571DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A9D2972225B9A9008D7CCD /* ShakingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingTextField.swift; sourceTree = "<group>"; };
 		04B019DA222887A400B75555 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		907A9EECE82CE70B2C77D571 /* Pods-Calcumon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.release.xcconfig"; sourceTree = "<group>"; };
+		C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calcumon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBDD8B50BD6808759AB5D983 /* Pods-Calcumon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9D8A007ADC81CC685F24FD9 /* Pods_Calcumon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,11 +116,22 @@
 			path = MathGenerator;
 			sourceTree = "<group>";
 		};
+		0493B6BF33C234E552B5EAF4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBDD8B50BD6808759AB5D983 /* Pods-Calcumon.debug.xcconfig */,
+				907A9EECE82CE70B2C77D571 /* Pods-Calcumon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		049956A6220B703300571DDC = {
 			isa = PBXGroup;
 			children = (
 				049956B1220B703300571DDC /* Calcumon */,
 				049956B0220B703300571DDC /* Products */,
+				0493B6BF33C234E552B5EAF4 /* Pods */,
+				EF8794806D75EC030D47BDD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,6 +182,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		EF8794806D75EC030D47BDD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049956C1220B703400571DDC /* Build configuration list for PBXNativeTarget "Calcumon" */;
 			buildPhases = (
+				724B535D587120DD71E6C2BC /* [CP] Check Pods Manifest.lock */,
 				049956AB220B703300571DDC /* Sources */,
 				049956AC220B703300571DDC /* Frameworks */,
 				049956AD220B703300571DDC /* Resources */,
+				4501764ABC9A73235DB63713 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +258,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4501764ABC9A73235DB63713 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PullToDismiss/PullToDismiss.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PullToDismiss.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		724B535D587120DD71E6C2BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calcumon-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		049956AB220B703300571DDC /* Sources */ = {
@@ -400,6 +465,7 @@
 		};
 		049956C2220B703400571DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBDD8B50BD6808759AB5D983 /* Pods-Calcumon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -418,6 +484,7 @@
 		};
 		049956C3220B703400571DDC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 907A9EECE82CE70B2C77D571 /* Pods-Calcumon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
