@@ -9,14 +9,23 @@
 import UIKit
 
 class ProfileLogViewController: UIViewController {
+    
+    var allCorrect: Int = 0
 
-    @IBOutlet weak var downBtn: UIButton!
+    @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var whiteView: UIView!
+    
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var scoreOutOfTenLabel: UILabel!
+    @IBOutlet weak var commentsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupBgGradient()
+        
+        scoreOutOfTenLabel.text = "\(allCorrect)/10"
+        setupMainLabel()
+        setupCommentsLabel()
     }
     
     func setupBgGradient() {
@@ -28,19 +37,33 @@ class ProfileLogViewController: UIViewController {
         view.layer.insertSublayer(gradient, at: 0)
     }
     
-    @IBAction func downBtnTapped(_ sender: UIButton) {
+    func setupMainLabel() {
+        if 0...1 ~= allCorrect {
+            mainLabel.text = "POOR"
+        } else if 2...3 ~= allCorrect {
+            mainLabel.text = "AVERAGE"
+        } else if 4...5 ~= allCorrect {
+            mainLabel.text = "GOOD"
+        } else if 6...7 ~= allCorrect {
+            mainLabel.text = "VERY GOOD"
+        } else if 8...10 ~= allCorrect {
+            mainLabel.text = "EXCELLENT"
+        }
+    }
+    
+    func setupCommentsLabel() {
+        if 0...2 ~= allCorrect {
+            commentsLabel.text = "You have some studying to do! Make sure to try harder next time"
+        } else if 3...5 ~= allCorrect {
+            commentsLabel.text = "Your scores are pretty low:( Push yourself a little more and you'll get better!"
+        } else if 6...7 ~= allCorrect {
+            commentsLabel.text = "You are doing good so far. Keep up the good work."
+        } else if 8...10 ~= allCorrect {
+            commentsLabel.text = "You have done great so far. Keep up the great work!"
+        }
+    }
+    
+    @IBAction func menuBtnTapped(_ sender: UIButton) {
         self.dismiss(animated: false, completion: nil)
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -13,7 +13,8 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     // results of the math equation, and total sum of points!!
     var result: NSNumber = 0
     var pointsResult: Int = 0
-    var numberOfEquations: Int = 9
+    var numberOfEquations: Int = 0
+    var correctAnswers: Int = 0
     
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var instructionsLabel: UILabel!
@@ -118,6 +119,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 pointsDefualt.synchronize()
                 
                 numberOfEquations += 1
+                correctAnswers += 1
             } else {
                 // Answer was incorrect
                 self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
@@ -152,9 +154,8 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             if numberOfEquations == 10 {
                 let story = UIStoryboard(name: "Main", bundle: Bundle.main)
                 guard let profileVC = story.instantiateViewController(withIdentifier: "profileLog") as? ProfileLogViewController else { return }
-//                self.navigationController?.pushViewController(profileVC, animated: false)
+                profileVC.allCorrect = correctAnswers
                 self.present(profileVC, animated: false, completion: nil)
-                // set back to 0
                 numberOfEquations = 0
             }
             
