@@ -197,7 +197,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     
     func setupNavBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backToMainPage))
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Pro", style: .plain, target: self, action: #selector(showMainPage))
     }
     @objc func backToMainPage() {
         self.navigationController?.dismiss(animated: true, completion: nil)

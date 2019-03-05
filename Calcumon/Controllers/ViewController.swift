@@ -52,7 +52,7 @@ extension ViewController {
             let story = UIStoryboard(name: "Main", bundle: Bundle.main)
             guard let singleCategoryVC = story.instantiateViewController(withIdentifier: "singleCategoryView") as? SingleCategoryViewController else { return }
             let navController = UINavigationController(rootViewController: singleCategoryVC)
-        
+            navController.navigationBar.barTintColor = UIColor(patternImage: self.images[indexPath.row])
             // setting the title to the specific math category
             singleCategoryVC.title = self.categories[indexPath.row]
             self.present(navController, animated: true, completion: nil)
