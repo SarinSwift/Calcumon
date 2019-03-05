@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UICollectionViewController {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     let images = [#imageLiteral(resourceName: "Inspiration-01"), #imageLiteral(resourceName: "Inspiration-02"), #imageLiteral(resourceName: "Inspiration-03"), #imageLiteral(resourceName: "Inspiration-04"), #imageLiteral(resourceName: "Inspiration-05"), #imageLiteral(resourceName: "Inspiration-06"), #imageLiteral(resourceName: "Inspiration-07"), #imageLiteral(resourceName: "Inspiration-08"), #imageLiteral(resourceName: "Inspiration-09"), #imageLiteral(resourceName: "Inspiration-10"), #imageLiteral(resourceName: "Inspiration-11"), #imageLiteral(resourceName: "Inspiration-08"), #imageLiteral(resourceName: "Inspiration-13")]
     let categories = ["Basic Math", "Addition", "Subtraction", "Multiplication", "Division", "Addition & Subtraction", "Division & Mulitplication", "Square Root", "Linear Equation", "Radicals", "xDerivatives", "xLinear Algebra", "xVectors", "xMatrices", "xStatistics", "xLists"]
 

@@ -9,6 +9,10 @@
 import UIKit
 
 class CustomAlertViewController: UIViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     @IBOutlet weak var alertView: UIView!
     @IBOutlet weak var closeButton: UIButton!

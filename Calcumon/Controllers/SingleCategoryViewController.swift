@@ -40,7 +40,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             pointsResult = pointsDefault.value(forKey: "points") as! Int
             pointsLabel.text = "Points: \(pointsResult)"
         }
-        
+        navigationController?.navigationBar.barStyle = .blackTranslucent
         setupNavBar()
         callingEquations()
         print("viewdidload method result is: \(result)")
@@ -196,7 +196,10 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setupNavBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backToMainPage))
+        let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backToMainPage))
+        backButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+//        backButton.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 20)!], for: UIControl.State.normal)
+        navigationItem.leftBarButtonItem = backButton
     }
     @objc func backToMainPage() {
         self.navigationController?.dismiss(animated: true, completion: nil)

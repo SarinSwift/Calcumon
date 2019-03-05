@@ -10,17 +10,21 @@ import UIKit
 import PullToDismiss
 
 class ProfileLogViewController: UIViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     private var pullToDismiss: PullToDismiss?
     var allCorrect: Int = 0
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var whiteView: UIView!
     
     @IBOutlet weak var mainLabel: UILabel!
     @IBOutlet weak var scoreOutOfTenLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!
+    @IBOutlet weak var viewLogBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,8 +78,12 @@ class ProfileLogViewController: UIViewController {
             commentsLabel.text = "You have done great so far. Keep up the great work!"
         }
     }
-    
-    @IBAction func menuBtnTapped(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func viewLogBtnTapped(_ sender: UIButton) {
+        // present coming soon
+        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let profileVC = story.instantiateViewController(withIdentifier: "comingSoonId") as? ComingSoonViewController else { return }
+        profileVC.modalPresentationStyle = .overCurrentContext
+        self.present(profileVC, animated: true, completion: nil)
     }
+    
 }
