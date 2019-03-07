@@ -7,7 +7,7 @@ simple signup to setup your game user. It consists of multiple levels of calcumo
 * [Github](https://github.com/SarinSwift/Calcumon)
 
 ## Screen Casts
-![Main](Images/Mainpage.png) &nbsp; ![Addition](Images/Addition.png) ![AdditionCorr](Images/AdditionCorrect.png) &nbsp; ![Result](Images/Result.png) ![ComingSoon](Images/ComingSoon.png)
+&nbsp; &nbsp; &nbsp; ![Main](Images/Mainpage.png)  ![Addition](Images/Addition.png) ![AdditionCorr](Images/AdditionCorrect.png) ![Result](Images/Result.png) ![ComingSoon](Images/ComingSoon.png)
 
 ## Website Project
 * [Github](https://github.com/Coswold/Calcumon) 
