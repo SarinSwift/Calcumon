@@ -4,7 +4,10 @@ Calcumon is a web-based game involving a virtual world with mini-math games/acti
 simple signup to setup your game user. It consists of multiple levels of calcumon battles against opponents. Attacks can be used through tokens, and players earn tokens via completing math problems within the game. 
 
 ## iOS Project
-* [Github](https://github.com/SarinSwift/Calcumon) 
+* [Github](https://github.com/SarinSwift/Calcumon)
+
+## Screen Casts
+![Main](Images/Mainpage.png) &nbsp; ![Addition](Images/Addition.png) ![AdditionCorr](Images/AdditionCorrect.png) &nbsp; ![Result](Images/Result.png) ![ComingSoon](Images/ComingSoon.png)
 
 ## Website Project
 * [Github](https://github.com/Coswold/Calcumon) 
@@ -14,7 +17,7 @@ simple signup to setup your game user. It consists of multiple levels of calcumo
 
 ## Authors
 
-* **Sarin** - *Initial work* - [SarinSwift](https://github.com/SarinSwift)
-* **Javier** - *Initial work* - [javiier_am](https://github.com/javiermms)
-* **Anisha** - *Initial work* - [anisha7](https://github.com/Anisha7)
-* **Connor** - *Initial work* - [Coswold](https://github.com/Coswold)
+* **Sarin** - *Lead iOS developer, UI and UX designer* - [SarinSwift](https://github.com/SarinSwift)
+* **Javier** - *Back end developer, Animation Design* - [javiier_am](https://github.com/javiermms)
+* **Anisha** - *Front end developer, Animation design* - [anisha7](https://github.com/Anisha7)
+* **Connor** - *Back end developer* - [Coswold](https://github.com/Coswold)
