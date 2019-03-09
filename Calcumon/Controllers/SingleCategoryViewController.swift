@@ -13,7 +13,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     // results of the math equation, and total sum of points!!
     var result: NSNumber = 0
     var pointsResult: Int = 0
-    var numberOfEquations: Int = 9
+    var numberOfEquations: Int = 0
     var correctAnswers: Int = 0
     
     @IBOutlet weak var pointsLabel: UILabel!
@@ -88,7 +88,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             // Checking answer
             if answerInput == "\(self.result)" {
                 // Answer was correct
-                // TODO: animate the popup splashContinueButton button
                 self.answerTextField.layer.borderColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
                 self.answerTextField.layer.cornerRadius = 4.5
                 self.answerTextField.layer.borderWidth = 2.0
@@ -198,17 +197,11 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     func setupNavBar() {
         let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backToMainPage))
         backButton.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//        backButton.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Chalkduster", size: 20)!], for: UIControl.State.normal)
         navigationItem.leftBarButtonItem = backButton
     }
     @objc func backToMainPage() {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
-//    @objc func showMainPage() {
-//        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        guard let profileVC = story.instantiateViewController(withIdentifier: "profileLog") as? ProfileLogViewController else { return }
-//        self.navigationController?.pushViewController(profileVC, animated: true)
-//    }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         // Update the questionLabel to another problem

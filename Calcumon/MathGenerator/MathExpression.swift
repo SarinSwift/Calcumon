@@ -66,7 +66,6 @@ class MathExpression: CustomStringConvertible {
         return "\(leftString)X \(self.operator.rawValue) \(rightString) = \(randInt)"
     }
     
-    
     var result: Any? {
         let format = "\(lhs.nsExpressionFormatString) \(`operator`.rawValue) \(rhs.nsExpressionFormatString)"
         let expr = NSExpression(format: format)
@@ -93,7 +92,7 @@ class MathExpression: CustomStringConvertible {
     
     // returns random Dividing equations
     static func randomDivide() -> MathExpression {
-        let lhs = MathElement.Integer(value: Int(arc4random_uniform(100)))
+        let lhs = MathElement.Integer(value: Int(arc4random_uniform(30)))
         let rhs = MathElement.Integer(value: Int.random(in: 1...15))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .divide)
@@ -101,8 +100,8 @@ class MathExpression: CustomStringConvertible {
     
     // returns random Multiplying equations
     static func randomMultiply() -> MathExpression {
-        let lhs = MathElement.Integer(value: Int(arc4random_uniform(50)))
-        let rhs = MathElement.Integer(value: Int(arc4random_uniform(50)))
+        let lhs = MathElement.Integer(value: Int(arc4random_uniform(20)))
+        let rhs = MathElement.Integer(value: Int(arc4random_uniform(20)))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .multiply)
     }
@@ -117,8 +116,8 @@ class MathExpression: CustomStringConvertible {
     
     // returns random Multiply/Division equations
     static func randomDivMultiply() -> MathExpression {
-        let lhs = MathElement.Integer(value: Int(arc4random_uniform(50)))
-        let rhs = MathElement.Integer(value: Int(arc4random_uniform(50)))
+        let lhs = MathElement.Integer(value: Int(arc4random_uniform(30)))
+        let rhs = MathElement.Integer(value: Int(arc4random_uniform(30)))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .randomDivMul())
     }
@@ -133,8 +132,8 @@ class MathExpression: CustomStringConvertible {
     
     // returns random Adding radicals
     static func randomAddRadicals() -> MathExpression {
-        let lhs = MathElement.Root(value: Int.random(in: 1...30))
-        let rhs = MathElement.Root(value: Int.random(in: 1...30))
+        let lhs = MathElement.Root(value: Int.random(in: 1...25))
+        let rhs = MathElement.Root(value: Int.random(in: 1...25))
         
         return MathExpression.init(lhs: lhs, rhs: rhs, operator: .plus)
     }

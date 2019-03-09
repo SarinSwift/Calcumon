@@ -425,18 +425,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKQ-qi-jcc">
-                                <rect key="frame" x="103" y="597" width="169" height="40"/>
+                                <rect key="frame" x="155.5" y="572" width="64" height="65"/>
                                 <color key="backgroundColor" red="0.33333333333333331" green="0.25882352941176473" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="WY2-SW-t5e"/>
+                                    <constraint firstAttribute="height" constant="65" id="WY2-SW-t5e"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Great 😃">
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
+                                        <integer key="value" value="32"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -451,7 +451,7 @@
                             <constraint firstItem="8tq-8C-nIT" firstAttribute="leading" secondItem="gL2-Sq-I0d" secondAttribute="leading" constant="25" id="NGo-LA-s01"/>
                             <constraint firstItem="8tq-8C-nIT" firstAttribute="top" secondItem="gL2-Sq-I0d" secondAttribute="top" constant="110" id="Ube-Fl-XhA"/>
                             <constraint firstItem="8tq-8C-nIT" firstAttribute="width" secondItem="Fju-jp-pCY" secondAttribute="width" multiplier="0.5" id="jWM-w7-RbM"/>
-                            <constraint firstItem="eKQ-qi-jcc" firstAttribute="width" secondItem="Fju-jp-pCY" secondAttribute="width" multiplier="0.45" id="ul3-eV-IXZ"/>
+                            <constraint firstItem="eKQ-qi-jcc" firstAttribute="width" secondItem="Fju-jp-pCY" secondAttribute="width" multiplier="0.17" id="ul3-eV-IXZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gL2-Sq-I0d"/>
                     </view>
