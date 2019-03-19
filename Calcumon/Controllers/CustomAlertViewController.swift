@@ -20,9 +20,6 @@ class CustomAlertViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Not hiding the navBar??
-        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func closeButtonTapped(_ sender: UIButton) {

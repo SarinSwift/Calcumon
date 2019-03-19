@@ -29,7 +29,6 @@ extension SingleCategoryViewController {
         } else if self.title == "Square Root" {
             getRandomRoot()
         } else if self.title == "Linear Equation" {
-            instructionsLabel.text = "Solve for X"
             getRandomLinearEq()
         } else if self.title == "Radicals" {
             getRandomRad()
