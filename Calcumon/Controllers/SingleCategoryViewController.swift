@@ -17,7 +17,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     var correctAnswers: Int = 0
     
     @IBOutlet weak var pointsLabel: UILabel!
-    @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var solveView: UIView!
     @IBOutlet weak var questionLabel: UILabel!
@@ -38,7 +37,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         let pointsDefault = UserDefaults.standard
         if pointsDefault.value(forKey: "points") != nil {
             pointsResult = pointsDefault.value(forKey: "points") as! Int
-            pointsLabel.text = "Points: \(pointsResult)"
+            pointsLabel.text = "Score: \(pointsResult)"
         }
         navigationController?.navigationBar.barStyle = .blackTranslucent
         setupNavBar()
@@ -48,6 +47,13 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         plusPoints.alpha = 0
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let height: CGFloat = 50
+        let bounds = self.navigationController!.navigationBar.bounds
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
+    }
+    
     func keyboardListenEvents() {
         // listen for keyboard events
         answerTextField.delegate = self
@@ -55,7 +61,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
-    
+
     deinit {
         // stop listen from keyboard hide/show events
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -72,8 +78,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
             vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-            // Not hiding the navBar??
-            vc.navigationController?.navigationBar.isHidden = true
             self.addChild(vc)
             self.view.addSubview(vc.view)
             
@@ -171,7 +175,8 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         }
         if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
             
-            view.frame.origin.y = -keyboardRect.height
+            // bringing keybourd up with the following height
+            view.frame.origin.y = -(keyboardRect.height/3)
         } else {
             view.frame.origin.y = 0
         }
