@@ -25,8 +25,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var answerTextField: ShakingTextField!
     @IBOutlet weak var submitButton: UIButton!
-    @IBOutlet weak var continueButton: UIButton!
-    @IBOutlet weak var splashContinueButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +42,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         setupNavBar()
         callingEquations()
         print("viewdidload method result is: \(result)")
-        splashContinueButton.isHidden = true
         plusPoints.alpha = 0
     }
     
@@ -61,7 +59,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
-
     deinit {
         // stop listen from keyboard hide/show events
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -95,10 +92,10 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.answerTextField.layer.borderColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
                 self.answerTextField.layer.cornerRadius = 4.5
                 self.answerTextField.layer.borderWidth = 2.0
-                self.splashContinueButton.isHidden = false
-                self.submitButton.isHidden = true
-                self.continueButton.isHidden = true
                 self.pointsResult += 10
+                
+                // bring up new question
+                continueNext()
                 
                 // Animate the pointsLabel
                 UIView.animate(withDuration: 0.3, animations: {
@@ -188,16 +185,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     @IBAction func swipeToHideKeyboard(_ sender: UISwipeGestureRecognizer) {
         self.answerTextField.resignFirstResponder()
     }
-    @IBAction func splashButtonTapped(_ sender: UIButton) {
-        callingEquations()
-        answerTextField.layer.borderColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
-        answerTextField.layer.borderWidth = 1
-        splashContinueButton.isHidden = true
-        continueButton.isHidden = false
-        submitButton.isHidden = false
-        answerTextField.text = ""
-        answerTextField.placeholder = "Answer"
-    }
     
     func setupNavBar() {
         let backButton = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backToMainPage))
@@ -208,7 +195,17 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func continueButtonPressed(_ sender: UIButton) {
+    @IBAction func skipPressed(_ sender: UIButton) {
+        // Update the questionLabel to another problem
+        callingEquations()
+        answerTextField.layer.borderColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
+        answerTextField.layer.borderWidth = 1
+        answerTextField.text = ""
+        answerTextField.placeholder = "Answer"
+    }
+    
+    // brings to new question after answering correctly!!
+    func continueNext() {
         // Update the questionLabel to another problem
         callingEquations()
         answerTextField.layer.borderColor = #colorLiteral(red: 0.8470588235, green: 0.8470588235, blue: 0.8470588235, alpha: 1)
