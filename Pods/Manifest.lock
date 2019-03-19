@@ -1,0 +1,16 @@
+PODS:
+  - PullToDismiss (2.1)
+
+DEPENDENCIES:
+  - PullToDismiss (~> 2.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PullToDismiss
+
+SPEC CHECKSUMS:
+  PullToDismiss: 5513d561c382d201d0e3fbbdab9a47196cf5d2e2
+
+PODFILE CHECKSUM: b711dcf7c21ebb3ee3c0a62f3a97bc34fa442751
+
+COCOAPODS: 1.5.3
