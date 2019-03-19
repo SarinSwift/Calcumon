@@ -173,7 +173,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
             
             // bringing keybourd up with the following height
-            view.frame.origin.y = -(keyboardRect.height/3)
+            view.frame.origin.y = -(keyboardRect.height/3 - 30)
         } else {
             view.frame.origin.y = 0
         }
