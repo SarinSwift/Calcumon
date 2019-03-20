@@ -32,7 +32,7 @@ extension SingleCategoryViewController {
             getRandomLinearEq()
         } else if self.title == "Radicals" {
             getRandomRad()
-        }
+        } 
     }
     
     func getRandomAdd() {

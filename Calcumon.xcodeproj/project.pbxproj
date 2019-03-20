@@ -23,6 +23,7 @@
 		047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54F2222677200ACA52E /* CustomAlertViewController.swift */; };
 		047DA554222331A700ACA52E /* AppId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA553222331A700ACA52E /* AppId.swift */; };
 		047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */; };
+		0494F6C42242C89400BB24FD /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494F6C32242C89400BB24FD /* NewProfileViewController.swift */; };
 		0499441222212148008A0427 /* MathExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499441122212148008A0427 /* MathExpression.swift */; };
 		049956B3220B703300571DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049956B2220B703300571DDC /* AppDelegate.swift */; };
 		049956B5220B703300571DDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049956B4220B703300571DDC /* ViewController.swift */; };
@@ -31,6 +32,8 @@
 		049956BD220B703400571DDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049956BB220B703400571DDC /* LaunchScreen.storyboard */; };
 		04A9D2982225B9A9008D7CCD /* ShakingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A9D2972225B9A9008D7CCD /* ShakingTextField.swift */; };
 		04B019DB222887A400B75555 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B019DA222887A400B75555 /* StringExt.swift */; };
+		04BCA0F422416ECC0067D349 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BCA0F322416ECC0067D349 /* Login.storyboard */; };
+		04BCA0F622416EF60067D349 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCA0F522416EF60067D349 /* LoginViewController.swift */; };
 		D9D8A007ADC81CC685F24FD9 /* Pods_Calcumon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */; };
 		E5CB85A72241C8C9006113CC /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB85A62241C8C9006113CC /* UserDashboardViewController.swift */; };
 		E5EC790F2241BCCD0096BBAE /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EC790E2241BCCD0096BBAE /* UserLoginViewController.swift */; };
@@ -53,6 +56,7 @@
 		047DA54F2222677200ACA52E /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		047DA553222331A700ACA52E /* AppId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppId.swift; sourceTree = "<group>"; };
 		047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificDecimalPlaces.swift; sourceTree = "<group>"; };
+		0494F6C32242C89400BB24FD /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		0499441122212148008A0427 /* MathExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathExpression.swift; sourceTree = "<group>"; };
 		049956AF220B703300571DDC /* Calcumon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calcumon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		049956B2220B703300571DDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		049956BE220B703400571DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A9D2972225B9A9008D7CCD /* ShakingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakingTextField.swift; sourceTree = "<group>"; };
 		04B019DA222887A400B75555 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		04BCA0F322416ECC0067D349 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		04BCA0F522416EF60067D349 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		907A9EECE82CE70B2C77D571 /* Pods-Calcumon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.release.xcconfig"; sourceTree = "<group>"; };
 		C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calcumon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDD8B50BD6808759AB5D983 /* Pods-Calcumon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +184,8 @@
 				047DA54F2222677200ACA52E /* CustomAlertViewController.swift */,
 				0452896D222B02D50072D3AC /* ProfileLogViewController.swift */,
 				044ADAE8222F1D6700BCC21B /* ComingSoonViewController.swift */,
+				04BCA0F522416EF60067D349 /* LoginViewController.swift */,
+				0494F6C32242C89400BB24FD /* NewProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				049956B6220B703300571DDC /* Main.storyboard */,
+				04BCA0F322416ECC0067D349 /* Login.storyboard */,
 				049956BB220B703400571DDC /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -262,6 +271,7 @@
 				049956BD220B703400571DDC /* LaunchScreen.storyboard in Resources */,
 				049956BA220B703400571DDC /* Assets.xcassets in Resources */,
 				049956B8220B703300571DDC /* Main.storyboard in Resources */,
+				04BCA0F422416ECC0067D349 /* Login.storyboard in Resources */,
 				0400E972220E5E11009452C1 /* Inspirations.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,10 +323,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5EC790F2241BCCD0096BBAE /* UserLoginViewController.swift in Sources */,
+				04BCA0F622416EF60067D349 /* LoginViewController.swift in Sources */,
 				04528972222B3FFC0072D3AC /* WhiteView.swift in Sources */,
 				0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */,
 				0405F34C221CBB8700B6C70F /* NetworkManager.swift in Sources */,
 				0499441222212148008A0427 /* MathExpression.swift in Sources */,
+				0494F6C42242C89400BB24FD /* NewProfileViewController.swift in Sources */,
 				04528970222B3DCA0072D3AC /* UIView+CornerRadius.swift in Sources */,
 				047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */,
 				04A9D2982225B9A9008D7CCD /* ShakingTextField.swift in Sources */,

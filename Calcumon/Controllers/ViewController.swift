@@ -52,7 +52,6 @@ extension ViewController {
         // pauses
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             // Presenting a navController to the singleCategoryVC
-            
             let story = UIStoryboard(name: "Main", bundle: Bundle.main)
             guard let singleCategoryVC = story.instantiateViewController(withIdentifier: "singleCategoryView") as? SingleCategoryViewController else { return }
             let navController = UINavigationController(rootViewController: singleCategoryVC)
