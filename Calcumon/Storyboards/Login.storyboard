@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="bUF-EV-8qz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="bUF-EV-8qz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -64,7 +64,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Oh3-DF-goR"/>
                                                 </constraints>
-                                                <state key="normal" title="Sign in">
+                                                <state key="normal" title="Sign up">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -87,6 +87,9 @@
                                                         <integer key="value" value="19"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="BfE-E5-d73" kind="show" animates="NO" id="3EF-yW-C38"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -143,6 +146,7 @@
                             <outletCollection property="gestureRecognizers" destination="EEr-aL-Kcv" appends="YES" id="lb5-Zc-l5F"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="2bF-uo-S9N"/>
                     <connections>
                         <outlet property="emailTextField" destination="WI7-pT-0mx" id="IdA-Lx-lBq"/>
                         <outlet property="loginBtn" destination="JNM-Yt-wVA" id="Uh3-ha-auM"/>
@@ -164,6 +168,57 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="76" y="169.56521739130437"/>
+        </scene>
+        <!--New Profile View Controller-->
+        <scene sceneID="27N-8U-DQN">
+            <objects>
+                <viewController id="BfE-E5-d73" customClass="NewProfileViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P2g-Ca-BCO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="77r-fz-fAf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcumonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="b1u-th-Yse">
+                                <rect key="frame" x="19" y="110" width="337.5" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="eVD-f3-p6m"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFf-sI-I32">
+                                <rect key="frame" x="22" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.5450980392" green="0.35294117650000001" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="CancelBtnTapped:" destination="FKt-n2-brh" eventType="touchUpInside" id="5Kf-if-dJo"/>
+                                    <action selector="CancelBtnTapped:" destination="BfE-E5-d73" eventType="touchUpInside" id="EhF-GW-Cwg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b1u-th-Yse" firstAttribute="centerX" secondItem="77r-fz-fAf" secondAttribute="centerX" id="7gk-f6-ysQ"/>
+                            <constraint firstItem="OFf-sI-I32" firstAttribute="top" secondItem="1Dh-Tq-42P" secondAttribute="top" id="E9F-28-fEb"/>
+                            <constraint firstItem="b1u-th-Yse" firstAttribute="top" secondItem="1Dh-Tq-42P" secondAttribute="top" constant="90" id="I0l-Xj-Lzo"/>
+                            <constraint firstItem="77r-fz-fAf" firstAttribute="top" secondItem="P2g-Ca-BCO" secondAttribute="top" id="XM0-I6-gxe"/>
+                            <constraint firstItem="77r-fz-fAf" firstAttribute="leading" secondItem="1Dh-Tq-42P" secondAttribute="leading" id="gqs-YZ-HiL"/>
+                            <constraint firstItem="77r-fz-fAf" firstAttribute="trailing" secondItem="1Dh-Tq-42P" secondAttribute="trailing" id="nTm-gm-yjl"/>
+                            <constraint firstItem="OFf-sI-I32" firstAttribute="leading" secondItem="1Dh-Tq-42P" secondAttribute="leading" constant="22" id="oue-qQ-N1U"/>
+                            <constraint firstItem="b1u-th-Yse" firstAttribute="width" secondItem="77r-fz-fAf" secondAttribute="width" multiplier="0.9" id="tO1-Pa-QfR"/>
+                            <constraint firstItem="77r-fz-fAf" firstAttribute="bottom" secondItem="P2g-Ca-BCO" secondAttribute="bottom" id="vdZ-Nf-X5W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Dh-Tq-42P"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vqR-57-MIi">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="4kr-Pg-X9y"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ogF-AO-0ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FKt-n2-brh" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="170"/>
         </scene>
     </scenes>
     <resources>
