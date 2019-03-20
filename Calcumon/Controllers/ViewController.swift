@@ -14,8 +14,8 @@ class ViewController: UICollectionViewController {
         return .lightContent
     }
     
-    let images = [#imageLiteral(resourceName: "Inspiration-01"), #imageLiteral(resourceName: "Inspiration-02"), #imageLiteral(resourceName: "Inspiration-03"), #imageLiteral(resourceName: "Inspiration-04"), #imageLiteral(resourceName: "Inspiration-05"), #imageLiteral(resourceName: "Inspiration-06"), #imageLiteral(resourceName: "Inspiration-07"), #imageLiteral(resourceName: "Inspiration-08"), #imageLiteral(resourceName: "Inspiration-09"), #imageLiteral(resourceName: "Inspiration-10"), #imageLiteral(resourceName: "Inspiration-16")]
-    let categories = ["Basic Math", "Addition", "Subtraction", "Multiplication", "Division", "Addition & Subtraction", "Division & Mulitplication", "Square Root", "Linear Equation", "Radicals", "Have an account?"]
+    let images = [#imageLiteral(resourceName: "Inspiration-01"), #imageLiteral(resourceName: "Inspiration-02"), #imageLiteral(resourceName: "Inspiration-03"), #imageLiteral(resourceName: "Inspiration-04"), #imageLiteral(resourceName: "Inspiration-05"), #imageLiteral(resourceName: "Inspiration-06"), #imageLiteral(resourceName: "Inspiration-07"), #imageLiteral(resourceName: "Inspiration-08"), #imageLiteral(resourceName: "Inspiration-09"), #imageLiteral(resourceName: "Inspiration-10")]
+    let categories = ["Basic Math", "Addition", "Subtraction", "Multiplication", "Division", "Addition & Subtraction", "Division & Mulitplication", "Square Root", "Linear Equation", "Radicals"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,13 +52,6 @@ extension ViewController {
         // pauses
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             // Presenting a navController to the singleCategoryVC
-            
-            if indexPath.row == self.images.count-1 {
-                let story = UIStoryboard(name: "Login", bundle: Bundle.main)
-                guard let loginVC = story.instantiateViewController(withIdentifier: "loginView") as? LoginViewController else { return }
-                self.present(loginVC, animated: true, completion: nil)
-            }
-            
             let story = UIStoryboard(name: "Main", bundle: Bundle.main)
             guard let singleCategoryVC = story.instantiateViewController(withIdentifier: "singleCategoryView") as? SingleCategoryViewController else { return }
             let navController = UINavigationController(rootViewController: singleCategoryVC)
