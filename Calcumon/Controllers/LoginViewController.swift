@@ -10,21 +10,25 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        loginView.layer.cornerRadius = 10
+        loginView.layer.shadowColor = UIColor.black.cgColor
+        loginView.layer.shadowOpacity = 0.3
+        loginView.layer.shadowOffset = CGSize.zero
+        loginView.layer.shadowRadius = 10
     }
-    */
 
+    @IBAction func loginBtnTapped(_ sender: Any) {
+        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let categoryVC = story.instantiateViewController(withIdentifier: "categories") as? ViewController else { return }
+        self.present(categoryVC, animated: true, completion: nil)
+    }
 }
