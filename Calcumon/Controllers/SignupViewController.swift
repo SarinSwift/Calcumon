@@ -21,4 +21,20 @@ class SignupViewController: UIViewController {
         
     }
     
+    @IBAction func cancelBtnTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
+        self.emailTextField.resignFirstResponder()
+        self.usernameTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+        self.repeatPassTextField.resignFirstResponder()
+    }
+    @IBAction func swipeToHideKeyboard(_ sender: UISwipeGestureRecognizer) {
+        self.emailTextField.resignFirstResponder()
+        self.usernameTextField.resignFirstResponder()
+        self.passwordTextField.resignFirstResponder()
+        self.repeatPassTextField.resignFirstResponder()
+    }
 }

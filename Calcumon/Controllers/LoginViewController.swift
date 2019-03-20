@@ -21,17 +21,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupView()
-        keyboardListenEvents()
-    }
     
-    func setupView() {
-        loginView.layer.cornerRadius = 10
-        loginView.layer.shadowColor = UIColor.black.cgColor
-        loginView.layer.shadowOpacity = 0.3
-        loginView.layer.shadowOffset = CGSize.zero
-        loginView.layer.shadowRadius = 10
+        keyboardListenEvents()
     }
     
     func keyboardListenEvents() {
@@ -56,6 +47,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         } else {
             view.frame.origin.y = 0
         }
+    }
+    
+    @IBAction func cancelBtnTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
