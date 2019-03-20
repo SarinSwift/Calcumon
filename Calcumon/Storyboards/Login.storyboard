@@ -20,6 +20,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="bUF-EV-8qz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7g-pb-DjI">
                                 <rect key="frame" x="19" y="273.5" width="337.5" height="333.5"/>
@@ -39,26 +40,26 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="loginBtnTapped:" destination="Kh0-jW-OFg" eventType="touchUpInside" id="DNd-8z-tf8"/>
+                                            <action selector="playBtnTapped:" destination="Kh0-jW-OFg" eventType="touchUpInside" id="idv-jf-goa"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YtQ-Mo-Cav">
-                                        <rect key="frame" x="42" y="35" width="253" height="170"/>
+                                        <rect key="frame" x="33.5" y="35" width="270" height="170"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WI7-pT-0mx">
-                                                <rect key="frame" x="0.0" y="0.0" width="253" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ana-qq-a7c">
-                                                <rect key="frame" x="0.0" y="40" width="253" height="30"/>
+                                                <rect key="frame" x="0.0" y="40" width="270" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4D4-Jl-hdk">
-                                                <rect key="frame" x="63" y="80" width="127" height="40"/>
+                                                <rect key="frame" x="67.5" y="80" width="135" height="40"/>
                                                 <color key="backgroundColor" red="0.6588235294117647" green="0.43137254901960786" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Oh3-DF-goR"/>
@@ -73,7 +74,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNM-Yt-wVA">
-                                                <rect key="frame" x="63" y="130" width="127" height="40"/>
+                                                <rect key="frame" x="67.5" y="130" width="135" height="40"/>
                                                 <color key="backgroundColor" red="0.6588235294117647" green="0.43137254901960786" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="nWB-8m-qRC"/>
@@ -99,7 +100,7 @@
                                 <constraints>
                                     <constraint firstItem="YtQ-Mo-Cav" firstAttribute="top" secondItem="Y7g-pb-DjI" secondAttribute="top" constant="35" id="Gqt-xs-pla"/>
                                     <constraint firstItem="MpH-EC-aKY" firstAttribute="centerX" secondItem="Y7g-pb-DjI" secondAttribute="centerX" id="Ojr-qw-e6a"/>
-                                    <constraint firstItem="WI7-pT-0mx" firstAttribute="width" secondItem="Y7g-pb-DjI" secondAttribute="width" multiplier="0.75" id="QZX-Fp-2mF"/>
+                                    <constraint firstItem="WI7-pT-0mx" firstAttribute="width" secondItem="Y7g-pb-DjI" secondAttribute="width" multiplier="0.8" id="QZX-Fp-2mF"/>
                                     <constraint firstItem="YtQ-Mo-Cav" firstAttribute="centerX" secondItem="Y7g-pb-DjI" secondAttribute="centerX" id="Yoa-ii-Bjv"/>
                                     <constraint firstItem="MpH-EC-aKY" firstAttribute="width" secondItem="Y7g-pb-DjI" secondAttribute="width" multiplier="0.3" id="fXv-xd-KWJ"/>
                                     <constraint firstAttribute="bottom" secondItem="MpH-EC-aKY" secondAttribute="bottom" constant="35" id="tcW-Uu-zda"/>
@@ -119,6 +120,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bUF-EV-8qz" firstAttribute="bottom" secondItem="XTe-07-jUc" secondAttribute="bottom" id="6Of-X5-1aw"/>
                             <constraint firstItem="Y7g-pb-DjI" firstAttribute="height" secondItem="bUF-EV-8qz" secondAttribute="height" multiplier="0.5" id="8Hr-wY-679"/>
@@ -136,12 +138,30 @@
                             <constraint firstItem="3Hs-f7-hrp" firstAttribute="trailing" secondItem="UT5-6f-Hp7" secondAttribute="trailing" constant="10" id="vOC-Be-vji"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Hs-f7-hrp"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="eOl-8D-cuB" appends="YES" id="Gu2-ib-l14"/>
+                            <outletCollection property="gestureRecognizers" destination="EEr-aL-Kcv" appends="YES" id="lb5-Zc-l5F"/>
+                        </connections>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="WI7-pT-0mx" id="IdA-Lx-lBq"/>
+                        <outlet property="loginBtn" destination="JNM-Yt-wVA" id="Uh3-ha-auM"/>
                         <outlet property="loginView" destination="Y7g-pb-DjI" id="fHZ-We-e20"/>
+                        <outlet property="passwordTextField" destination="ana-qq-a7c" id="oNz-em-47L"/>
+                        <outlet property="signinBtn" destination="4D4-Jl-hdk" id="2dO-Fr-IF4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Byq-BN-nCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="eOl-8D-cuB">
+                    <connections>
+                        <action selector="tapToHideKeyboard:" destination="Kh0-jW-OFg" id="55K-cH-gzA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="EEr-aL-Kcv">
+                    <connections>
+                        <action selector="swipeToHideKeyboard:" destination="Kh0-jW-OFg" id="IKv-YS-X8s"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="76" y="169.56521739130437"/>
         </scene>
