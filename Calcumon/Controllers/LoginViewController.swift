@@ -43,7 +43,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
             
-            view.frame.origin.y = -keyboardRect.height
+            view.frame.origin.y = -(keyboardRect.height/3)
         } else {
             view.frame.origin.y = 0
         }
