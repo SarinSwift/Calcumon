@@ -25,80 +25,74 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKR-17-ARA">
                                 <rect key="frame" x="19" y="253.5" width="337.5" height="333.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXP-JI-7RA">
-                                        <rect key="frame" x="84" y="82" width="169" height="70"/>
-                                        <color key="backgroundColor" red="0.5450980392" green="0.35294117650000001" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXP-JI-7RA">
+                                        <rect key="frame" x="79" y="22" width="169" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="7I7-mP-PKr"/>
+                                            <constraint firstAttribute="height" constant="150" id="7I7-mP-PKr"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="38"/>
-                                        <state key="normal" title="Play">
+                                        <state key="normal" image="playBtn">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="34"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                                <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="playBtnTapped:" destination="4hO-vY-8lL" eventType="touchUpInside" id="hWb-DR-bla"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3qw-cD-LeS">
-                                        <rect key="frame" x="84" y="193.5" width="169" height="90"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66g-h4-Rn3">
+                                        <rect key="frame" x="84" y="212.5" width="169" height="44"/>
+                                        <color key="backgroundColor" red="0.6588235294" green="0.43137254899999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="WcO-zL-Ri2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Log in">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="19"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="QoI-A5-MxG" kind="show" id="iI4-rB-MSD"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="R4Q-1s-T9u">
+                                        <rect key="frame" x="64.5" y="286.5" width="208" height="32"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIb-sw-nLk">
-                                                <rect key="frame" x="0.0" y="0.0" width="169" height="40"/>
-                                                <color key="backgroundColor" red="0.6588235294" green="0.43137254899999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="eFh-gB-vI8"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                <state key="normal" title="Sign up">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYc-V0-CXX">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="32"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                                <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBB-AU-His">
+                                                <rect key="frame" x="160" y="0.0" width="48" height="32"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                                <state key="normal" title="Signup.">
+                                                    <color key="titleColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="19"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="GKP-sM-sK0" kind="show" id="6qs-xr-Ko7"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66g-h4-Rn3">
-                                                <rect key="frame" x="0.0" y="50" width="169" height="40"/>
-                                                <color key="backgroundColor" red="0.6588235294" green="0.43137254899999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="WcO-zL-Ri2"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                <state key="normal" title="Log in">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="19"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="QoI-A5-MxG" kind="show" id="iI4-rB-MSD"/>
+                                                    <segue destination="GKP-sM-sK0" kind="show" id="MXC-52-TjP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="66g-h4-Rn3" firstAttribute="width" secondItem="wIb-sw-nLk" secondAttribute="width" id="bDZ-Jk-Pay"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="wIb-sw-nLk" firstAttribute="width" secondItem="cKR-17-ARA" secondAttribute="width" multiplier="0.5" id="8aB-u8-8kE"/>
+                                    <constraint firstItem="66g-h4-Rn3" firstAttribute="width" secondItem="cKR-17-ARA" secondAttribute="width" multiplier="0.5" id="6f0-47-NX2"/>
                                     <constraint firstItem="zXP-JI-7RA" firstAttribute="width" secondItem="cKR-17-ARA" secondAttribute="width" multiplier="0.5" id="Au8-HN-usg"/>
-                                    <constraint firstItem="zXP-JI-7RA" firstAttribute="centerY" secondItem="cKR-17-ARA" secondAttribute="centerY" constant="-50" id="Ikl-6m-btc"/>
-                                    <constraint firstItem="3qw-cD-LeS" firstAttribute="bottom" secondItem="cKR-17-ARA" secondAttribute="bottom" constant="-50" id="VaL-Mi-Y4K"/>
-                                    <constraint firstItem="zXP-JI-7RA" firstAttribute="centerX" secondItem="cKR-17-ARA" secondAttribute="centerX" id="k0d-LB-Qn5"/>
-                                    <constraint firstItem="3qw-cD-LeS" firstAttribute="centerX" secondItem="cKR-17-ARA" secondAttribute="centerX" id="zy9-9K-z1C"/>
+                                    <constraint firstItem="zXP-JI-7RA" firstAttribute="centerY" secondItem="cKR-17-ARA" secondAttribute="centerY" constant="-70" id="Ikl-6m-btc"/>
+                                    <constraint firstItem="R4Q-1s-T9u" firstAttribute="centerX" secondItem="cKR-17-ARA" secondAttribute="centerX" id="TwF-xE-UPV"/>
+                                    <constraint firstItem="R4Q-1s-T9u" firstAttribute="top" secondItem="66g-h4-Rn3" secondAttribute="bottom" constant="30" id="aE5-4b-h1M"/>
+                                    <constraint firstItem="66g-h4-Rn3" firstAttribute="centerX" secondItem="cKR-17-ARA" secondAttribute="centerX" id="eza-97-jDn"/>
+                                    <constraint firstItem="zXP-JI-7RA" firstAttribute="centerX" secondItem="cKR-17-ARA" secondAttribute="centerX" constant="-5" id="k0d-LB-Qn5"/>
+                                    <constraint firstAttribute="bottom" secondItem="R4Q-1s-T9u" secondAttribute="bottom" constant="15" id="nmH-Yr-uuz"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcumonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-2b-Bnw">
@@ -161,7 +155,7 @@
                                 <rect key="frame" x="21" y="182" width="337.5" height="323.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QwT-z8-dFj">
-                                        <rect key="frame" x="33.5" y="101.5" width="270" height="120"/>
+                                        <rect key="frame" x="33.5" y="99.5" width="270" height="124"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bod-Tz-eAu">
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
@@ -176,10 +170,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-P5-RUg">
-                                                <rect key="frame" x="51" y="80" width="168.5" height="40"/>
+                                                <rect key="frame" x="51" y="80" width="168.5" height="44"/>
                                                 <color key="backgroundColor" red="0.6588235294" green="0.43137254899999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="w5W-se-u1W"/>
+                                                    <constraint firstAttribute="height" constant="44" id="w5W-se-u1W"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                 <state key="normal" title="Log in">
@@ -282,7 +276,7 @@
                                 <rect key="frame" x="21" y="182" width="337.5" height="323.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AKI-GR-dfe">
-                                        <rect key="frame" x="33.5" y="61.5" width="270" height="200"/>
+                                        <rect key="frame" x="33.5" y="59.5" width="270" height="204"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xeP-oQ-vmZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
@@ -309,10 +303,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-2j-7af">
-                                                <rect key="frame" x="51" y="160" width="168.5" height="40"/>
+                                                <rect key="frame" x="51" y="160" width="168.5" height="44"/>
                                                 <color key="backgroundColor" red="0.6588235294" green="0.43137254899999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="HtL-Be-oEK"/>
+                                                    <constraint firstAttribute="height" constant="44" id="HtL-Be-oEK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                                 <state key="normal" title="Signup">
@@ -400,5 +394,6 @@
     <resources>
         <image name="calcumonLogo" width="916" height="180"/>
         <image name="loginBackground1" width="275" height="466"/>
+        <image name="playBtn" width="457" height="400"/>
     </resources>
 </document>

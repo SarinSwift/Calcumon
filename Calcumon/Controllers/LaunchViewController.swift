@@ -9,6 +9,10 @@
 import UIKit
 
 class LaunchViewController: UIViewController {
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     @IBOutlet weak var backgroundView: UIView!
     
