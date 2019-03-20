@@ -9,9 +9,9 @@
 import Foundation
 
 class NetworkManager {
-    let urlSession = URLSession.shared
-    var baseUrl = "http://api.wolframalpha.com/v1/result"
-    var appId = appIdString
+//    let urlSession = URLSession.shared
+//    var baseUrl = "http://api.wolframalpha.com/v1/result"
+//    var appId = appIdString
     
     func getPost() {
         
