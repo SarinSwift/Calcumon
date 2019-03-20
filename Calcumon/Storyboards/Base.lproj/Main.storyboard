@@ -592,6 +592,42 @@
             </objects>
             <point key="canvasLocation" x="2215" y="-390"/>
         </scene>
+        <!--User Dashboard View Controller-->
+        <scene sceneID="S5r-PB-kpD">
+            <objects>
+                <viewController id="aXN-cQ-kJc" customClass="UserDashboardViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ynu-eu-iAi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcumonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8Zm-w4-k3A">
+                                <rect key="frame" x="19" y="20" width="337.5" height="169"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8Zm-w4-k3A" secondAttribute="height" multiplier="2:1" id="rbQ-qZ-2Ij"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3L-XT-nZq">
+                                <rect key="frame" x="98" y="189" width="179" height="52"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qd2-U1-dNg" firstAttribute="top" secondItem="8Zm-w4-k3A" secondAttribute="top" id="2ah-df-OZL"/>
+                            <constraint firstItem="L3L-XT-nZq" firstAttribute="top" secondItem="8Zm-w4-k3A" secondAttribute="bottom" id="5WF-8o-gos"/>
+                            <constraint firstItem="8Zm-w4-k3A" firstAttribute="centerX" secondItem="qd2-U1-dNg" secondAttribute="centerX" id="BM4-i8-YSJ"/>
+                            <constraint firstItem="8Zm-w4-k3A" firstAttribute="width" secondItem="ynu-eu-iAi" secondAttribute="width" multiplier="9:10" id="N4S-PN-7Bl"/>
+                            <constraint firstItem="L3L-XT-nZq" firstAttribute="centerX" secondItem="qd2-U1-dNg" secondAttribute="centerX" id="nT1-J1-FbT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qd2-U1-dNg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shp-n0-HhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-282" y="-1400"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Trophy" width="221" height="228"/>
