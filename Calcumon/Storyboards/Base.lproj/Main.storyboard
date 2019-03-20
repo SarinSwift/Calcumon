@@ -10,89 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--User Login View Controller-->
-        <scene sceneID="82i-4f-PSf">
-            <objects>
-                <viewController id="RY7-o1-oBo" customClass="UserLoginViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NXd-n1-Ai0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcumonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="E0u-L7-pQb">
-                                <rect key="frame" x="19" y="20" width="337.5" height="169"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="E0u-L7-pQb" secondAttribute="height" multiplier="2:1" id="jrO-kz-vPa"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TbV-va-YdX">
-                                <rect key="frame" x="23" y="303.5" width="329" height="80"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CXv-Vf-CbN">
-                                        <rect key="frame" x="0.0" y="0.0" width="329" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Prz-4z-M1G">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="30"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4FF-JI-Dti">
-                                                <rect key="frame" x="94.5" y="0.0" width="234.5" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fzJ-32-3yb">
-                                        <rect key="frame" x="0.0" y="50" width="329" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaP-85-3t7">
-                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="30"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z7C-88-dVO">
-                                                <rect key="frame" x="94.5" y="0.0" width="234.5" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-gS-FGH">
-                                <rect key="frame" x="25" y="569" width="325" height="78"/>
-                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="48"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="TZI-gS-FGH" firstAttribute="centerX" secondItem="MnE-uX-7Mk" secondAttribute="centerX" id="7br-3g-g0o"/>
-                            <constraint firstItem="E0u-L7-pQb" firstAttribute="centerX" secondItem="MnE-uX-7Mk" secondAttribute="centerX" id="DRe-HD-v7j"/>
-                            <constraint firstItem="TZI-gS-FGH" firstAttribute="trailing" secondItem="MnE-uX-7Mk" secondAttribute="trailing" constant="-25" id="RTU-cm-GnH"/>
-                            <constraint firstItem="TbV-va-YdX" firstAttribute="centerX" secondItem="MnE-uX-7Mk" secondAttribute="centerX" id="X4j-o2-2bZ"/>
-                            <constraint firstItem="MnE-uX-7Mk" firstAttribute="top" secondItem="E0u-L7-pQb" secondAttribute="top" id="Zde-s5-Uti"/>
-                            <constraint firstItem="4FF-JI-Dti" firstAttribute="width" secondItem="NXd-n1-Ai0" secondAttribute="width" multiplier="5:8" id="gCb-kh-SLo"/>
-                            <constraint firstItem="E0u-L7-pQb" firstAttribute="width" secondItem="NXd-n1-Ai0" secondAttribute="width" multiplier="9:10" id="ikh-ol-5lC"/>
-                            <constraint firstItem="MnE-uX-7Mk" firstAttribute="bottom" secondItem="TZI-gS-FGH" secondAttribute="bottom" constant="20" id="mTk-q3-qnE"/>
-                            <constraint firstItem="TbV-va-YdX" firstAttribute="centerY" secondItem="MnE-uX-7Mk" secondAttribute="centerY" id="n7A-vU-u80"/>
-                            <constraint firstItem="Z7C-88-dVO" firstAttribute="width" secondItem="NXd-n1-Ai0" secondAttribute="width" multiplier="5:8" id="omJ-zp-fSj"/>
-                            <constraint firstItem="TZI-gS-FGH" firstAttribute="leading" secondItem="MnE-uX-7Mk" secondAttribute="leading" constant="25" id="zbW-02-c0w"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="MnE-uX-7Mk"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7rh-N7-Czs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-287.19999999999999" y="-728.18590704647681"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="jg3-qk-ECF">
             <objects>
@@ -592,45 +509,8 @@
             </objects>
             <point key="canvasLocation" x="2215" y="-390"/>
         </scene>
-        <!--User Dashboard View Controller-->
-        <scene sceneID="S5r-PB-kpD">
-            <objects>
-                <viewController id="aXN-cQ-kJc" customClass="UserDashboardViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ynu-eu-iAi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcumonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8Zm-w4-k3A">
-                                <rect key="frame" x="19" y="20" width="337.5" height="169"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="8Zm-w4-k3A" secondAttribute="height" multiplier="2:1" id="rbQ-qZ-2Ij"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3L-XT-nZq">
-                                <rect key="frame" x="98" y="189" width="179" height="52"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="38"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="qd2-U1-dNg" firstAttribute="top" secondItem="8Zm-w4-k3A" secondAttribute="top" id="2ah-df-OZL"/>
-                            <constraint firstItem="L3L-XT-nZq" firstAttribute="top" secondItem="8Zm-w4-k3A" secondAttribute="bottom" id="5WF-8o-gos"/>
-                            <constraint firstItem="8Zm-w4-k3A" firstAttribute="centerX" secondItem="qd2-U1-dNg" secondAttribute="centerX" id="BM4-i8-YSJ"/>
-                            <constraint firstItem="8Zm-w4-k3A" firstAttribute="width" secondItem="ynu-eu-iAi" secondAttribute="width" multiplier="9:10" id="N4S-PN-7Bl"/>
-                            <constraint firstItem="L3L-XT-nZq" firstAttribute="centerX" secondItem="qd2-U1-dNg" secondAttribute="centerX" id="nT1-J1-FbT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="qd2-U1-dNg"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="shp-n0-HhL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-282" y="-1400"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Trophy" width="221" height="228"/>
-        <image name="calcumonLogo" width="1375" height="270"/>
     </resources>
 </document>

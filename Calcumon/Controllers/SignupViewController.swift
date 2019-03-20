@@ -1,14 +1,14 @@
 //
-//  UserLoginViewController.swift
+//  SignupViewController.swift
 //  Calcumon
 //
-//  Created by Lucia Reynoso on 3/19/19.
+//  Created by Lucia Reynoso on 3/20/19.
 //  Copyright © 2019 sarinswift. All rights reserved.
 //
 
 import UIKit
 
-class UserLoginViewController: UIViewController {
+class SignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

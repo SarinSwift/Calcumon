@@ -35,8 +35,9 @@
 		04BCA0F422416ECC0067D349 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BCA0F322416ECC0067D349 /* Login.storyboard */; };
 		04BCA0F622416EF60067D349 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCA0F522416EF60067D349 /* LoginViewController.swift */; };
 		D9D8A007ADC81CC685F24FD9 /* Pods_Calcumon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */; };
-		E5CB85A72241C8C9006113CC /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB85A62241C8C9006113CC /* UserDashboardViewController.swift */; };
-		E5EC790F2241BCCD0096BBAE /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EC790E2241BCCD0096BBAE /* UserLoginViewController.swift */; };
+		E5CB85A72241C8C9006113CC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB85A62241C8C9006113CC /* DashboardViewController.swift */; };
+		E5FC5D5E2242D60F00E15F66 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC5D5D2242D60F00E15F66 /* LaunchViewController.swift */; };
+		E5FC5D602242D8B600E15F66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC5D5F2242D8B600E15F66 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,8 +73,9 @@
 		907A9EECE82CE70B2C77D571 /* Pods-Calcumon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.release.xcconfig"; sourceTree = "<group>"; };
 		C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calcumon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDD8B50BD6808759AB5D983 /* Pods-Calcumon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.debug.xcconfig"; sourceTree = "<group>"; };
-		E5CB85A62241C8C9006113CC /* UserDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboardViewController.swift; sourceTree = "<group>"; };
-		E5EC790E2241BCCD0096BBAE /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
+		E5CB85A62241C8C9006113CC /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		E5FC5D5D2242D60F00E15F66 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		E5FC5D5F2242D8B600E15F66 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,13 +180,14 @@
 			isa = PBXGroup;
 			children = (
 				049956B4220B703300571DDC /* ViewController.swift */,
-				E5EC790E2241BCCD0096BBAE /* UserLoginViewController.swift */,
-				E5CB85A62241C8C9006113CC /* UserDashboardViewController.swift */,
+				E5FC5D5D2242D60F00E15F66 /* LaunchViewController.swift */,
+				E5CB85A62241C8C9006113CC /* DashboardViewController.swift */,
 				0400B9C22217423800720075 /* SingleCategoryViewController.swift */,
 				047DA54F2222677200ACA52E /* CustomAlertViewController.swift */,
 				0452896D222B02D50072D3AC /* ProfileLogViewController.swift */,
 				044ADAE8222F1D6700BCC21B /* ComingSoonViewController.swift */,
 				04BCA0F522416EF60067D349 /* LoginViewController.swift */,
+				E5FC5D5F2242D8B600E15F66 /* SignupViewController.swift */,
 				0494F6C32242C89400BB24FD /* NewProfileViewController.swift */,
 			);
 			path = Controllers;
@@ -322,7 +325,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5EC790F2241BCCD0096BBAE /* UserLoginViewController.swift in Sources */,
 				04BCA0F622416EF60067D349 /* LoginViewController.swift in Sources */,
 				04528972222B3FFC0072D3AC /* WhiteView.swift in Sources */,
 				0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */,
@@ -330,11 +332,12 @@
 				0499441222212148008A0427 /* MathExpression.swift in Sources */,
 				0494F6C42242C89400BB24FD /* NewProfileViewController.swift in Sources */,
 				04528970222B3DCA0072D3AC /* UIView+CornerRadius.swift in Sources */,
+				E5FC5D5E2242D60F00E15F66 /* LaunchViewController.swift in Sources */,
 				047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */,
 				04A9D2982225B9A9008D7CCD /* ShakingTextField.swift in Sources */,
 				04B019DB222887A400B75555 /* StringExt.swift in Sources */,
 				044ADAE9222F1D6700BCC21B /* ComingSoonViewController.swift in Sources */,
-				E5CB85A72241C8C9006113CC /* UserDashboardViewController.swift in Sources */,
+				E5CB85A72241C8C9006113CC /* DashboardViewController.swift in Sources */,
 				047DA54C2221CA3800ACA52E /* MathElement.swift in Sources */,
 				0400E966220E4555009452C1 /* UltravisualLayout.swift in Sources */,
 				049956B5220B703300571DDC /* ViewController.swift in Sources */,
@@ -344,6 +347,7 @@
 				047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */,
 				0400B9C32217423800720075 /* SingleCategoryViewController.swift in Sources */,
 				0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */,
+				E5FC5D602242D8B600E15F66 /* SignupViewController.swift in Sources */,
 				047DA554222331A700ACA52E /* AppId.swift in Sources */,
 				047DA54E2221CA4F00ACA52E /* MathOperator.swift in Sources */,
 			);
