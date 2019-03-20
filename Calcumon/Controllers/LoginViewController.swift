@@ -16,7 +16,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var loginView: UIView!
     
@@ -66,12 +65,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func swipeToHideKeyboard(_ sender: UISwipeGestureRecognizer) {
         self.emailTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
-    }
-    
-    
-    @IBAction func playBtnTapped(_ sender: Any) {
-        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let categoryVC = story.instantiateViewController(withIdentifier: "categories") as? ViewController else { return }
-        self.present(categoryVC, animated: true, completion: nil)
     }
 }

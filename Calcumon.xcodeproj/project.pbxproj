@@ -21,7 +21,6 @@
 		047DA54C2221CA3800ACA52E /* MathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54B2221CA3800ACA52E /* MathElement.swift */; };
 		047DA54E2221CA4F00ACA52E /* MathOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54D2221CA4F00ACA52E /* MathOperator.swift */; };
 		047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54F2222677200ACA52E /* CustomAlertViewController.swift */; };
-		047DA554222331A700ACA52E /* AppId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA553222331A700ACA52E /* AppId.swift */; };
 		047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */; };
 		0494F6C42242C89400BB24FD /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494F6C32242C89400BB24FD /* NewProfileViewController.swift */; };
 		0499441222212148008A0427 /* MathExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499441122212148008A0427 /* MathExpression.swift */; };
@@ -55,7 +54,6 @@
 		047DA54B2221CA3800ACA52E /* MathElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathElement.swift; sourceTree = "<group>"; };
 		047DA54D2221CA4F00ACA52E /* MathOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathOperator.swift; sourceTree = "<group>"; };
 		047DA54F2222677200ACA52E /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
-		047DA553222331A700ACA52E /* AppId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppId.swift; sourceTree = "<group>"; };
 		047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificDecimalPlaces.swift; sourceTree = "<group>"; };
 		0494F6C32242C89400BB24FD /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		0499441122212148008A0427 /* MathExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathExpression.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			children = (
 				049956B2220B703300571DDC /* AppDelegate.swift */,
 				0405F34B221CBB8700B6C70F /* NetworkManager.swift */,
-				047DA553222331A700ACA52E /* AppId.swift */,
 				049956C4220B704100571DDC /* Controllers */,
 				0400E963220E3F96009452C1 /* Views */,
 				047DA54A2221CA1500ACA52E /* MathGenerator */,
@@ -348,7 +345,6 @@
 				0400B9C32217423800720075 /* SingleCategoryViewController.swift in Sources */,
 				0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */,
 				E5FC5D602242D8B600E15F66 /* SignupViewController.swift in Sources */,
-				047DA554222331A700ACA52E /* AppId.swift in Sources */,
 				047DA54E2221CA4F00ACA52E /* MathOperator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

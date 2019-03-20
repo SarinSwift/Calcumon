@@ -41,7 +41,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="playBtnTapped:" destination="4hO-vY-8lL" eventType="touchUpInside" id="1fE-8p-Ae7"/>
+                                            <action selector="playBtnTapped:" destination="4hO-vY-8lL" eventType="touchUpInside" id="hWb-DR-bla"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3qw-cD-LeS">
@@ -62,6 +62,9 @@
                                                         <integer key="value" value="19"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="GKP-sM-sK0" kind="show" id="6qs-xr-Ko7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66g-h4-Rn3">
                                                 <rect key="frame" x="0.0" y="50" width="169" height="40"/>
@@ -78,6 +81,9 @@
                                                         <integer key="value" value="19"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="QoI-A5-MxG" kind="show" id="iI4-rB-MSD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -123,23 +129,10 @@
                             <outletCollection property="gestureRecognizers" destination="xCJ-Jl-pzJ" appends="YES" id="J7N-JW-1NC"/>
                         </connections>
                     </view>
-                    <connections>
-                        <outlet property="loginBtn" destination="66g-h4-Rn3" id="Ass-Ok-wnG"/>
-                        <outlet property="loginView" destination="cKR-17-ARA" id="jaz-Ge-nyp"/>
-                        <outlet property="signinBtn" destination="wIb-sw-nLk" id="SGP-C5-Smt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHX-gw-esw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="BcE-5k-agp">
-                    <connections>
-                        <action selector="tapToHideKeyboard:" destination="4hO-vY-8lL" id="GeO-Iz-2dp"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="down" id="xCJ-Jl-pzJ">
-                    <connections>
-                        <action selector="swipeToHideKeyboard:" destination="4hO-vY-8lL" id="fiH-VU-NOk"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="BcE-5k-agp"/>
+                <swipeGestureRecognizer direction="down" id="xCJ-Jl-pzJ"/>
             </objects>
             <point key="canvasLocation" x="-815" y="561"/>
         </scene>
@@ -219,7 +212,7 @@
                             <constraint firstItem="4Vz-N4-h7I" firstAttribute="centerX" secondItem="yCF-OQ-C8N" secondAttribute="centerX" id="Dfj-2G-4gb"/>
                             <constraint firstItem="yCF-OQ-C8N" firstAttribute="leading" secondItem="3Hg-7V-hEB" secondAttribute="leading" id="aBy-tq-vYX"/>
                             <constraint firstItem="4Vz-N4-h7I" firstAttribute="width" secondItem="yCF-OQ-C8N" secondAttribute="width" multiplier="0.9" id="foX-la-7UI"/>
-                            <constraint firstItem="yCF-OQ-C8N" firstAttribute="bottom" secondItem="3Hg-7V-hEB" secondAttribute="bottom" id="kEu-Ec-eMQ"/>
+                            <constraint firstItem="yCF-OQ-C8N" firstAttribute="bottom" secondItem="Gt2-Au-TLj" secondAttribute="bottom" id="kEu-Ec-eMQ"/>
                             <constraint firstItem="4Vz-N4-h7I" firstAttribute="centerY" secondItem="3Hg-7V-hEB" secondAttribute="centerY" id="lj9-mj-Zh6"/>
                             <constraint firstItem="yCF-OQ-C8N" firstAttribute="top" secondItem="Gt2-Au-TLj" secondAttribute="top" id="mHS-D3-VtA"/>
                             <constraint firstItem="ffk-Hg-Z9B" firstAttribute="centerX" secondItem="yCF-OQ-C8N" secondAttribute="centerX" id="q9p-z6-8qn"/>
@@ -357,10 +350,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="PEs-LW-iwX"/>
                     <connections>
-                        <outlet property="emailTextField" destination="xeP-oQ-vmZ" id="bWK-nB-dBf"/>
-                        <outlet property="loginBtn" destination="eCv-2j-7af" id="2Pq-bp-q1s"/>
+                        <outlet property="emailTextField" destination="xeP-oQ-vmZ" id="RBz-Lf-kza"/>
                         <outlet property="loginView" destination="yYe-Wp-KUO" id="JiV-cy-N5P"/>
-                        <outlet property="passwordTextField" destination="7Hs-AV-KIo" id="bDu-L3-gTL"/>
+                        <outlet property="passwordTextField" destination="7Hs-AV-KIo" id="G73-NZ-ICI"/>
+                        <outlet property="repeatPassTextField" destination="4s8-c8-Ruc" id="9Ah-M0-9U6"/>
+                        <outlet property="signupBtn" destination="vyu-lp-Ez5" id="6ob-Px-7qM"/>
+                        <outlet property="usernameTextField" destination="uRo-xN-1yB" id="UU2-4S-E8W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shR-t2-Tzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -379,7 +374,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calcumonLogo" width="1375" height="270"/>
-        <image name="loginBackground1" width="827" height="1399"/>
+        <image name="calcumonLogo" width="916" height="180"/>
+        <image name="loginBackground1" width="275" height="466"/>
     </resources>
 </document>
