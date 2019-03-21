@@ -10,12 +10,6 @@ import Foundation
 
 struct UserObject: Codable {
     let coins: Int
-    let id: String
     let username: String
     let password: String
-    
-    enum CodingKeys: String, CodingKey {
-        case coins, username, password
-        case id = "_id"
-    }
 }
