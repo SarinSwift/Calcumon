@@ -18,7 +18,8 @@ simple signup to setup your game user. It consists of multiple levels of calcumo
 
 ## Authors
 
-* **Sarin** - *Lead iOS developer, UI and UX designer* - [SarinSwift](https://github.com/SarinSwift)
-* **Javier** - *Back end developer, Animation Design* - [javiier_am](https://github.com/javiermms)
+* **Sarin** - *iOS developer, UI and UX designer* - [SarinSwift](https://github.com/SarinSwift)
+* **Lucia** - *iOS developer, back end developer* - [Lucia Reynoso](https://github.com/lvreynoso)
 * **Anisha** - *Front end developer, Animation design* - [anisha7](https://github.com/Anisha7)
 * **Connor** - *Back end developer* - [Coswold](https://github.com/Coswold)
+* **Anna** - *Front end developer* - [Anna Pawl](https://github.com/AnniePawl)
