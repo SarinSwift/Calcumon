@@ -86,4 +86,7 @@ class ProfileLogViewController: UIViewController {
         self.present(profileVC, animated: true, completion: nil)
     }
     
+    @IBAction func signupBtnTapped(_ sender: UIButton) {
+        print("send to signup new user")
+    }
 }

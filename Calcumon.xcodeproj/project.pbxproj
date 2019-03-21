@@ -35,6 +35,7 @@
 		04B019DB222887A400B75555 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B019DA222887A400B75555 /* StringExt.swift */; };
 		04BCA0F422416ECC0067D349 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BCA0F322416ECC0067D349 /* Login.storyboard */; };
 		04BCA0F622416EF60067D349 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BCA0F522416EF60067D349 /* LoginViewController.swift */; };
+		04F2347E2243FDFB007F9B47 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F2347D2243FDFB007F9B47 /* Dashboard.storyboard */; };
 		D9D8A007ADC81CC685F24FD9 /* Pods_Calcumon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */; };
 		E5CB85A72241C8C9006113CC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB85A62241C8C9006113CC /* DashboardViewController.swift */; };
 		E5FC5D5E2242D60F00E15F66 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC5D5D2242D60F00E15F66 /* LaunchViewController.swift */; };
@@ -72,6 +73,7 @@
 		04B019DA222887A400B75555 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		04BCA0F322416ECC0067D349 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		04BCA0F522416EF60067D349 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		04F2347D2243FDFB007F9B47 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		907A9EECE82CE70B2C77D571 /* Pods-Calcumon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.release.xcconfig"; sourceTree = "<group>"; };
 		C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calcumon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDD8B50BD6808759AB5D983 /* Pods-Calcumon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -207,8 +209,9 @@
 		04FCA400220FB96200C746FD /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				049956B6220B703300571DDC /* Main.storyboard */,
 				04BCA0F322416ECC0067D349 /* Login.storyboard */,
+				049956B6220B703300571DDC /* Main.storyboard */,
+				04F2347D2243FDFB007F9B47 /* Dashboard.storyboard */,
 				049956BB220B703400571DDC /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -283,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049956BD220B703400571DDC /* LaunchScreen.storyboard in Resources */,
+				04F2347E2243FDFB007F9B47 /* Dashboard.storyboard in Resources */,
 				049956BA220B703400571DDC /* Assets.xcassets in Resources */,
 				049956B8220B703300571DDC /* Main.storyboard in Resources */,
 				04BCA0F422416ECC0067D349 /* Login.storyboard in Resources */,

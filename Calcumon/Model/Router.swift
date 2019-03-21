@@ -15,7 +15,7 @@ enum Router {
     var scheme: String {
         switch self {
         case .existingLogin, .newLogin:
-            return "http"
+            return "https"
         }
     }
     

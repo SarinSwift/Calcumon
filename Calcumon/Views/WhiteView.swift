@@ -13,6 +13,6 @@ class WhiteView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.roundCorners(corners: [.topLeft, .topRight], radius: 16)
+//        self.roundCorners(corners: [.topLeft, .topRight], radius: 16)
     }
 }

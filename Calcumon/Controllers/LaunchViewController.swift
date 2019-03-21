@@ -25,7 +25,7 @@ class LaunchViewController: UIViewController {
         backgroundView.layer.cornerRadius = 10
         backgroundView.layer.shadowColor = UIColor.black.cgColor
         backgroundView.layer.shadowOpacity = 0.3
-        backgroundView.layer.shadowOffset = CGSize.zero
+        backgroundView.layer.shadowOffset = CGSize(width: 10, height: 10)
         backgroundView.layer.shadowRadius = 10
     }
     

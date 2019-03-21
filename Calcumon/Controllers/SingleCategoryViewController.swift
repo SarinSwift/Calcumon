@@ -13,7 +13,8 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     // results of the math equation, and total sum of points!!
     var result: NSNumber = 0
     var pointsResult: Int = 0
-    var numberOfEquations: Int = 0
+    // variable for keeping count until user hits 10
+    var numberOfEquations: Int = 9
     var correctAnswers: Int = 0
     
     @IBOutlet weak var pointsLabel: UILabel!
