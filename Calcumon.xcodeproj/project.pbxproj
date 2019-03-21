@@ -12,7 +12,9 @@
 		0400E966220E4555009452C1 /* UltravisualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E965220E4555009452C1 /* UltravisualLayout.swift */; };
 		0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */; };
 		0400E972220E5E11009452C1 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400E971220E5E11009452C1 /* Inspirations.xcassets */; };
-		0405F34C221CBB8700B6C70F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405F34B221CBB8700B6C70F /* NetworkManager.swift */; };
+		04144E8D22431A94001B9ACD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8C22431A94001B9ACD /* Router.swift */; };
+		04144E8F22431CA6001B9ACD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8E22431CA6001B9ACD /* Service.swift */; };
+		04144E9122431DB6001B9ACD /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E9022431DB6001B9ACD /* UserObject.swift */; };
 		044ADAE9222F1D6700BCC21B /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ADAE8222F1D6700BCC21B /* ComingSoonViewController.swift */; };
 		0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */; };
 		0452896E222B02D50072D3AC /* ProfileLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896D222B02D50072D3AC /* ProfileLogViewController.swift */; };
@@ -45,7 +47,9 @@
 		0400E965220E4555009452C1 /* UltravisualLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltravisualLayout.swift; sourceTree = "<group>"; };
 		0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		0400E971220E5E11009452C1 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
-		0405F34B221CBB8700B6C70F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		04144E8C22431A94001B9ACD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		04144E8E22431CA6001B9ACD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		04144E9022431DB6001B9ACD /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
 		044ADAE8222F1D6700BCC21B /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
 		0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCatVCRandomEquations.swift; sourceTree = "<group>"; };
 		0452896D222B02D50072D3AC /* ProfileLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLogViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		04144E8B22431A64001B9ACD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04144E8C22431A94001B9ACD /* Router.swift */,
+				04144E8E22431CA6001B9ACD /* Service.swift */,
+				04144E9022431DB6001B9ACD /* UserObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		047DA54A2221CA1500ACA52E /* MathGenerator */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				049956B2220B703300571DDC /* AppDelegate.swift */,
-				0405F34B221CBB8700B6C70F /* NetworkManager.swift */,
+				04144E8B22431A64001B9ACD /* Model */,
 				049956C4220B704100571DDC /* Controllers */,
 				0400E963220E3F96009452C1 /* Views */,
 				047DA54A2221CA1500ACA52E /* MathGenerator */,
@@ -323,14 +337,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BCA0F622416EF60067D349 /* LoginViewController.swift in Sources */,
+				04144E8F22431CA6001B9ACD /* Service.swift in Sources */,
 				04528972222B3FFC0072D3AC /* WhiteView.swift in Sources */,
+				04144E8D22431A94001B9ACD /* Router.swift in Sources */,
 				0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */,
-				0405F34C221CBB8700B6C70F /* NetworkManager.swift in Sources */,
 				0499441222212148008A0427 /* MathExpression.swift in Sources */,
 				0494F6C42242C89400BB24FD /* NewProfileViewController.swift in Sources */,
 				04528970222B3DCA0072D3AC /* UIView+CornerRadius.swift in Sources */,
 				E5FC5D5E2242D60F00E15F66 /* LaunchViewController.swift in Sources */,
 				047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */,
+				04144E9122431DB6001B9ACD /* UserObject.swift in Sources */,
 				04A9D2982225B9A9008D7CCD /* ShakingTextField.swift in Sources */,
 				04B019DB222887A400B75555 /* StringExt.swift in Sources */,
 				044ADAE9222F1D6700BCC21B /* ComingSoonViewController.swift in Sources */,
