@@ -43,7 +43,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66g-h4-Rn3">
-                                        <rect key="frame" x="84" y="212.5" width="169" height="44"/>
+                                        <rect key="frame" x="84" y="213.5" width="169" height="44"/>
                                         <color key="backgroundColor" red="0.6588235294" green="0.43137254899999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="WcO-zL-Ri2"/>
@@ -58,26 +58,35 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="QoI-A5-MxG" kind="show" id="iI4-rB-MSD"/>
+                                            <action selector="loginBtnTapped:" destination="4hO-vY-8lL" eventType="touchUpInside" id="N5a-QA-2P3"/>
+                                            <segue destination="QoI-A5-MxG" kind="show" animates="NO" id="iI4-rB-MSD"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="R4Q-1s-T9u">
-                                        <rect key="frame" x="84" y="286.5" width="169.5" height="32"/>
+                                        <rect key="frame" x="84" y="287.5" width="169.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYc-V0-CXX">
-                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="31"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                                 <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBB-AU-His">
-                                                <rect key="frame" x="121.5" y="0.0" width="48" height="32"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
-                                                <state key="normal" title="Signup.">
-                                                    <color key="titleColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBB-AU-His">
+                                                <rect key="frame" x="121.5" y="0.0" width="48" height="31"/>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Signup.">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="14" name="Avenir-Medium"/>
+                                                                <integer key="NSUnderline" value="1"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="GKP-sM-sK0" kind="show" id="MXC-52-TjP"/>
+                                                    <action selector="signupBtnTapped:" destination="4hO-vY-8lL" eventType="touchUpInside" id="uFd-Br-RHk"/>
+                                                    <segue destination="GKP-sM-sK0" kind="show" identifier="signupSegue" animates="NO" id="MXC-52-TjP"/>
                                                 </connections>
                                             </button>
                                         </subviews>

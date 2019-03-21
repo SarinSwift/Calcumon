@@ -34,4 +34,19 @@ class LaunchViewController: UIViewController {
         guard let categoryVC = story.instantiateViewController(withIdentifier: "categories") as? ViewController else { return }
         self.present(categoryVC, animated: true, completion: nil)
     }
+    
+    @IBAction func signupBtnTapped(_ sender: UIButton) {
+        animateSignBtns()
+    }
+    @IBAction func loginBtnTapped(_ sender: UIButton) {
+        animateSignBtns()
+    }
+    
+    func animateSignBtns() {
+        // animation for dismiss
+        let animation = CATransition()
+        animation.type = .fade
+        animation.duration = 0.25
+        self.view.window!.layer.add(animation, forKey: nil)
+    }
 }

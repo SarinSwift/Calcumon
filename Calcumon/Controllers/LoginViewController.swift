@@ -50,7 +50,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        // animation for dismiss
+        let animation = CATransition()
+        animation.type = .fade
+        animation.duration = 0.25
+        self.view.window!.layer.add(animation, forKey: nil)
+        
+        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
