@@ -17,6 +17,9 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     var numberOfEquations: Int = 9
     var correctAnswers: Int = 0
     
+    // storing question&answer to populate the tableview
+    var questionAnswersArr = [QuestionAnswer]()
+    
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var solveView: UIView!
@@ -27,6 +30,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var answerTextField: ShakingTextField!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +99,10 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.answerTextField.layer.borderWidth = 2.0
                 self.pointsResult += 10
                 
+                // inserting the new set of answered question
+                insertNewAnswerSet(q: questionLabel.text!, a: answerTextField.text!)
+                print(questionAnswersArr[0].answer)
+                
                 // bring up new question
                 continueNext()
                 
@@ -123,6 +131,9 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 correctAnswers += 1
             } else {
                 // Answer was incorrect
+                insertNewAnswerSet(q: questionLabel.text!, a: answerTextField.text!)
+                print(questionAnswersArr[0].answer)
+                
                 self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
                 self.answerTextField.layer.cornerRadius = 4.5
                 self.answerTextField.layer.borderWidth = 2.0
@@ -143,7 +154,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                     })
                 }
                 
-                // Settign data in Userdefaults for the pointsLabel
+                // Setting data in Userdefaults for the pointsLabel
                 let pointsDefualt = UserDefaults.standard
                 pointsDefualt.set(pointsResult, forKey: "points")
                 pointsDefualt.synchronize()

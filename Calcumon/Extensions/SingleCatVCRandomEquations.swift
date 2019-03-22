@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension SingleCategoryViewController {
+extension SingleCategoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func callingEquations() {
         if self.title == "Addition" {
@@ -122,4 +122,30 @@ extension SingleCategoryViewController {
         let sqrtNumberRight = sqrt(Double(rightAfter)!)
         result = (sqrtNumberLeft + sqrtNumberRight).roundTo(places: 2) as NSNumber
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return questionAnswersArr.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(questionAnswersArr.count)
+        let  cell = tableView.dequeueReusableCell(withIdentifier: "questionLogCell", for: indexPath) as! QuestionLogCell
+        print("tableview cellforrowat: \(questionAnswersArr[0].answer)")
+        cell.questionLabel.text = questionAnswersArr[indexPath.row].question
+        cell.answerLabel.text = questionAnswersArr[indexPath.row].answer
+        return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    // needs to be called when submit button is tapped
+    func insertNewAnswerSet(q: String, a: String) {
+        let newSet = QuestionAnswer(question: q, answer: a)
+        questionAnswersArr.append(newSet)
+        let indexPath = IndexPath(row: questionAnswersArr.count-1, section: 0)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
+    }
+    
 }

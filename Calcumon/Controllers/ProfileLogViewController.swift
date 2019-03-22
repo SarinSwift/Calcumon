@@ -87,6 +87,8 @@ class ProfileLogViewController: UIViewController {
     }
     
     @IBAction func signupBtnTapped(_ sender: UIButton) {
-        print("send to signup new user")
+        let story = UIStoryboard(name: "Login", bundle: Bundle.main)
+        guard let signupVc = story.instantiateViewController(withIdentifier: "signupView") as? SignupViewController else { return }
+        self.present(signupVc, animated: false, completion: nil)
     }
 }

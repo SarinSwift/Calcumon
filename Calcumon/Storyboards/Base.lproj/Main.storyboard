@@ -202,15 +202,38 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x2B-si-WEh">
+                                <rect key="frame" x="16" y="453.5" width="343" height="213.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionLogCell" id="k1x-Y4-mQI" customClass="QuestionLogCell" customModule="Calcumon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k1x-Y4-mQI" id="SAG-rz-ngA">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.85098039219999999" green="0.75294117650000003" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Zle-33-ki0" id="s5w-bM-cp5"/>
+                                    <outlet property="delegate" destination="Zle-33-ki0" id="LE6-lV-Qek"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="top" secondItem="h7s-vz-mX3" secondAttribute="top" id="2Iz-Yg-D5m"/>
+                            <constraint firstItem="x2B-si-WEh" firstAttribute="bottom" secondItem="h7s-vz-mX3" secondAttribute="bottom" id="C9z-Ip-dsw"/>
                             <constraint firstItem="hWK-Qe-MzQ" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="bottom" id="LaU-bu-90m"/>
+                            <constraint firstItem="x2B-si-WEh" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" constant="16" id="LiU-LQ-1b6"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="ezh-F3-L4L" secondAttribute="trailing" id="Sbc-ew-mCc"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="height" secondItem="M8T-64-Gn7" secondAttribute="height" multiplier="0.5" id="W0K-WJ-lVv"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" id="WdG-ej-qUz"/>
+                            <constraint firstItem="x2B-si-WEh" firstAttribute="top" secondItem="hWK-Qe-MzQ" secondAttribute="bottom" constant="50" id="Wey-Am-AVy"/>
+                            <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="x2B-si-WEh" secondAttribute="trailing" constant="16" id="XIU-WW-1Eh"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="dkX-M0-UDj"/>
                             <constraint firstItem="hWK-Qe-MzQ" firstAttribute="centerX" secondItem="h7s-vz-mX3" secondAttribute="centerX" id="tjQ-gK-KVp"/>
                         </constraints>
@@ -228,6 +251,7 @@
                         <outlet property="skipButton" destination="yuB-7u-rmY" id="Z89-Ev-ZQp"/>
                         <outlet property="solveView" destination="orR-Y3-ZCf" id="4Yc-ft-LW2"/>
                         <outlet property="submitButton" destination="rBa-xw-zZf" id="Gxb-Fk-7G2"/>
+                        <outlet property="tableView" destination="x2B-si-WEh" id="Y5m-rb-AVl"/>
                         <outlet property="topContainerView" destination="ezh-F3-L4L" id="VRn-JK-L5f"/>
                     </connections>
                 </viewController>
@@ -243,7 +267,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="492" y="-39"/>
+            <point key="canvasLocation" x="492" y="-39.130434782608695"/>
         </scene>
         <!--Profile Log View Controller-->
         <scene sceneID="asD-Gk-D7q">
