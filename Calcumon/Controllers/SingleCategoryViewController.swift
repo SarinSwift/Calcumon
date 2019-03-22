@@ -100,8 +100,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.pointsResult += 10
                 
                 // inserting the new set of answered question
-                insertNewAnswerSet(q: questionLabel.text!, a: answerTextField.text!)
-                print(questionAnswersArr[0].answer)
+                insertNewAnswerSet(q: questionLabel.text!, a: answerTextField.text!, correctness: #imageLiteral(resourceName: "correct"))
                 
                 // bring up new question
                 continueNext()
@@ -131,8 +130,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 correctAnswers += 1
             } else {
                 // Answer was incorrect
-                insertNewAnswerSet(q: questionLabel.text!, a: answerTextField.text!)
-                print(questionAnswersArr[0].answer)
+                insertNewAnswerSet(q: questionLabel.text!, a: answerTextField.text!, correctness: #imageLiteral(resourceName: "wrong"))
                 
                 self.answerTextField.layer.borderColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
                 self.answerTextField.layer.cornerRadius = 4.5

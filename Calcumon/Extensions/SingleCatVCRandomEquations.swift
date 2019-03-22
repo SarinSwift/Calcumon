@@ -132,15 +132,16 @@ extension SingleCategoryViewController: UITableViewDelegate, UITableViewDataSour
         print("tableview cellforrowat: \(questionAnswersArr[0].answer)")
         cell.questionLabel.text = questionAnswersArr[indexPath.row].question
         cell.answerLabel.text = questionAnswersArr[indexPath.row].answer
+        cell.answerStateIV.image = questionAnswersArr[indexPath.row].correctness
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 60
     }
     
     // needs to be called when submit button is tapped
-    func insertNewAnswerSet(q: String, a: String) {
-        let newSet = QuestionAnswer(question: q, answer: a)
+    func insertNewAnswerSet(q: String, a: String, correctness: UIImage) {
+        let newSet = QuestionAnswer(question: q, answer: a, correctness: correctness)
         questionAnswersArr.insert(newSet, at: 0)
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.beginUpdates()

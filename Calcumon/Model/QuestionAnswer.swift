@@ -7,13 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 class QuestionAnswer {
     let question: String
     let answer: String
+    let correctness: UIImage
     
-    init(question: String, answer: String) {
+    init(question: String, answer: String, correctness: UIImage) {
         self.question = question
         self.answer = answer
+        self.correctness = correctness
     }
 }
