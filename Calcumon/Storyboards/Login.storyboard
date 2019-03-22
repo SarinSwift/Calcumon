@@ -193,6 +193,9 @@
                                                         <integer key="value" value="19"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="loginBtnTapped:" destination="QoI-A5-MxG" eventType="touchUpInside" id="5lB-6h-DWn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -330,6 +333,9 @@
                                                         <integer key="value" value="19"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signupBtnTapped:" destination="GKP-sM-sK0" eventType="touchUpInside" id="Cnm-oZ-0FG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

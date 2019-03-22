@@ -62,4 +62,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.emailTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
     }
+    
+    @IBAction func loginBtnTapped(_ sender: UIButton) {
+        checkTextfields()
+    }
+    
+    func checkTextfields() {
+        if emailTextField.text == "" || passwordTextField.text == "" {
+            let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
+            vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+            vc.textBody.text = "Make sure to insert all text fields!!"
+            self.addChild(vc)
+            self.view.addSubview(vc.view)
+        }
+    }
 }

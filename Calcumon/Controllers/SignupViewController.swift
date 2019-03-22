@@ -56,15 +56,33 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
+        resignResponder()
+    }
+    @IBAction func swipeToHideKeyboard(_ sender: UISwipeGestureRecognizer) {
+        resignResponder()
+    }
+    func resignResponder() {
         self.emailTextField.resignFirstResponder()
         self.usernameTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
         self.repeatPassTextField.resignFirstResponder()
     }
-    @IBAction func swipeToHideKeyboard(_ sender: UISwipeGestureRecognizer) {
-        self.emailTextField.resignFirstResponder()
-        self.usernameTextField.resignFirstResponder()
-        self.passwordTextField.resignFirstResponder()
-        self.repeatPassTextField.resignFirstResponder()
+    
+    @IBAction func signupBtnTapped(_ sender: UIButton) {
+        print("Welcome \(usernameTextField.text!)")
+        checkTextfields()
+        // TODO: Navigate to an empty viewcontroller first
+        
+    }
+    
+    func checkTextfields() {
+        if emailTextField.text == "" || usernameTextField.text == "" || passwordTextField.text == "" || repeatPassTextField.text == "" {
+            let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
+            vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+            vc.textBody.text = "Make sure to insert all text fields!!"
+            self.addChild(vc)
+            self.view.addSubview(vc.view)
+        }
     }
 }
