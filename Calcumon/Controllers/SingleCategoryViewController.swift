@@ -14,7 +14,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     var result: NSNumber = 0
     var pointsResult: Int = 0
     // variable for keeping count until user hits 10
-    var numberOfEquations: Int = 9
+    var numberOfEquations: Int = 0
     var correctAnswers: Int = 0
     
     // storing question&answer to populate the tableview

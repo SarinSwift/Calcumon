@@ -141,8 +141,8 @@ extension SingleCategoryViewController: UITableViewDelegate, UITableViewDataSour
     // needs to be called when submit button is tapped
     func insertNewAnswerSet(q: String, a: String) {
         let newSet = QuestionAnswer(question: q, answer: a)
-        questionAnswersArr.append(newSet)
-        let indexPath = IndexPath(row: questionAnswersArr.count-1, section: 0)
+        questionAnswersArr.insert(newSet, at: 0)
+        let indexPath = IndexPath(row: 0, section: 0)
         tableView.beginUpdates()
         tableView.insertRows(at: [indexPath], with: .automatic)
         tableView.endUpdates()
