@@ -13,7 +13,6 @@ class NewProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
     
     @IBAction func CancelBtnTapped(_ sender: UIButton) {

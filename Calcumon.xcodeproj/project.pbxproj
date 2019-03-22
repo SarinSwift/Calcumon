@@ -38,6 +38,7 @@
 		04F2347E2243FDFB007F9B47 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F2347D2243FDFB007F9B47 /* Dashboard.storyboard */; };
 		04F2348022443836007F9B47 /* QuestionLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2347F22443836007F9B47 /* QuestionLogCell.swift */; };
 		04F23482224443AD007F9B47 /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F23481224443AD007F9B47 /* QuestionAnswer.swift */; };
+		04F2348422448319007F9B47 /* VIewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F2348322448319007F9B47 /* VIewAnimation.swift */; };
 		D9D8A007ADC81CC685F24FD9 /* Pods_Calcumon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */; };
 		E5CB85A72241C8C9006113CC /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CB85A62241C8C9006113CC /* DashboardViewController.swift */; };
 		E5FC5D5E2242D60F00E15F66 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC5D5D2242D60F00E15F66 /* LaunchViewController.swift */; };
@@ -78,6 +79,7 @@
 		04F2347D2243FDFB007F9B47 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		04F2347F22443836007F9B47 /* QuestionLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLogCell.swift; sourceTree = "<group>"; };
 		04F23481224443AD007F9B47 /* QuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
+		04F2348322448319007F9B47 /* VIewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIewAnimation.swift; sourceTree = "<group>"; };
 		907A9EECE82CE70B2C77D571 /* Pods-Calcumon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.release.xcconfig"; sourceTree = "<group>"; };
 		C1722929B498ED06CD216D34 /* Pods_Calcumon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calcumon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBDD8B50BD6808759AB5D983 /* Pods-Calcumon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calcumon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calcumon/Pods-Calcumon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				04B019DA222887A400B75555 /* StringExt.swift */,
 				0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */,
 				0452896F222B3DCA0072D3AC /* UIView+CornerRadius.swift */,
+				04F2348322448319007F9B47 /* VIewAnimation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				04BCA0F622416EF60067D349 /* LoginViewController.swift in Sources */,
 				04144E8F22431CA6001B9ACD /* Service.swift in Sources */,
 				04528972222B3FFC0072D3AC /* WhiteView.swift in Sources */,
+				04F2348422448319007F9B47 /* VIewAnimation.swift in Sources */,
 				04F23482224443AD007F9B47 /* QuestionAnswer.swift in Sources */,
 				04144E8D22431A94001B9ACD /* Router.swift in Sources */,
 				0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */,

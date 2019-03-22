@@ -51,12 +51,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
-        // animation for dismiss
-        let animation = CATransition()
-        animation.type = .fade
-        animation.duration = 0.25
-        self.view.window!.layer.add(animation, forKey: nil)
-        
+        self.fadingViewAnimation()
         self.dismiss(animated: false, completion: nil)
     }
     

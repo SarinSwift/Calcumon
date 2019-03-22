@@ -203,14 +203,14 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="x2B-si-WEh">
-                                <rect key="frame" x="16" y="453.5" width="343" height="213.5"/>
+                                <rect key="frame" x="0.0" y="453.5" width="359" height="213.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionLogCell" id="k1x-Y4-mQI" customClass="QuestionLogCell" customModule="Calcumon" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="359" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k1x-Y4-mQI" id="SAG-rz-ngA">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="359" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -227,7 +227,7 @@
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="top" secondItem="h7s-vz-mX3" secondAttribute="top" id="2Iz-Yg-D5m"/>
                             <constraint firstItem="x2B-si-WEh" firstAttribute="bottom" secondItem="h7s-vz-mX3" secondAttribute="bottom" id="C9z-Ip-dsw"/>
                             <constraint firstItem="hWK-Qe-MzQ" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="bottom" id="LaU-bu-90m"/>
-                            <constraint firstItem="x2B-si-WEh" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" constant="16" id="LiU-LQ-1b6"/>
+                            <constraint firstItem="x2B-si-WEh" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" id="LiU-LQ-1b6"/>
                             <constraint firstItem="h7s-vz-mX3" firstAttribute="trailing" secondItem="ezh-F3-L4L" secondAttribute="trailing" id="Sbc-ew-mCc"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="height" secondItem="M8T-64-Gn7" secondAttribute="height" multiplier="0.5" id="W0K-WJ-lVv"/>
                             <constraint firstItem="ezh-F3-L4L" firstAttribute="leading" secondItem="h7s-vz-mX3" secondAttribute="leading" id="WdG-ej-qUz"/>

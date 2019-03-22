@@ -57,7 +57,8 @@ extension ViewController {
             let navController = UINavigationController(rootViewController: singleCategoryVC)
             navController.navigationBar.barTintColor = UIColor(patternImage: self.images[indexPath.row])
             singleCategoryVC.title = self.categories[indexPath.row]
-            self.present(navController, animated: true, completion: nil)
+            self.present(navController, animated: false, completion: nil)
+            self.fadingViewAnimation()
         }
         
     }

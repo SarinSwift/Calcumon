@@ -36,17 +36,9 @@ class LaunchViewController: UIViewController {
     }
     
     @IBAction func signupBtnTapped(_ sender: UIButton) {
-        animateSignBtns()
+        self.fadingViewAnimation()
     }
     @IBAction func loginBtnTapped(_ sender: UIButton) {
-        animateSignBtns()
-    }
-    
-    func animateSignBtns() {
-        // animation for dismiss
-        let animation = CATransition()
-        animation.type = .fade
-        animation.duration = 0.25
-        self.view.window!.layer.add(animation, forKey: nil)
+        self.fadingViewAnimation()
     }
 }
