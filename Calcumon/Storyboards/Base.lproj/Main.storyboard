@@ -291,7 +291,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="qWt-fR-6gf">
                                         <rect key="frame" x="67" y="106" width="221" height="249.5"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monsterTrophy" translatesAutoresizingMaskIntoConstraints="NO" id="Den-po-e4t">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Den-po-e4t">
                                                 <rect key="frame" x="0.0" y="0.0" width="221" height="172"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="juB-jd-5ye">
@@ -425,6 +425,7 @@
                         <outlet property="mainLabel" destination="5d2-1C-5sw" id="Lyx-8I-Obw"/>
                         <outlet property="scoreOutOfTenLabel" destination="QIn-O6-FDg" id="3Ir-DX-1Z4"/>
                         <outlet property="tableView" destination="pUO-ID-qLM" id="me0-h0-uib"/>
+                        <outlet property="trophyImageView" destination="Den-po-e4t" id="zrZ-9J-1Dp"/>
                         <outlet property="viewLogBtn" destination="DbR-oW-KOP" id="VSj-Sd-L15"/>
                         <outlet property="whiteView" destination="QCI-Yp-EH5" id="hcg-f0-Lya"/>
                     </connections>
@@ -467,7 +468,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.84950083620000005" green="0.74891906649999995" blue="0.8733170629" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.74901960784313726" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="gL2-Sq-I0d" firstAttribute="bottom" secondItem="eKQ-qi-jcc" secondAttribute="bottom" constant="30" id="Jta-5M-ywv"/>
                             <constraint firstItem="eKQ-qi-jcc" firstAttribute="centerX" secondItem="gL2-Sq-I0d" secondAttribute="centerX" id="KYy-fE-zOt"/>
@@ -568,7 +569,4 @@
             <point key="canvasLocation" x="1290" y="-757"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="monsterTrophy" width="221" height="228"/>
-    </resources>
 </document>

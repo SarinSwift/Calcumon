@@ -9,9 +9,18 @@
 import UIKit
 
 class UserDashboardViewController: UIViewController {
+    
+    var welcomeText: String = ""
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        welcomeLabel.text = "Welcome, \(welcomeText)"
 
         setupBgGradient()
     }
@@ -25,4 +34,7 @@ class UserDashboardViewController: UIViewController {
         view.layer.insertSublayer(gradient, at: 0)
     }
 
+    @IBAction func backBtnTapped(_ sender: UIButton) {
+        self.dismiss(animated: false, completion: nil)
+    }
 }

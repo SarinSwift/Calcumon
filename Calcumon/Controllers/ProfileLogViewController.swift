@@ -10,6 +10,7 @@ import UIKit
 import PullToDismiss
 
 class ProfileLogViewController: UIViewController {
+    var trophyImageFromPrevVC: UIImage = #imageLiteral(resourceName: "badTrophy")
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -22,6 +23,7 @@ class ProfileLogViewController: UIViewController {
     @IBOutlet weak var whiteView: UIView!
     
     @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var trophyImageView: UIImageView!
     @IBOutlet weak var scoreOutOfTenLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var viewLogBtn: UIButton!
@@ -29,6 +31,7 @@ class ProfileLogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBgGradient()
+        trophyImageView.image = trophyImageFromPrevVC
         
         scoreOutOfTenLabel.text = "\(allCorrect)/10"
         setupMainLabel()
