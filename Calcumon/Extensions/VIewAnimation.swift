@@ -13,7 +13,7 @@ extension UIViewController {
     public func fadingViewAnimation() {
         let animation = CATransition()
         animation.type = .fade
-        animation.duration = 0.25
+        animation.duration = 0.2
         self.view.window!.layer.add(animation, forKey: nil)
     }
 }

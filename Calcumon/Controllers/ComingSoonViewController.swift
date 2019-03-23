@@ -9,7 +9,6 @@
 import UIKit
 
 class ComingSoonViewController: UIViewController {
-
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

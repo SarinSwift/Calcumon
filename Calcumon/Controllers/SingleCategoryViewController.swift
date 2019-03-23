@@ -165,6 +165,10 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 let story = UIStoryboard(name: "Main", bundle: Bundle.main)
                 guard let profileVC = story.instantiateViewController(withIdentifier: "profileLog") as? ProfileLogViewController else { return }
                 profileVC.allCorrect = correctAnswers
+                // setting the trophy if you get more than 50% correct
+                if correctAnswers >= 5 {
+                    profileVC.trophyImageFromPrevVC = #imageLiteral(resourceName: "trophy")
+                }
                 profileVC.modalPresentationStyle = .overCurrentContext
                 self.present(profileVC, animated: true, completion: nil)
                 numberOfEquations = 0
