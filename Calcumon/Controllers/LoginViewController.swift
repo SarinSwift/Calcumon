@@ -75,6 +75,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             vc.textBody.text = "Make sure to insert all text fields!!"
             self.addChild(vc)
             self.view.addSubview(vc.view)
+        } else {
+            let story = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
+            guard let dashboardVC = story.instantiateViewController(withIdentifier: "userDashboardViewController") as? UserDashboardViewController else { return }
+            dashboardVC.welcomeText = emailTextField.text!
+            dashboardVC.modalPresentationStyle = .overCurrentContext
+            self.present(dashboardVC, animated: true, completion: nil)
         }
     }
 }
