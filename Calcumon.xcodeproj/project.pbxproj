@@ -203,13 +203,13 @@
 			children = (
 				049956B4220B703300571DDC /* ViewController.swift */,
 				E5FC5D5D2242D60F00E15F66 /* LaunchViewController.swift */,
-				E5CB85A62241C8C9006113CC /* UserDashboardViewController.swift */,
 				0400B9C22217423800720075 /* SingleCategoryViewController.swift */,
 				047DA54F2222677200ACA52E /* CustomAlertViewController.swift */,
 				0452896D222B02D50072D3AC /* ProfileLogViewController.swift */,
 				044ADAE8222F1D6700BCC21B /* ComingSoonViewController.swift */,
 				04BCA0F522416EF60067D349 /* LoginViewController.swift */,
 				E5FC5D5F2242D8B600E15F66 /* SignupViewController.swift */,
+				E5CB85A62241C8C9006113CC /* UserDashboardViewController.swift */,
 				0494F6C32242C89400BB24FD /* NewProfileViewController.swift */,
 			);
 			path = Controllers;

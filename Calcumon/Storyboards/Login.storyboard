@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4hO-vY-8lL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JEx-iR-Grj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="19" y="253.5" width="337.5" height="333.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXP-JI-7RA">
-                                        <rect key="frame" x="79" y="22" width="169" height="150"/>
+                                        <rect key="frame" x="84" y="22" width="169" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="7I7-mP-PKr"/>
                                         </constraints>
@@ -59,7 +59,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="loginBtnTapped:" destination="4hO-vY-8lL" eventType="touchUpInside" id="N5a-QA-2P3"/>
-                                            <segue destination="QoI-A5-MxG" kind="show" animates="NO" id="iI4-rB-MSD"/>
+                                            <segue destination="QoI-A5-MxG" kind="show" animates="NO" id="XTP-FY-65k"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="R4Q-1s-T9u">
@@ -100,7 +100,7 @@
                                     <constraint firstItem="R4Q-1s-T9u" firstAttribute="centerX" secondItem="cKR-17-ARA" secondAttribute="centerX" id="TwF-xE-UPV"/>
                                     <constraint firstItem="R4Q-1s-T9u" firstAttribute="top" secondItem="66g-h4-Rn3" secondAttribute="bottom" constant="30" id="aE5-4b-h1M"/>
                                     <constraint firstItem="66g-h4-Rn3" firstAttribute="centerX" secondItem="cKR-17-ARA" secondAttribute="centerX" id="eza-97-jDn"/>
-                                    <constraint firstItem="zXP-JI-7RA" firstAttribute="centerX" secondItem="cKR-17-ARA" secondAttribute="centerX" constant="-5" id="k0d-LB-Qn5"/>
+                                    <constraint firstItem="zXP-JI-7RA" firstAttribute="centerX" secondItem="cKR-17-ARA" secondAttribute="centerX" id="k0d-LB-Qn5"/>
                                     <constraint firstAttribute="bottom" secondItem="R4Q-1s-T9u" secondAttribute="bottom" constant="15" id="nmH-Yr-uuz"/>
                                 </constraints>
                             </view>
@@ -132,6 +132,7 @@
                             <outletCollection property="gestureRecognizers" destination="xCJ-Jl-pzJ" appends="YES" id="J7N-JW-1NC"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="1pk-Uu-3L3"/>
                     <connections>
                         <outlet property="backgroundView" destination="cKR-17-ARA" id="MjF-rO-ccp"/>
                     </connections>
@@ -140,7 +141,7 @@
                 <tapGestureRecognizer id="BcE-5k-agp"/>
                 <swipeGestureRecognizer direction="down" id="xCJ-Jl-pzJ"/>
             </objects>
-            <point key="canvasLocation" x="-815" y="561"/>
+            <point key="canvasLocation" x="124" y="560.86956521739137"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Lkv-wo-NGG">
@@ -170,13 +171,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVC-Dd-4NL">
                                                 <rect key="frame" x="0.0" y="45" width="270" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-P5-RUg">
                                                 <rect key="frame" x="51" y="90" width="168.5" height="44"/>
@@ -268,7 +269,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="76" y="868"/>
+            <point key="canvasLocation" x="1072.8" y="880.20989505247383"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="wSG-Zr-vEv">
@@ -298,7 +299,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uRo-xN-1yB">
                                                 <rect key="frame" x="0.0" y="45" width="270" height="30"/>
@@ -310,13 +311,13 @@
                                                 <rect key="frame" x="0.0" y="90" width="270" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4s8-c8-Ruc">
                                                 <rect key="frame" x="0.0" y="135" width="270" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-2j-7af">
                                                 <rect key="frame" x="51" y="180" width="168.5" height="44"/>
@@ -411,13 +412,30 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="76" y="152"/>
+            <point key="canvasLocation" x="1015.2" y="151.57421289355324"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EsR-Nv-psQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="JEx-iR-Grj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A1p-JF-cDb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4hO-vY-8lL" kind="relationship" relationship="rootViewController" id="ihH-ME-Uq3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xWz-jX-YsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-815.20000000000005" y="560.86956521739137"/>
         </scene>
     </scenes>
     <resources>
         <image name="backBtn" width="33" height="33"/>
         <image name="calcumonLogo" width="916" height="180"/>
         <image name="loginBackground1" width="275" height="466"/>
-        <image name="playBtn" width="457" height="400"/>
+        <image name="playBtn" width="425" height="399"/>
     </resources>
 </document>

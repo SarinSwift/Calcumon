@@ -51,7 +51,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
         self.fadingViewAnimation()
-        self.dismiss(animated: false, completion: nil)
+        self.navigationController?.popViewController(animated: false)
+        print("in cancel btnnnn")
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
@@ -80,7 +81,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             guard let dashboardVC = story.instantiateViewController(withIdentifier: "userDashboardViewController") as? UserDashboardViewController else { return }
             dashboardVC.welcomeText = emailTextField.text!
             dashboardVC.modalPresentationStyle = .overCurrentContext
-            self.present(dashboardVC, animated: true, completion: nil)
+            self.fadingViewAnimation()
+            self.navigationController?.pushViewController(dashboardVC, animated: false)
         }
     }
 }

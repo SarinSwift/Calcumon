@@ -35,6 +35,7 @@ class UserDashboardViewController: UIViewController {
     }
 
     @IBAction func backBtnTapped(_ sender: UIButton) {
-        self.dismiss(animated: false, completion: nil)
+        self.fadingViewAnimation()
+        self.navigationController?.popViewController(animated: false)
     }
 }

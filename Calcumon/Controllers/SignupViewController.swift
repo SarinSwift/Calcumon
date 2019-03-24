@@ -52,7 +52,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
         self.fadingViewAnimation()
-        self.dismiss(animated: false, completion: nil)
+        self.navigationController?.popViewController(animated: false)
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
