@@ -52,10 +52,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let height: CGFloat = 50
-        let bounds = self.navigationController!.navigationBar.bounds
-        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
-        
         self.answerTextField.becomeFirstResponder()
     }
     
