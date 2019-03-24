@@ -52,6 +52,18 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
         self.fadingViewAnimation()
+        // TODO: check if the previous vc is coming from login.storyboard, then use popViewController
+        // else, use dismissViewController
+        
+        if let viewControllers = self.navigationController?.viewControllers {
+            for vc in viewControllers {
+                if vc.isKind(of: LoginViewController.classForCoder()) {
+                    print("It's in the stack, so pop it!")
+                    // pop view controller
+                }
+            }
+        }
+        
         self.navigationController?.popViewController(animated: false)
     }
     
@@ -88,7 +100,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             guard let dashboardVC = story.instantiateViewController(withIdentifier: "userDashboardViewController") as? UserDashboardViewController else { return }
             dashboardVC.welcomeText = usernameTextField.text!
             dashboardVC.modalPresentationStyle = .overCurrentContext
-            self.present(dashboardVC, animated: true, completion: nil)
+            self.navigationController?.pushViewController(dashboardVC, animated: false)
         }
     }
 }

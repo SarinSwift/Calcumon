@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UICollectionViewController {
+    let selection = UISelectionFeedbackGenerator()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -60,7 +61,8 @@ extension ViewController {
             self.present(navController, animated: false, completion: nil)
             self.fadingViewAnimation()
         }
-        
+        // trigger the haptic feedback
+        selection.selectionChanged()
     }
     
     func selectAnimation(offset: CGFloat) {

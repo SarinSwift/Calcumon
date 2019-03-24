@@ -107,7 +107,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="equation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiX-9l-pZd">
-                                        <rect key="frame" x="20" y="51.5" width="335" height="80.5"/>
+                                        <rect key="frame" x="20" y="71.5" width="335" height="60.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                         <nil key="highlightedColor"/>
@@ -123,7 +123,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMk-8r-MG1" customClass="ShakingTextField" customModule="Calcumon" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="193.5" width="343" height="90"/>
+                                        <rect key="frame" x="16" y="173.5" width="343" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="5Ld-Ly-MIt"/>
                                         </constraints>
@@ -141,12 +141,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="orR-Y3-ZCf" secondAttribute="trailing" constant="15" id="2Cu-Dh-3K8"/>
-                                    <constraint firstAttribute="bottom" secondItem="YMk-8r-MG1" secondAttribute="bottom" constant="50" id="BUT-zm-ilE"/>
+                                    <constraint firstAttribute="bottom" secondItem="YMk-8r-MG1" secondAttribute="bottom" constant="70" id="BUT-zm-ilE"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="height" secondItem="ezh-F3-L4L" secondAttribute="height" multiplier="0.3" id="Etb-OP-XU6"/>
                                     <constraint firstItem="WqU-8C-q9c" firstAttribute="top" secondItem="ezh-F3-L4L" secondAttribute="top" id="LKh-Ik-dVU"/>
                                     <constraint firstAttribute="trailing" secondItem="YMk-8r-MG1" secondAttribute="trailing" constant="16" id="Ynp-He-n4U"/>
                                     <constraint firstItem="7O7-Qp-6nb" firstAttribute="top" secondItem="orR-Y3-ZCf" secondAttribute="bottom" id="aPm-So-Nmh"/>
-                                    <constraint firstItem="YiX-9l-pZd" firstAttribute="top" secondItem="orR-Y3-ZCf" secondAttribute="top" constant="10" id="iVF-B6-mUt"/>
+                                    <constraint firstItem="YiX-9l-pZd" firstAttribute="top" secondItem="orR-Y3-ZCf" secondAttribute="top" constant="30" id="iVF-B6-mUt"/>
                                     <constraint firstAttribute="trailing" secondItem="WqU-8C-q9c" secondAttribute="trailing" id="jC8-UG-xhS"/>
                                     <constraint firstItem="orR-Y3-ZCf" firstAttribute="centerX" secondItem="ezh-F3-L4L" secondAttribute="centerX" id="lT7-ZG-xpH"/>
                                     <constraint firstItem="YiX-9l-pZd" firstAttribute="leading" secondItem="orR-Y3-ZCf" secondAttribute="leading" constant="5" id="miA-qm-lqT"/>
@@ -314,17 +314,18 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DbR-oW-KOP">
-                                        <rect key="frame" x="25" y="447.5" width="305" height="44"/>
+                                        <rect key="frame" x="89" y="437.5" width="177.5" height="44"/>
                                         <color key="backgroundColor" red="0.35686274509803922" green="0.23137254901960785" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="6eS-AE-bLK"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="VIEW LOG">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="3"/>
+                                                <integer key="value" value="19"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -332,13 +333,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have done great so far. Keep up the great work!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIG-X1-MCo">
-                                        <rect key="frame" x="50" y="374.5" width="255" height="64"/>
+                                        <rect key="frame" x="50" y="370.5" width="255" height="58"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
                                         <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="b8y-7t-xaY">
-                                        <rect key="frame" x="89.5" y="491.5" width="176.5" height="31"/>
+                                        <rect key="frame" x="89.5" y="486.5" width="176.5" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE7-cm-giL">
                                                 <rect key="frame" x="0.0" y="0.0" width="126.5" height="31"/>
@@ -371,18 +372,18 @@
                                     <constraint firstItem="b8y-7t-xaY" firstAttribute="centerX" secondItem="QCI-Yp-EH5" secondAttribute="centerX" id="1Vb-3r-Pkg"/>
                                     <constraint firstItem="dIG-X1-MCo" firstAttribute="centerX" secondItem="QCI-Yp-EH5" secondAttribute="centerX" id="IjE-lW-lW4"/>
                                     <constraint firstItem="qWt-fR-6gf" firstAttribute="centerY" secondItem="QCI-Yp-EH5" secondAttribute="centerY" constant="-30" id="Oco-L9-hGW"/>
-                                    <constraint firstItem="DbR-oW-KOP" firstAttribute="leading" secondItem="QCI-Yp-EH5" secondAttribute="leading" constant="25" id="P4p-gA-19g"/>
-                                    <constraint firstAttribute="bottom" secondItem="DbR-oW-KOP" secondAttribute="bottom" constant="30" id="TCA-aF-rvP"/>
+                                    <constraint firstItem="DbR-oW-KOP" firstAttribute="width" secondItem="QCI-Yp-EH5" secondAttribute="width" multiplier="0.5" id="Rhb-fg-fVo"/>
+                                    <constraint firstAttribute="bottom" secondItem="DbR-oW-KOP" secondAttribute="bottom" constant="40" id="TCA-aF-rvP"/>
                                     <constraint firstItem="qWt-fR-6gf" firstAttribute="centerX" secondItem="QCI-Yp-EH5" secondAttribute="centerX" id="VML-BV-L28"/>
                                     <constraint firstItem="dIG-X1-MCo" firstAttribute="leading" secondItem="QCI-Yp-EH5" secondAttribute="leading" constant="50" id="YHK-MV-vcH"/>
+                                    <constraint firstItem="DbR-oW-KOP" firstAttribute="centerX" secondItem="QCI-Yp-EH5" secondAttribute="centerX" id="aL7-1t-FZ9"/>
                                     <constraint firstItem="Den-po-e4t" firstAttribute="height" secondItem="QCI-Yp-EH5" secondAttribute="height" multiplier="0.33" id="aqi-tY-wCh"/>
                                     <constraint firstItem="DbR-oW-KOP" firstAttribute="top" secondItem="dIG-X1-MCo" secondAttribute="bottom" constant="9" id="ccm-cO-fW0"/>
                                     <constraint firstItem="5d2-1C-5sw" firstAttribute="top" secondItem="QCI-Yp-EH5" secondAttribute="top" constant="40" id="hVm-9I-XRg"/>
-                                    <constraint firstItem="b8y-7t-xaY" firstAttribute="top" secondItem="DbR-oW-KOP" secondAttribute="bottom" id="hvX-1t-jOd"/>
+                                    <constraint firstItem="b8y-7t-xaY" firstAttribute="top" secondItem="DbR-oW-KOP" secondAttribute="bottom" constant="5" id="hvX-1t-jOd"/>
                                     <constraint firstItem="5d2-1C-5sw" firstAttribute="centerX" secondItem="QCI-Yp-EH5" secondAttribute="centerX" id="taH-QJ-0pD"/>
                                     <constraint firstAttribute="trailing" secondItem="dIG-X1-MCo" secondAttribute="trailing" constant="50" id="tje-cq-m9m"/>
-                                    <constraint firstItem="dIG-X1-MCo" firstAttribute="top" secondItem="qWt-fR-6gf" secondAttribute="bottom" constant="19" id="vHM-VU-pcU"/>
-                                    <constraint firstAttribute="trailing" secondItem="DbR-oW-KOP" secondAttribute="trailing" constant="25" id="wcl-MW-GFr"/>
+                                    <constraint firstItem="dIG-X1-MCo" firstAttribute="top" secondItem="qWt-fR-6gf" secondAttribute="bottom" constant="15" id="vHM-VU-pcU"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
