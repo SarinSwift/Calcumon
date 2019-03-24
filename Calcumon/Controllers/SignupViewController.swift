@@ -52,18 +52,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
         self.fadingViewAnimation()
-        
-        // Previous vc is coming from login.storyboard, so we use popViewController()
-        // else, use dismissViewController()
-        if let viewControllers = self.navigationController?.viewControllers {
-            for vc in viewControllers {
-                if vc.isKind(of: LaunchViewController.classForCoder()) {
-                    self.navigationController?.popViewController(animated: false)
-                    return
-                }
-            }
-        }
-        self.dismiss(animated: false, completion: nil)
+        checkIfInNavController()
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {

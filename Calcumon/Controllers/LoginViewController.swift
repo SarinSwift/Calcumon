@@ -52,7 +52,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
         self.fadingViewAnimation()
         self.navigationController?.popViewController(animated: false)
-        print("in cancel btnnnn")
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
