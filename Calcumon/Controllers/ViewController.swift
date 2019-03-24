@@ -22,6 +22,8 @@ class ViewController: UICollectionViewController {
         super.viewDidLoad()
         collectionView?.backgroundColor = .white
         collectionView?.decelerationRate = .fast
+        
+        transitioningDelegate = self
     }
 }
 
@@ -71,4 +73,12 @@ extension ViewController {
         }
     }
     
+}
+
+// This viewController is acting as the delegate
+extension ViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        // animation duration sets the time where the ViewController pops up
+        return AnimationController(animationDuration: 0.5, animationType: .present)
+    }
 }

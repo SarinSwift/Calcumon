@@ -71,8 +71,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signupBtnTapped(_ sender: UIButton) {
         print("Welcome \(usernameTextField.text!)")
         checkTextfields()
-        // TODO: Navigate to an empty viewcontroller first
-        
     }
     
     func checkTextfields() {
@@ -94,11 +92,13 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             if let viewControllers = self.navigationController?.viewControllers {
                 for vc in viewControllers {
                     if vc.isKind(of: LaunchViewController.classForCoder()) {
+                        self.fadingViewAnimation()
                         self.navigationController?.pushViewController(dashboardVC, animated: false)
                         return
                     }
                 }
             }
+            self.fadingViewAnimation()
             self.present(dashboardVC, animated: false, completion: nil)
         }
     }
