@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBG" translatesAutoresizingMaskIntoConstraints="NO" id="vKz-er-iYO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground1" translatesAutoresizingMaskIntoConstraints="NO" id="vKz-er-iYO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
                             </imageView>
@@ -435,7 +435,6 @@
     <resources>
         <image name="backBtn" width="33" height="33"/>
         <image name="calcumonLogo" width="916" height="180"/>
-        <image name="loginBG" width="276" height="466"/>
         <image name="loginBackground1" width="275" height="466"/>
         <image name="playBtn" width="425" height="399"/>
     </resources>

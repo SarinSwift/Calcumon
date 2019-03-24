@@ -52,19 +52,18 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func cancelBtnTapped(_ sender: UIButton) {
         self.fadingViewAnimation()
-        // TODO: check if the previous vc is coming from login.storyboard, then use popViewController
-        // else, use dismissViewController
         
+        // Previous vc is coming from login.storyboard, so we use popViewController()
+        // else, use dismissViewController()
         if let viewControllers = self.navigationController?.viewControllers {
             for vc in viewControllers {
-                if vc.isKind(of: LoginViewController.classForCoder()) {
-                    print("It's in the stack, so pop it!")
-                    // pop view controller
+                if vc.isKind(of: LaunchViewController.classForCoder()) {
+                    self.navigationController?.popViewController(animated: false)
+                    return
                 }
             }
         }
-        
-        self.navigationController?.popViewController(animated: false)
+        self.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
@@ -100,7 +99,18 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             guard let dashboardVC = story.instantiateViewController(withIdentifier: "userDashboardViewController") as? UserDashboardViewController else { return }
             dashboardVC.welcomeText = usernameTextField.text!
             dashboardVC.modalPresentationStyle = .overCurrentContext
-            self.navigationController?.pushViewController(dashboardVC, animated: false)
+            
+            // Previous vc is coming from login.storyboard, so we use pushViewController()
+            // else, use present()
+            if let viewControllers = self.navigationController?.viewControllers {
+                for vc in viewControllers {
+                    if vc.isKind(of: LaunchViewController.classForCoder()) {
+                        self.navigationController?.pushViewController(dashboardVC, animated: false)
+                        return
+                    }
+                }
+            }
+            self.present(dashboardVC, animated: false, completion: nil)
         }
     }
 }
