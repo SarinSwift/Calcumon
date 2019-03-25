@@ -22,17 +22,16 @@ enum Router {
     var host: String {
         switch self {
         case .existingLogin, .newLogin:
-            return "calcumon.herokuapp.com"
+            return "calcmon-lvr.herokuapp.com"
         }
     }
     
     var path: String {
         switch self {
         case .existingLogin:
-            return "/mobile/login/:username/:password"
+            return "/mobile/login"
         case .newLogin:
-            return "/mobile/sign-up/:username/:password"
+            return "/mobile/sign-up"
         }
     }
-    
 }

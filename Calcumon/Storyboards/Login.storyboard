@@ -167,7 +167,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="QwT-z8-dFj">
                                         <rect key="frame" x="33.5" y="94.5" width="270" height="134"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bod-Tz-eAu">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bod-Tz-eAu">
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -251,10 +251,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="I6c-yb-CAw"/>
                     <connections>
-                        <outlet property="emailTextField" destination="bod-Tz-eAu" id="G7E-Ln-R7Z"/>
                         <outlet property="loginBtn" destination="KwJ-P5-RUg" id="sf5-dv-eS7"/>
                         <outlet property="loginView" destination="4Vz-N4-h7I" id="FPI-pn-a20"/>
                         <outlet property="passwordTextField" destination="WVC-Dd-4NL" id="i0p-P1-nsE"/>
+                        <outlet property="usernameTextField" destination="bod-Tz-eAu" id="UGv-1t-6wx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9g9-0a-2KX" userLabel="First Responder" sceneMemberID="firstResponder"/>

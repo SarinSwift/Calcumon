@@ -69,7 +69,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signupBtnTapped(_ sender: UIButton) {
-        print("Welcome \(usernameTextField.text!)")
         checkTextfields()
     }
     
@@ -82,11 +81,14 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             self.addChild(vc)
             self.view.addSubview(vc.view)
         } else {
+            
+            Service.signupNewUser(router: .newLogin, email: emailTextField.text!, password: passwordTextField.text!, username: usernameTextField.text!)
+            
             let story = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
             guard let dashboardVC = story.instantiateViewController(withIdentifier: "userDashboardViewController") as? UserDashboardViewController else { return }
             dashboardVC.welcomeText = usernameTextField.text!
             dashboardVC.modalPresentationStyle = .overCurrentContext
-            
+
             // Previous vc is coming from login.storyboard, so we use pushViewController()
             // else, use present()
             if let viewControllers = self.navigationController?.viewControllers {

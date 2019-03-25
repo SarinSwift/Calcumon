@@ -14,7 +14,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return .lightContent
     }
 
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var loginView: UIView!
@@ -26,7 +26,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func keyboardListenEvents() {
-        emailTextField.delegate = self
+        usernameTextField.delegate = self
         passwordTextField.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -55,11 +55,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tapToHideKeyboard(_ sender: UITapGestureRecognizer) {
-        self.emailTextField.resignFirstResponder()
+        self.usernameTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
     }
     @IBAction func swipeToHideKeyboard(_ sender: UISwipeGestureRecognizer) {
-        self.emailTextField.resignFirstResponder()
+        self.usernameTextField.resignFirstResponder()
         self.passwordTextField.resignFirstResponder()
     }
     
@@ -68,7 +68,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func checkTextfields() {
-        if emailTextField.text == "" || passwordTextField.text == "" {
+        if usernameTextField.text == "" || passwordTextField.text == "" {
             let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
             let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
             vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
@@ -76,12 +76,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.addChild(vc)
             self.view.addSubview(vc.view)
         } else {
-            let story = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
-            guard let dashboardVC = story.instantiateViewController(withIdentifier: "userDashboardViewController") as? UserDashboardViewController else { return }
-            dashboardVC.welcomeText = emailTextField.text!
-            dashboardVC.modalPresentationStyle = .overCurrentContext
-            self.fadingViewAnimation()
-            self.navigationController?.pushViewController(dashboardVC, animated: false)
+            
+            Service.loginOldUser(router: .existingLogin, password: passwordTextField.text!, username: usernameTextField.text!) { result in
+                if result == "Wrong Username or Password" {
+                    
+                    print("shwo wrong username password")
+                    return
+                    
+                } else if result == "success" {     // Correctly in the database
+                    let story = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
+                    guard let dashboardVC = story.instantiateViewController(withIdentifier: "userDashboardViewController") as? UserDashboardViewController else { return }
+                    dashboardVC.welcomeText = self.usernameTextField.text!
+                    dashboardVC.modalPresentationStyle = .overCurrentContext
+                    self.fadingViewAnimation()
+                    self.navigationController?.pushViewController(dashboardVC, animated: false)
+                }
+                
+            }
+            
         }
     }
 }
