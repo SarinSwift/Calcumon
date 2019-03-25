@@ -450,13 +450,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKQ-qi-jcc">
                                 <rect key="frame" x="155.5" y="572" width="64" height="65"/>
-                                <color key="backgroundColor" red="0.33333333333333331" green="0.25882352941176473" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="WY2-SW-t5e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="X">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.35686274509999999" green="0.23137254900000001" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -468,7 +468,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.85098039215686272" green="0.74901960784313726" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="gL2-Sq-I0d" firstAttribute="bottom" secondItem="eKQ-qi-jcc" secondAttribute="bottom" constant="30" id="Jta-5M-ywv"/>
                             <constraint firstItem="eKQ-qi-jcc" firstAttribute="centerX" secondItem="gL2-Sq-I0d" secondAttribute="centerX" id="KYy-fE-zOt"/>
@@ -480,6 +479,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gL2-Sq-I0d"/>
                     </view>
+                    <connections>
+                        <outlet property="greatBtn" destination="eKQ-qi-jcc" id="jmJ-aa-juw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chf-ep-Vdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

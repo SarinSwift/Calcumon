@@ -10,6 +10,9 @@ import UIKit
 import PullToDismiss
 
 class ProfileLogViewController: UIViewController {
+    
+    let transition = CircularTransition()
+    
     var trophyImageFromPrevVC: UIImage = #imageLiteral(resourceName: "badTrophy")
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -84,9 +87,10 @@ class ProfileLogViewController: UIViewController {
     @IBAction func viewLogBtnTapped(_ sender: UIButton) {
         // present coming soon
         let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let profileVC = story.instantiateViewController(withIdentifier: "comingSoonId") as? ComingSoonViewController else { return }
-        profileVC.modalPresentationStyle = .overCurrentContext
-        self.present(profileVC, animated: true, completion: nil)
+        guard let comingSoonVC = story.instantiateViewController(withIdentifier: "comingSoonId") as? ComingSoonViewController else { return }
+        comingSoonVC.modalPresentationStyle = .custom
+        comingSoonVC.transitioningDelegate = self
+        self.present(comingSoonVC, animated: true, completion: nil)
     }
     
     @IBAction func signupBtnTapped(_ sender: UIButton) {
@@ -95,4 +99,23 @@ class ProfileLogViewController: UIViewController {
         self.present(signupVc, animated: false, completion: nil)
         self.fadingViewAnimation()
     }
+}
+
+extension ProfileLogViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = CGPoint(x: UIScreen.main.bounds.width/2, y: (UIScreen.main.bounds.height - UIScreen.main.bounds.height/8))
+        transition.circleColor = viewLogBtn.backgroundColor!
+        
+        return transition
+    }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = CGPoint(x: UIScreen.main.bounds.width/2, y: (UIScreen.main.bounds.height - UIScreen.main.bounds.height/8))
+        transition.circleColor = viewLogBtn.backgroundColor!
+        
+        return transition
+    }
+    
 }

@@ -25,6 +25,7 @@
 		047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA54F2222677200ACA52E /* CustomAlertViewController.swift */; };
 		047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */; };
 		04875135224824430079BBC9 /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04875134224824430079BBC9 /* AnimationController.swift */; };
+		048DE5FC22485AF7007372F3 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048DE5FB22485AF7007372F3 /* CircularTransition.swift */; };
 		0494F6C42242C89400BB24FD /* NewProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494F6C32242C89400BB24FD /* NewProfileViewController.swift */; };
 		0499441222212148008A0427 /* MathExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0499441122212148008A0427 /* MathExpression.swift */; };
 		049956B3220B703300571DDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049956B2220B703300571DDC /* AppDelegate.swift */; };
@@ -65,6 +66,7 @@
 		047DA54F2222677200ACA52E /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		047DA5552224A8CC00ACA52E /* SpecificDecimalPlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificDecimalPlaces.swift; sourceTree = "<group>"; };
 		04875134224824430079BBC9 /* AnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		048DE5FB22485AF7007372F3 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		0494F6C32242C89400BB24FD /* NewProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProfileViewController.swift; sourceTree = "<group>"; };
 		0499441122212148008A0427 /* MathExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathExpression.swift; sourceTree = "<group>"; };
 		049956AF220B703300571DDC /* Calcumon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calcumon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				0400E965220E4555009452C1 /* UltravisualLayout.swift */,
+				04875134224824430079BBC9 /* AnimationController.swift */,
+				048DE5FB22485AF7007372F3 /* CircularTransition.swift */,
 			);
 			path = Layouts;
 			sourceTree = "<group>";
@@ -213,7 +217,6 @@
 				E5FC5D5F2242D8B600E15F66 /* SignupViewController.swift */,
 				E5CB85A62241C8C9006113CC /* UserDashboardViewController.swift */,
 				0494F6C32242C89400BB24FD /* NewProfileViewController.swift */,
-				04875134224824430079BBC9 /* AnimationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				049956B3220B703300571DDC /* AppDelegate.swift in Sources */,
 				0400E962220E3F90009452C1 /* CategoryCell.swift in Sources */,
 				04875135224824430079BBC9 /* AnimationController.swift in Sources */,
+				048DE5FC22485AF7007372F3 /* CircularTransition.swift in Sources */,
 				047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */,
 				0400B9C32217423800720075 /* SingleCategoryViewController.swift in Sources */,
 				0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */,
