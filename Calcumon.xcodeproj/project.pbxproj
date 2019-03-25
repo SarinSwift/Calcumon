@@ -12,6 +12,8 @@
 		0400E966220E4555009452C1 /* UltravisualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E965220E4555009452C1 /* UltravisualLayout.swift */; };
 		0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */; };
 		0400E972220E5E11009452C1 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400E971220E5E11009452C1 /* Inspirations.xcassets */; };
+		04123CB32249592D0037F83F /* ChooseMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */; };
+		04123CB522495EE10037F83F /* AllMonstersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB422495EE10037F83F /* AllMonstersCell.swift */; };
 		04144E8D22431A94001B9ACD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8C22431A94001B9ACD /* Router.swift */; };
 		04144E8F22431CA6001B9ACD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8E22431CA6001B9ACD /* Service.swift */; };
 		04144E9122431DB6001B9ACD /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E9022431DB6001B9ACD /* UserObject.swift */; };
@@ -53,6 +55,8 @@
 		0400E965220E4555009452C1 /* UltravisualLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltravisualLayout.swift; sourceTree = "<group>"; };
 		0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		0400E971220E5E11009452C1 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
+		04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMonsterViewController.swift; sourceTree = "<group>"; };
+		04123CB422495EE10037F83F /* AllMonstersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMonstersCell.swift; sourceTree = "<group>"; };
 		04144E8C22431A94001B9ACD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		04144E8E22431CA6001B9ACD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		04144E9022431DB6001B9ACD /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 				04F2347F22443836007F9B47 /* QuestionLogCell.swift */,
 				04A9D2972225B9A9008D7CCD /* ShakingTextField.swift */,
 				04528971222B3FFC0072D3AC /* WhiteView.swift */,
+				04123CB422495EE10037F83F /* AllMonstersCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				E5FC5D5F2242D8B600E15F66 /* SignupViewController.swift */,
 				E5CB85A62241C8C9006113CC /* UserDashboardViewController.swift */,
 				0494F6C32242C89400BB24FD /* NewProfileViewController.swift */,
+				04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			files = (
 				04BCA0F622416EF60067D349 /* LoginViewController.swift in Sources */,
 				04144E8F22431CA6001B9ACD /* Service.swift in Sources */,
+				04123CB522495EE10037F83F /* AllMonstersCell.swift in Sources */,
 				04528972222B3FFC0072D3AC /* WhiteView.swift in Sources */,
 				04F2348422448319007F9B47 /* VIewAnimation.swift in Sources */,
 				04F23482224443AD007F9B47 /* QuestionAnswer.swift in Sources */,
@@ -367,6 +374,7 @@
 				04528970222B3DCA0072D3AC /* UIView+CornerRadius.swift in Sources */,
 				E5FC5D5E2242D60F00E15F66 /* LaunchViewController.swift in Sources */,
 				047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */,
+				04123CB32249592D0037F83F /* ChooseMonsterViewController.swift in Sources */,
 				04144E9122431DB6001B9ACD /* UserObject.swift in Sources */,
 				04A9D2982225B9A9008D7CCD /* ShakingTextField.swift in Sources */,
 				04B019DB222887A400B75555 /* StringExt.swift in Sources */,

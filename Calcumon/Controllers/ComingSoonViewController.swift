@@ -18,7 +18,7 @@ class ComingSoonViewController: UIViewController, UIViewControllerTransitioningD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        greatBtn.layer.cornerRadius = greatBtn.bounds.size.width / 2
     }
     
     @IBAction func greatBtnTapped(_ sender: Any) {

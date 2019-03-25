@@ -449,33 +449,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKQ-qi-jcc">
-                                <rect key="frame" x="155.5" y="572" width="64" height="65"/>
+                                <rect key="frame" x="160" y="564" width="55" height="55"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="WY2-SW-t5e"/>
+                                    <constraint firstAttribute="height" constant="55" id="WY2-SW-t5e"/>
+                                    <constraint firstAttribute="width" constant="55" id="oLj-1r-Zzc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" red="0.35686274509999999" green="0.23137254900000001" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="32"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="greatBtnTapped:" destination="FOA-SY-4He" eventType="touchUpInside" id="i1m-XL-6eP"/>
                                 </connections>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="gL2-Sq-I0d" firstAttribute="bottom" secondItem="eKQ-qi-jcc" secondAttribute="bottom" constant="30" id="Jta-5M-ywv"/>
+                            <constraint firstItem="gL2-Sq-I0d" firstAttribute="bottom" secondItem="eKQ-qi-jcc" secondAttribute="bottom" constant="48" id="Jta-5M-ywv"/>
                             <constraint firstItem="eKQ-qi-jcc" firstAttribute="centerX" secondItem="gL2-Sq-I0d" secondAttribute="centerX" id="KYy-fE-zOt"/>
                             <constraint firstItem="8tq-8C-nIT" firstAttribute="leading" secondItem="gL2-Sq-I0d" secondAttribute="leading" constant="25" id="NGo-LA-s01"/>
                             <constraint firstItem="8tq-8C-nIT" firstAttribute="top" secondItem="gL2-Sq-I0d" secondAttribute="top" constant="110" id="Ube-Fl-XhA"/>
                             <constraint firstItem="8tq-8C-nIT" firstAttribute="width" secondItem="Fju-jp-pCY" secondAttribute="width" multiplier="0.5" id="jWM-w7-RbM"/>
                             <constraint firstItem="gL2-Sq-I0d" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8tq-8C-nIT" secondAttribute="trailing" symbolic="YES" id="sOy-ZM-e9W"/>
-                            <constraint firstItem="eKQ-qi-jcc" firstAttribute="width" secondItem="Fju-jp-pCY" secondAttribute="width" multiplier="0.17" id="ul3-eV-IXZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gL2-Sq-I0d"/>
                     </view>

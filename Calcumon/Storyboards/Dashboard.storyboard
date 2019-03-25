@@ -41,14 +41,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Rq-ql-yo9">
+                                <rect key="frame" x="322" y="35" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JZG-W5-bzu"/>
+                                    <constraint firstAttribute="width" constant="40" id="Jn2-mJ-Nm1"/>
+                                </constraints>
+                                <state key="normal" image="profileBtnWhite"/>
+                                <connections>
+                                    <action selector="profileBtnTapped:" destination="w6y-0L-44G" eventType="touchUpInside" id="yG0-eJ-CGh"/>
+                                    <segue destination="1Jy-1t-rdS" kind="show" animates="NO" id="Ebb-SJ-Ek6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.74901960784313726" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="aKO-k2-ore" firstAttribute="top" secondItem="AWT-4g-xdd" secondAttribute="top" constant="15" id="56V-B1-b26"/>
+                            <constraint firstItem="7Rq-ql-yo9" firstAttribute="top" secondItem="AWT-4g-xdd" secondAttribute="top" constant="15" id="HDh-zy-P38"/>
                             <constraint firstItem="o7R-hV-ypO" firstAttribute="top" secondItem="aKO-k2-ore" secondAttribute="bottom" constant="55" id="O7h-VC-ulJ"/>
                             <constraint firstItem="aKO-k2-ore" firstAttribute="centerX" secondItem="AWT-4g-xdd" secondAttribute="centerX" id="V0B-6v-pXw"/>
                             <constraint firstItem="s7N-gA-wMk" firstAttribute="leading" secondItem="AWT-4g-xdd" secondAttribute="leading" constant="13" id="XMs-cQ-CK4"/>
                             <constraint firstItem="s7N-gA-wMk" firstAttribute="top" secondItem="AWT-4g-xdd" secondAttribute="top" constant="12" id="bbF-bd-B3A"/>
+                            <constraint firstItem="AWT-4g-xdd" firstAttribute="trailing" secondItem="7Rq-ql-yo9" secondAttribute="trailing" constant="13" id="nnD-uZ-mVZ"/>
                             <constraint firstItem="o7R-hV-ypO" firstAttribute="leading" secondItem="AWT-4g-xdd" secondAttribute="leading" constant="20" id="q5k-CS-VEr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AWT-4g-xdd"/>
@@ -61,8 +75,81 @@
             </objects>
             <point key="canvasLocation" x="103" y="115"/>
         </scene>
+        <!--Choose Monster View Controller-->
+        <scene sceneID="Cbh-0A-7m5">
+            <objects>
+                <viewController id="1Jy-1t-rdS" customClass="ChooseMonsterViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nWA-Ir-Q6R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mmz-Q6-J1l">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wQL-kR-1XC">
+                                    <size key="itemSize" width="163" height="202"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="30" maxX="10" maxY="30"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allMonstersCell" id="Mty-vi-tbo" customClass="AllMonstersCell" customModule="Calcumon" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="30" width="163" height="202"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="163" height="202"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1Jy-1t-rdS" id="fma-bg-2Nd"/>
+                                    <outlet property="delegate" destination="1Jy-1t-rdS" id="ZCO-HK-fiP"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick your Calcmon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZG-yv-AbR">
+                                <rect key="frame" x="70.5" y="35" width="234" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7Z-j5-12f">
+                                <rect key="frame" x="13" y="32" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="LA0-aG-68g"/>
+                                    <constraint firstAttribute="height" constant="40" id="lVl-Hq-qtI"/>
+                                </constraints>
+                                <state key="normal" image="backBtnWhite"/>
+                                <connections>
+                                    <action selector="backBtnTapped:" destination="1Jy-1t-rdS" eventType="touchUpInside" id="bx1-Xx-ief"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.75294117647058822" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mmz-Q6-J1l" firstAttribute="trailing" secondItem="v12-5e-AyY" secondAttribute="trailing" id="1ve-iT-d4M"/>
+                            <constraint firstItem="mmz-Q6-J1l" firstAttribute="top" secondItem="nWA-Ir-Q6R" secondAttribute="top" constant="120" id="3IT-4a-5Hg"/>
+                            <constraint firstItem="W7Z-j5-12f" firstAttribute="top" secondItem="v12-5e-AyY" secondAttribute="top" constant="12" id="RTL-vE-c5R"/>
+                            <constraint firstItem="W7Z-j5-12f" firstAttribute="leading" secondItem="v12-5e-AyY" secondAttribute="leading" constant="13" id="TQo-6b-MRe"/>
+                            <constraint firstItem="7ZG-yv-AbR" firstAttribute="top" secondItem="v12-5e-AyY" secondAttribute="top" constant="15" id="Upd-ka-PG4"/>
+                            <constraint firstItem="mmz-Q6-J1l" firstAttribute="bottom" secondItem="nWA-Ir-Q6R" secondAttribute="bottom" id="hlh-Ev-hPm"/>
+                            <constraint firstItem="mmz-Q6-J1l" firstAttribute="leading" secondItem="v12-5e-AyY" secondAttribute="leading" id="jZo-zT-oOZ"/>
+                            <constraint firstItem="7ZG-yv-AbR" firstAttribute="centerX" secondItem="v12-5e-AyY" secondAttribute="centerX" id="zMn-vd-MCz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v12-5e-AyY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="mmz-Q6-J1l" id="z4x-lb-Nyr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2w-8d-U5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="114.69265367316342"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backBtnWhite" width="30" height="30"/>
+        <image name="profileBtnWhite" width="30" height="30"/>
     </resources>
 </document>

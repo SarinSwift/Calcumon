@@ -38,4 +38,7 @@ class UserDashboardViewController: UIViewController {
         self.fadingViewAnimation()
         checkIfInNavController()
     }
+    @IBAction func profileBtnTapped(_ sender: UIButton) {
+        self.fadingViewAnimation()
+    }
 }
