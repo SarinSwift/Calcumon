@@ -10,9 +10,12 @@ import UIKit
 
 class UserDashboardViewController: UIViewController {
     
+    let transition = CircularTransition()
+    
     var welcomeText: String = ""
     
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var pickCharBtn: UIButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -38,7 +41,36 @@ class UserDashboardViewController: UIViewController {
         self.fadingViewAnimation()
         checkIfInNavController()
     }
-    @IBAction func profileBtnTapped(_ sender: UIButton) {
-        self.fadingViewAnimation()
+    
+    @IBAction func logoutBtnTapped(_ sender: UIButton) {
+        print("GET request to logout the current user")
     }
+    
+    @IBAction func pickBtnTapped(_ sender: UIButton) {
+//        self.fadingViewAnimation()
+        let story = UIStoryboard(name: "Dashboard", bundle: nil)
+        guard let chooseMonVC = story.instantiateViewController(withIdentifier: "chooseMonster") as? ChooseMonsterViewController else { return }
+        chooseMonVC.modalPresentationStyle = .custom
+        chooseMonVC.transitioningDelegate = self
+        self.present(chooseMonVC, animated: true, completion: nil)
+    }
+}
+
+extension UserDashboardViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = CGPoint(x: UIScreen.main.bounds.width/2, y: (UIScreen.main.bounds.height - UIScreen.main.bounds.height/8))
+        transition.circleColor = pickCharBtn.backgroundColor!
+        
+        return transition
+    }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = CGPoint(x: UIScreen.main.bounds.width/2, y: (UIScreen.main.bounds.height - UIScreen.main.bounds.height/8))
+        transition.circleColor = pickCharBtn.backgroundColor!
+        
+        return transition
+    }
+    
 }

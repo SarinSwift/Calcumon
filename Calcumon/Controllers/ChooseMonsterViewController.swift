@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate {
+    
+    @IBOutlet weak var closeBtn: UIButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -19,17 +21,8 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupBgGradient()
+        closeBtn.layer.cornerRadius = closeBtn.bounds.size.width / 2
         flowLayout()
-    }
-    
-    func setupBgGradient() {
-        let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-        gradient.startPoint = CGPoint(x: 0.5, y: 1)
-        gradient.endPoint = CGPoint(x: 1, y: 0)
-        gradient.colors = [#colorLiteral(red: 0.7921568627, green: 0.5176470588, blue: 0.8862745098, alpha: 1).cgColor, #colorLiteral(red: 0.4, green: 0.2588235294, blue: 0.7529411765, alpha: 1).cgColor]
-        view.layer.insertSublayer(gradient, at: 0)
     }
     
     func flowLayout() {
@@ -49,9 +42,10 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
         return cell
     }
     
-    @IBAction func backBtnTapped(_ sender: UIButton) {
+    @IBAction func closeBtnTapped(_ sender: UIButton) {
         self.fadingViewAnimation()
         checkIfInNavController()
+        // TODO: currently cannot use circular animation on this button yet because is in NAVIGATION STACK!!
     }
     
 
