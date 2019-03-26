@@ -173,9 +173,6 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             }
             
         }
-        
-        print("Points: \(pointsResult)")
-        pointsLabel.text = "Points: \(pointsResult)"
     }
     
     @objc func keyboardWillChange(notification: Notification) {

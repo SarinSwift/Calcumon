@@ -558,6 +558,7 @@
                     <connections>
                         <outlet property="alertView" destination="t8f-O1-alA" id="XUX-kJ-U6j"/>
                         <outlet property="closeButton" destination="Slo-hh-X0t" id="EEk-1d-Pqp"/>
+                        <outlet property="ohnoLabel" destination="owO-pM-SUx" id="Tk9-R4-2eE"/>
                         <outlet property="textBody" destination="WzK-6M-am1" id="IvS-lq-KQW"/>
                     </connections>
                 </viewController>

@@ -87,14 +87,15 @@ class Service {
                 print(response)
                 
                 if response["message"] == "Wrong Username or password" || response["message"] == "Wrong Username or Password" {
-                    completion(response["message"]!)
+                    DispatchQueue.main.async {
+                        completion(response["message"]!)
+                    }
                     return 
                 } else {
                     DispatchQueue.main.async {
                         completion("success")
                     }
                 }
-                
             }
         }
         task.resume()

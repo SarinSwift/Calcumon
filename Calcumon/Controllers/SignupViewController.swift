@@ -10,6 +10,8 @@ import UIKit
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
     
+    var activityView: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -69,6 +71,11 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signupBtnTapped(_ sender: UIButton) {
+        // creating the activity indicator
+        activityView.center = self.view.center
+        self.view.addSubview(activityView)
+        activityView.startAnimating()
+        
         checkTextfields()
     }
     
@@ -88,9 +95,10 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             guard let dashboardVC = story.instantiateViewController(withIdentifier: "userDashboardViewController") as? UserDashboardViewController else { return }
             dashboardVC.welcomeText = usernameTextField.text!
             dashboardVC.modalPresentationStyle = .overCurrentContext
-
+            print("successfully signed up as a new user")
             // Previous vc is coming from login.storyboard, so we use pushViewController()
             // else, use present()
+            activityView.stopAnimating()
             if let viewControllers = self.navigationController?.viewControllers {
                 for vc in viewControllers {
                     if vc.isKind(of: LaunchViewController.classForCoder()) {

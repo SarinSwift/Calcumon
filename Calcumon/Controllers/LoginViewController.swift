@@ -10,6 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    var activityView: UIActivityIndicatorView = UIActivityIndicatorView(style: .gray)
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -64,6 +66,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginBtnTapped(_ sender: UIButton) {
+        // creating the activity indicator
+        activityView.center = self.view.center
+        self.view.addSubview(activityView)
+        activityView.startAnimating()
+        
         checkTextfields()
     }
     
@@ -79,17 +86,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             Service.loginOldUser(router: .existingLogin, password: passwordTextField.text!, username: usernameTextField.text!) { result in
                 if result == "Wrong Username or Password" {
-                    
-                    print("shwo wrong username password")
+                    self.activityView.stopAnimating()
+                    let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+                    let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
+                    vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+                    vc.ohnoLabel.text = "Error!"
+                    vc.textBody.text = "Wrong username or password"
+                    self.addChild(vc)
+                    self.view.addSubview(vc.view)
                     return
                     
                 } else if result == "success" {     // Correctly in the database
+                    self.activityView.stopAnimating()
                     let story = UIStoryboard(name: "Dashboard", bundle: Bundle.main)
                     guard let dashboardVC = story.instantiateViewController(withIdentifier: "userDashboardViewController") as? UserDashboardViewController else { return }
                     dashboardVC.welcomeText = self.usernameTextField.text!
                     dashboardVC.modalPresentationStyle = .overCurrentContext
                     self.fadingViewAnimation()
                     self.navigationController?.pushViewController(dashboardVC, animated: false)
+                    print("successfully logged in")
                 }
                 
             }

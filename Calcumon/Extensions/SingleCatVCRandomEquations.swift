@@ -127,9 +127,7 @@ extension SingleCategoryViewController: UITableViewDelegate, UITableViewDataSour
         return questionAnswersArr.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(questionAnswersArr.count)
         let  cell = tableView.dequeueReusableCell(withIdentifier: "questionLogCell", for: indexPath) as! QuestionLogCell
-        print("tableview cellforrowat: \(questionAnswersArr[0].answer)")
         cell.questionLabel.text = questionAnswersArr[indexPath.row].question
         cell.answerLabel.text = questionAnswersArr[indexPath.row].answer
         cell.answerStateIV.image = questionAnswersArr[indexPath.row].correctness
