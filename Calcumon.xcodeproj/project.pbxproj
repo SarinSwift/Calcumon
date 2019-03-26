@@ -14,6 +14,7 @@
 		0400E972220E5E11009452C1 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400E971220E5E11009452C1 /* Inspirations.xcassets */; };
 		04123CB32249592D0037F83F /* ChooseMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */; };
 		04123CB522495EE10037F83F /* AllMonstersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB422495EE10037F83F /* AllMonstersCell.swift */; };
+		04123CB72249F7AD0037F83F /* ViewLogPressedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB62249F7AD0037F83F /* ViewLogPressedCell.swift */; };
 		04144E8D22431A94001B9ACD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8C22431A94001B9ACD /* Router.swift */; };
 		04144E8F22431CA6001B9ACD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8E22431CA6001B9ACD /* Service.swift */; };
 		04144E9122431DB6001B9ACD /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E9022431DB6001B9ACD /* UserObject.swift */; };
@@ -57,6 +58,7 @@
 		0400E971220E5E11009452C1 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
 		04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMonsterViewController.swift; sourceTree = "<group>"; };
 		04123CB422495EE10037F83F /* AllMonstersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMonstersCell.swift; sourceTree = "<group>"; };
+		04123CB62249F7AD0037F83F /* ViewLogPressedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLogPressedCell.swift; sourceTree = "<group>"; };
 		04144E8C22431A94001B9ACD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		04144E8E22431CA6001B9ACD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		04144E9022431DB6001B9ACD /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				04A9D2972225B9A9008D7CCD /* ShakingTextField.swift */,
 				04528971222B3FFC0072D3AC /* WhiteView.swift */,
 				04123CB422495EE10037F83F /* AllMonstersCell.swift */,
+				04123CB62249F7AD0037F83F /* ViewLogPressedCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04123CB72249F7AD0037F83F /* ViewLogPressedCell.swift in Sources */,
 				04BCA0F622416EF60067D349 /* LoginViewController.swift in Sources */,
 				04144E8F22431CA6001B9ACD /* Service.swift in Sources */,
 				04123CB522495EE10037F83F /* AllMonstersCell.swift in Sources */,

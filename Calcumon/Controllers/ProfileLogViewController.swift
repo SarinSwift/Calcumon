@@ -12,6 +12,7 @@ import PullToDismiss
 class ProfileLogViewController: UIViewController {
     
     let transition = CircularTransition()
+    var questionAnswersArrFromSingleVC = [QuestionAnswer]()
     
     var trophyImageFromPrevVC: UIImage = #imageLiteral(resourceName: "badTrophy")
     
@@ -47,7 +48,6 @@ class ProfileLogViewController: UIViewController {
         
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
-        
     }
     
     func setupBgGradient() {
@@ -88,6 +88,7 @@ class ProfileLogViewController: UIViewController {
         // present coming soon
         let story = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let comingSoonVC = story.instantiateViewController(withIdentifier: "comingSoonId") as? ComingSoonViewController else { return }
+        comingSoonVC.questionAnswersArrFromProfileVC = questionAnswersArrFromSingleVC
         comingSoonVC.modalPresentationStyle = .custom
         comingSoonVC.transitioningDelegate = self
         self.present(comingSoonVC, animated: true, completion: nil)

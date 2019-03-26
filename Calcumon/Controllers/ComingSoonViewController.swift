@@ -10,8 +10,9 @@ import UIKit
 
 class ComingSoonViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    var infoFromTableView = [String]()
+    var questionAnswersArrFromProfileVC = [QuestionAnswer]()
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var greatBtn: UIButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -27,4 +28,22 @@ class ComingSoonViewController: UIViewController, UIViewControllerTransitioningD
         self.dismiss(animated: true, completion: nil)
     }
 
+}
+
+extension ComingSoonViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return questionAnswersArrFromProfileVC.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let  cell = tableView.dequeueReusableCell(withIdentifier: "viewLogsCell", for: indexPath) as! ViewLogPressedCell
+        cell.questionLabel.text = questionAnswersArrFromProfileVC[indexPath.row].question
+        cell.answerLabel.text = questionAnswersArrFromProfileVC[indexPath.row].answer
+        cell.answerStateIV.image = questionAnswersArrFromProfileVC[indexPath.row].correctness
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
 }

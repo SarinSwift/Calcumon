@@ -14,7 +14,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     var result: NSNumber = 0
     var pointsResult: Int = 0
     // variable for keeping count until user hits 10
-    var numberOfEquations: Int = 0
+    var numberOfEquations: Int = 9
     var correctAnswers: Int = 0
     
     // storing question&answer to populate the tableview
@@ -160,6 +160,9 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             
             // When users have answered up to 10 times:
             if numberOfEquations == 10 {
+                
+                // TODO: pass data from 'questionAnswersArr' to this viewController
+                
                 let story = UIStoryboard(name: "Main", bundle: Bundle.main)
                 guard let profileVC = story.instantiateViewController(withIdentifier: "profileLog") as? ProfileLogViewController else { return }
                 profileVC.allCorrect = correctAnswers
@@ -167,6 +170,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 if correctAnswers >= 5 {
                     profileVC.trophyImageFromPrevVC = #imageLiteral(resourceName: "trophy")
                 }
+                profileVC.questionAnswersArrFromSingleVC = questionAnswersArr
                 profileVC.modalPresentationStyle = .overCurrentContext
                 self.present(profileVC, animated: true, completion: nil)
                 numberOfEquations = 0
