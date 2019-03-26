@@ -43,7 +43,10 @@ class UserDashboardViewController: UIViewController {
     }
     
     @IBAction func logoutBtnTapped(_ sender: UIButton) {
+        // TODO: 
         print("GET request to logout the current user")
+        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func pickBtnTapped(_ sender: UIButton) {

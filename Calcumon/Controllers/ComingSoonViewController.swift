@@ -10,6 +10,8 @@ import UIKit
 
 class ComingSoonViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
+    var infoFromTableView = [String]()
+    
     @IBOutlet weak var greatBtn: UIButton!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

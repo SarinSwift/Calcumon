@@ -101,6 +101,11 @@ class Service {
         task.resume()
     }
     
+    class func logoutUser(router: Router) {
+        
+    }
+    
+    
     
     class func urlBuilder(router: Router) -> URL? {
         var components = URLComponents()

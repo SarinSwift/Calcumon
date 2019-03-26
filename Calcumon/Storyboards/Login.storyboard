@@ -30,7 +30,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="7I7-mP-PKr"/>
                                         </constraints>
-                                        <state key="normal" image="playBtn">
+                                        <state key="normal" image="startBtn">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -104,8 +104,8 @@
                                     <constraint firstAttribute="bottom" secondItem="R4Q-1s-T9u" secondAttribute="bottom" constant="15" id="nmH-Yr-uuz"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcumonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-2b-Bnw">
-                                <rect key="frame" x="19" y="110" width="337.5" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcmonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="yy7-2b-Bnw">
+                                <rect key="frame" x="19" y="130" width="337.5" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Wbw-oC-Bjb"/>
                                 </constraints>
@@ -121,7 +121,7 @@
                             <constraint firstItem="cKR-17-ARA" firstAttribute="width" secondItem="vKz-er-iYO" secondAttribute="width" multiplier="0.9" id="KIp-kR-8gB"/>
                             <constraint firstItem="cKR-17-ARA" firstAttribute="height" secondItem="vKz-er-iYO" secondAttribute="height" multiplier="0.5" id="Ku4-rx-HjM"/>
                             <constraint firstItem="vKz-er-iYO" firstAttribute="top" secondItem="ziV-MY-JLv" secondAttribute="top" id="QS1-fH-GkJ"/>
-                            <constraint firstItem="yy7-2b-Bnw" firstAttribute="top" secondItem="Uvg-pS-wGX" secondAttribute="top" constant="90" id="Wtl-YC-ELW"/>
+                            <constraint firstItem="yy7-2b-Bnw" firstAttribute="top" secondItem="Uvg-pS-wGX" secondAttribute="top" constant="110" id="Wtl-YC-ELW"/>
                             <constraint firstItem="vKz-er-iYO" firstAttribute="leading" secondItem="Uvg-pS-wGX" secondAttribute="leading" id="YaC-2b-xhW"/>
                             <constraint firstItem="vKz-er-iYO" firstAttribute="trailing" secondItem="Uvg-pS-wGX" secondAttribute="trailing" id="e3h-ea-KUz"/>
                             <constraint firstItem="yy7-2b-Bnw" firstAttribute="width" secondItem="vKz-er-iYO" secondAttribute="width" multiplier="0.9" id="xOq-GW-MdD"/>
@@ -155,8 +155,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcumonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ffk-Hg-Z9B">
-                                <rect key="frame" x="19" y="110" width="337.5" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcmonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ffk-Hg-Z9B">
+                                <rect key="frame" x="19" y="130" width="337.5" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Yuw-bZ-4KW"/>
                                 </constraints>
@@ -230,7 +230,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ffk-Hg-Z9B" firstAttribute="width" secondItem="yCF-OQ-C8N" secondAttribute="width" multiplier="0.9" id="92P-4k-o9L"/>
-                            <constraint firstItem="ffk-Hg-Z9B" firstAttribute="top" secondItem="3Hg-7V-hEB" secondAttribute="top" constant="90" id="B6w-e0-4sU"/>
+                            <constraint firstItem="ffk-Hg-Z9B" firstAttribute="top" secondItem="3Hg-7V-hEB" secondAttribute="top" constant="110" id="B6w-e0-4sU"/>
                             <constraint firstItem="yCF-OQ-C8N" firstAttribute="trailing" secondItem="3Hg-7V-hEB" secondAttribute="trailing" id="CO0-HX-0pB"/>
                             <constraint firstItem="4Vz-N4-h7I" firstAttribute="centerY" secondItem="3Hg-7V-hEB" secondAttribute="centerY" id="Ci7-nD-hjg"/>
                             <constraint firstItem="4Vz-N4-h7I" firstAttribute="centerX" secondItem="yCF-OQ-C8N" secondAttribute="centerX" constant="2.2000000000000002" id="Dfj-2G-4gb"/>
@@ -269,7 +269,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1072.8" y="880.20989505247383"/>
+            <point key="canvasLocation" x="1015" y="926"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="wSG-Zr-vEv">
@@ -283,8 +283,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcumonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="PQ5-qE-j25">
-                                <rect key="frame" x="19" y="110" width="337.5" height="100"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcmonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="PQ5-qE-j25">
+                                <rect key="frame" x="19" y="130" width="337.5" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="SDI-B5-lpL"/>
                                 </constraints>
@@ -379,7 +379,7 @@
                             <constraint firstItem="yYe-Wp-KUO" firstAttribute="centerY" secondItem="uWp-hH-yKT" secondAttribute="centerY" id="Sn9-xT-zcn"/>
                             <constraint firstItem="vyu-lp-Ez5" firstAttribute="top" secondItem="ZHy-0W-gra" secondAttribute="top" id="Y6K-wM-Qep"/>
                             <constraint firstItem="yYe-Wp-KUO" firstAttribute="centerX" secondItem="vyu-lp-Ez5" secondAttribute="centerX" constant="2.2000000000000002" id="azj-Yn-oWm"/>
-                            <constraint firstItem="PQ5-qE-j25" firstAttribute="top" secondItem="uWp-hH-yKT" secondAttribute="top" constant="90" id="h5C-p2-ekz"/>
+                            <constraint firstItem="PQ5-qE-j25" firstAttribute="top" secondItem="uWp-hH-yKT" secondAttribute="top" constant="110" id="h5C-p2-ekz"/>
                             <constraint firstItem="vyu-lp-Ez5" firstAttribute="bottom" secondItem="ZHy-0W-gra" secondAttribute="bottom" id="ir2-IA-pRQ"/>
                             <constraint firstItem="vyu-lp-Ez5" firstAttribute="leading" secondItem="uWp-hH-yKT" secondAttribute="leading" id="lvC-4i-FEx"/>
                             <constraint firstItem="yYe-Wp-KUO" firstAttribute="height" secondItem="uWp-hH-yKT" secondAttribute="height" multiplier="0.5" id="u3i-GU-9dl"/>
@@ -434,8 +434,8 @@
     </scenes>
     <resources>
         <image name="backBtn" width="33" height="33"/>
-        <image name="calcumonLogo" width="916" height="180"/>
+        <image name="calcmonLogo" width="601" height="110"/>
         <image name="loginBackground1" width="275" height="466"/>
-        <image name="playBtn" width="425" height="399"/>
+        <image name="startBtn" width="131" height="77"/>
     </resources>
 </document>

@@ -81,6 +81,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
     func checkTextfields() {
         if emailTextField.text == "" || usernameTextField.text == "" || passwordTextField.text == "" || repeatPassTextField.text == "" {
+            self.activityView.stopAnimating()
             let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
             let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
             vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)

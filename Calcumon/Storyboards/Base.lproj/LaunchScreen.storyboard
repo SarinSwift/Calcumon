@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcumonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="edy-M7-9ch">
-                                <rect key="frame" x="23" y="70" width="329" height="180"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calcmonLogo" translatesAutoresizingMaskIntoConstraints="NO" id="edy-M7-9ch">
+                                <rect key="frame" x="23" y="120" width="329" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="329" id="IBx-FC-LtU"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="edy-M7-9ch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="n04-9K-DK4"/>
+                            <constraint firstItem="edy-M7-9ch" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="n04-9K-DK4"/>
                             <constraint firstItem="edy-M7-9ch" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wEq-d8-QRu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calcumonLogo" width="916" height="180"/>
+        <image name="calcmonLogo" width="601" height="110"/>
     </resources>
 </document>

@@ -76,6 +76,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func checkTextfields() {
         if usernameTextField.text == "" || passwordTextField.text == "" {
+            self.activityView.stopAnimating()
             let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
             let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
             vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)

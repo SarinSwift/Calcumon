@@ -11,17 +11,18 @@ import Foundation
 enum Router {
     case existingLogin
     case newLogin
+    case logout
     
     var scheme: String {
         switch self {
-        case .existingLogin, .newLogin:
+        case .existingLogin, .newLogin, .logout:
             return "https"
         }
     }
     
     var host: String {
         switch self {
-        case .existingLogin, .newLogin:
+        case .existingLogin, .newLogin, .logout:
             return "calcmon-lvr.herokuapp.com"
         }
     }
@@ -32,6 +33,8 @@ enum Router {
             return "/mobile/login"
         case .newLogin:
             return "/mobile/sign-up"
+        case .logout:
+            return "/mobile/logout"
         }
     }
 }
