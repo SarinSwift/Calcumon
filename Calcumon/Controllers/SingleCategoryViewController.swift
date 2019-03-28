@@ -14,7 +14,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
     var result: NSNumber = 0
     var pointsResult: Int = 0
     // variable for keeping count until user hits 10
-    var numberOfEquations: Int = 9
+    var numberOfEquations: Int = 0
     var correctAnswers: Int = 0
     
     // storing question&answer to populate the tableview
@@ -36,6 +36,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         keyboardListenEvents()
+        setNegativeSign()
         
         // Setting the points score
         let pointsDefault = UserDefaults.standard
@@ -48,6 +49,25 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         callingEquations()
         print("viewdidload method result is: \(result)")
         plusPoints.alpha = 0
+    }
+    
+    func setNegativeSign() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        flexibleSpace.width = (UIScreen.main.bounds.width / 3) / 3
+        let negativeBtn = UIBarButtonItem(title: "-", style: .plain, target: self, action: #selector(self.negativeClicked))
+        negativeBtn.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        let font = UIFont(name: "Arial", size: 30)
+        negativeBtn.setTitleTextAttributes([NSAttributedString.Key.font: font as Any], for: .normal)
+        toolBar.setItems([flexibleSpace, negativeBtn], animated: false)
+        answerTextField.inputAccessoryView = toolBar
+    }
+    
+    @objc func negativeClicked() {
+        answerTextField.insertText("-")
     }
     
     override func viewDidAppear(_ animated: Bool) {
