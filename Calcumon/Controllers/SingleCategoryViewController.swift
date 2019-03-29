@@ -194,6 +194,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 profileVC.modalPresentationStyle = .overCurrentContext
                 self.present(profileVC, animated: true, completion: nil)
                 numberOfEquations = 0
+                correctAnswers = 0
             }
             
         }

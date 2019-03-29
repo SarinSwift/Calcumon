@@ -24,17 +24,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7N-gA-wMk">
-                                <rect key="frame" x="13" y="32" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="fPD-cA-GEb"/>
-                                    <constraint firstAttribute="width" constant="40" id="g7A-DT-c2k"/>
-                                </constraints>
-                                <state key="normal" image="backBtnWhite"/>
-                                <connections>
-                                    <action selector="backBtnTapped:" destination="w6y-0L-44G" eventType="touchUpInside" id="6oj-4Z-3Cd"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7R-hV-ypO">
                                 <rect key="frame" x="20" y="129" width="112" height="28"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
@@ -79,9 +68,7 @@
                             <constraint firstItem="bqc-fm-fyZ" firstAttribute="width" secondItem="OfY-w3-XCP" secondAttribute="width" multiplier="0.45" id="LJE-rQ-Jd3"/>
                             <constraint firstItem="o7R-hV-ypO" firstAttribute="top" secondItem="aKO-k2-ore" secondAttribute="bottom" constant="55" id="O7h-VC-ulJ"/>
                             <constraint firstItem="aKO-k2-ore" firstAttribute="centerX" secondItem="AWT-4g-xdd" secondAttribute="centerX" id="V0B-6v-pXw"/>
-                            <constraint firstItem="s7N-gA-wMk" firstAttribute="leading" secondItem="AWT-4g-xdd" secondAttribute="leading" constant="13" id="XMs-cQ-CK4"/>
                             <constraint firstItem="bqc-fm-fyZ" firstAttribute="centerX" secondItem="AWT-4g-xdd" secondAttribute="centerX" id="ZJo-1L-llL"/>
-                            <constraint firstItem="s7N-gA-wMk" firstAttribute="top" secondItem="AWT-4g-xdd" secondAttribute="top" constant="12" id="bbF-bd-B3A"/>
                             <constraint firstItem="AWT-4g-xdd" firstAttribute="trailing" secondItem="7Rq-ql-yo9" secondAttribute="trailing" constant="13" id="nnD-uZ-mVZ"/>
                             <constraint firstItem="o7R-hV-ypO" firstAttribute="leading" secondItem="AWT-4g-xdd" secondAttribute="leading" constant="20" id="q5k-CS-VEr"/>
                         </constraints>
@@ -174,7 +161,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backBtnWhite" width="30" height="30"/>
         <image name="logoutBtnWhite" width="33" height="33"/>
     </resources>
 </document>

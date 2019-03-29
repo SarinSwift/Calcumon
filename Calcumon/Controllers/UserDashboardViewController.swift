@@ -36,17 +36,20 @@ class UserDashboardViewController: UIViewController {
         gradient.colors = [#colorLiteral(red: 0.7921568627, green: 0.5176470588, blue: 0.8862745098, alpha: 1).cgColor, #colorLiteral(red: 0.4, green: 0.2588235294, blue: 0.7529411765, alpha: 1).cgColor]
         view.layer.insertSublayer(gradient, at: 0)
     }
-
-    @IBAction func backBtnTapped(_ sender: UIButton) {
-        self.fadingViewAnimation()
-        checkIfInNavController()
-    }
     
     @IBAction func logoutBtnTapped(_ sender: UIButton) {
         // TODO: 
         print("GET request to logout the current user")
-        self.navigationController?.popViewController(animated: true)
-        self.navigationController?.popViewController(animated: true)
+        
+        if let viewControllers = self.navigationController?.viewControllers {
+            for vc in viewControllers {
+                if vc.isKind(of: LaunchViewController.classForCoder()) {
+                    self.navigationController?.popToRootViewController(animated: false)
+                    return
+                }
+            }
+        }
+        self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func pickBtnTapped(_ sender: UIButton) {
