@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate {
+class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var closeBtn: UIButton!
     let monsterImages = [#imageLiteral(resourceName: "Goob"), #imageLiteral(resourceName: "Zoob")]
+    let monsterName = ["Goob", "Zoob"]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -40,6 +41,7 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "allMonstersCell", for: indexPath) as! AllMonstersCell
         cell.monsterImageView.image = monsterImages[indexPath.row]
+        cell.monsterName.text = monsterName[indexPath.row]
         return cell
     }
     
@@ -48,6 +50,23 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
         checkIfInNavController()
         // TODO: currently cannot use circular animation on this button yet because is in NAVIGATION STACK!!
     }
-    
+}
 
+extension ChooseMonsterViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 30, left: 50, bottom: 0, right: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 200, height: 300)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
 }

@@ -11,6 +11,7 @@ import UIKit
 class AllMonstersCell: UICollectionViewCell {
     
     @IBOutlet weak var monsterImageView: UIImageView!
+    @IBOutlet weak var monsterName: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
