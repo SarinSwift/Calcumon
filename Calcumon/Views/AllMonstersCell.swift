@@ -9,6 +9,9 @@
 import UIKit
 
 class AllMonstersCell: UICollectionViewCell {
+    
+    @IBOutlet weak var monsterImageView: UIImageView!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }

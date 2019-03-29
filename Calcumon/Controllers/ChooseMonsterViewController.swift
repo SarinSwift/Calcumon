@@ -11,6 +11,7 @@ import UIKit
 class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var closeBtn: UIButton!
+    let monsterImages = [#imageLiteral(resourceName: "Goob"), #imageLiteral(resourceName: "Zoob")]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -27,18 +28,18 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
     
     func flowLayout() {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let width = (view.frame.size.width - 40) / 2
+        let width = (view.frame.size.width) / 2
         let height = (view.frame.size.width - 20) / 2
         layout.itemSize = CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "allMonstersCell", for: indexPath) as! AllMonstersCell
-        
+        cell.monsterImageView.image = monsterImages[indexPath.row]
         return cell
     }
     
