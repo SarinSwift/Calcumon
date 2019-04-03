@@ -11,8 +11,10 @@ import UIKit
 class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var closeBtn: UIButton!
+    
     let monsterImages = [#imageLiteral(resourceName: "Goob"), #imageLiteral(resourceName: "Zoob")]
     let monsterName = ["Goob", "Zoob"]
+    var selectedIndexPath: IndexPath?
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -24,14 +26,6 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
         super.viewDidLoad()
         
         closeBtn.layer.cornerRadius = closeBtn.bounds.size.width / 2
-        flowLayout()
-    }
-    
-    func flowLayout() {
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let width = (view.frame.size.width) / 2
-        let height = (view.frame.size.width - 20) / 2
-        layout.itemSize = CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -67,6 +61,31 @@ extension ChooseMonsterViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // animate to let user know they have chosen that character
+        let cell = collectionView.cellForItem(at: indexPath)
+        
+        cell?.superview?.bringSubviewToFront(cell!)
+        
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: {
+            cell?.frame = collectionView.bounds
+        }, completion: nil)
+        
+        self.selectedIndexPath = indexPath
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        
+        cell?.superview?.bringSubviewToFront(cell!)
+        
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: {
+            cell?.frame = collectionView.bounds
+        }, completion: nil)
+        
+        self.selectedIndexPath = nil
     }
     
 }
