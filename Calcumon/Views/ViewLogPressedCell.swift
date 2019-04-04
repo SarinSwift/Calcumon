@@ -22,7 +22,7 @@ class ViewLogPressedCell: UITableViewCell {
     let questionLabel: UILabel = {
         let label = UILabel()
         label.text = "1+1"
-        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.3411764706, green: 0.3411764706, blue: 0.3411764706, alpha: 1)
         label.font = UIFont(name: "Arial", size: 24)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -31,7 +31,7 @@ class ViewLogPressedCell: UITableViewCell {
     let answerLabel: UILabel = {
         let label = UILabel()
         label.text = "2"
-        label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.3411764706, green: 0.3411764706, blue: 0.3411764706, alpha: 1)
         label.font = UIFont(name: "Arial", size: 24)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

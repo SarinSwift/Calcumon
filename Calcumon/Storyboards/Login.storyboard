@@ -181,7 +181,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-P5-RUg">
                                                 <rect key="frame" x="51" y="90" width="168.5" height="44"/>
-                                                <color key="backgroundColor" red="0.6588235294" green="0.43137254899999999" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.62352941176470589" green="0.45490196078431372" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="w5W-se-u1W"/>
                                                 </constraints>

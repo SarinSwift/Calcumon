@@ -12,13 +12,14 @@
 		0400E966220E4555009452C1 /* UltravisualLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E965220E4555009452C1 /* UltravisualLayout.swift */; };
 		0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */; };
 		0400E972220E5E11009452C1 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400E971220E5E11009452C1 /* Inspirations.xcassets */; };
+		04049D572256822C0035486F /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04049D562256822C0035486F /* ComingSoonViewController.swift */; };
 		04123CB32249592D0037F83F /* ChooseMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */; };
 		04123CB522495EE10037F83F /* AllMonstersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB422495EE10037F83F /* AllMonstersCell.swift */; };
 		04123CB72249F7AD0037F83F /* ViewLogPressedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB62249F7AD0037F83F /* ViewLogPressedCell.swift */; };
 		04144E8D22431A94001B9ACD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8C22431A94001B9ACD /* Router.swift */; };
 		04144E8F22431CA6001B9ACD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8E22431CA6001B9ACD /* Service.swift */; };
 		04144E9122431DB6001B9ACD /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E9022431DB6001B9ACD /* UserObject.swift */; };
-		044ADAE9222F1D6700BCC21B /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ADAE8222F1D6700BCC21B /* ComingSoonViewController.swift */; };
+		044ADAE9222F1D6700BCC21B /* ViewLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ADAE8222F1D6700BCC21B /* ViewLogsViewController.swift */; };
 		0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */; };
 		0452896E222B02D50072D3AC /* ProfileLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896D222B02D50072D3AC /* ProfileLogViewController.swift */; };
 		04528970222B3DCA0072D3AC /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896F222B3DCA0072D3AC /* UIView+CornerRadius.swift */; };
@@ -56,13 +57,14 @@
 		0400E965220E4555009452C1 /* UltravisualLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UltravisualLayout.swift; sourceTree = "<group>"; };
 		0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		0400E971220E5E11009452C1 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
+		04049D562256822C0035486F /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
 		04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMonsterViewController.swift; sourceTree = "<group>"; };
 		04123CB422495EE10037F83F /* AllMonstersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMonstersCell.swift; sourceTree = "<group>"; };
 		04123CB62249F7AD0037F83F /* ViewLogPressedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLogPressedCell.swift; sourceTree = "<group>"; };
 		04144E8C22431A94001B9ACD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		04144E8E22431CA6001B9ACD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		04144E9022431DB6001B9ACD /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
-		044ADAE8222F1D6700BCC21B /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
+		044ADAE8222F1D6700BCC21B /* ViewLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLogsViewController.swift; sourceTree = "<group>"; };
 		0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCatVCRandomEquations.swift; sourceTree = "<group>"; };
 		0452896D222B02D50072D3AC /* ProfileLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLogViewController.swift; sourceTree = "<group>"; };
 		0452896F222B3DCA0072D3AC /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
@@ -220,12 +222,13 @@
 				0400B9C22217423800720075 /* SingleCategoryViewController.swift */,
 				047DA54F2222677200ACA52E /* CustomAlertViewController.swift */,
 				0452896D222B02D50072D3AC /* ProfileLogViewController.swift */,
-				044ADAE8222F1D6700BCC21B /* ComingSoonViewController.swift */,
+				044ADAE8222F1D6700BCC21B /* ViewLogsViewController.swift */,
 				04BCA0F522416EF60067D349 /* LoginViewController.swift */,
 				E5FC5D5F2242D8B600E15F66 /* SignupViewController.swift */,
 				E5CB85A62241C8C9006113CC /* UserDashboardViewController.swift */,
 				0494F6C32242C89400BB24FD /* NewProfileViewController.swift */,
 				04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */,
+				04049D562256822C0035486F /* ComingSoonViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -377,12 +380,13 @@
 				0494F6C42242C89400BB24FD /* NewProfileViewController.swift in Sources */,
 				04528970222B3DCA0072D3AC /* UIView+CornerRadius.swift in Sources */,
 				E5FC5D5E2242D60F00E15F66 /* LaunchViewController.swift in Sources */,
+				04049D572256822C0035486F /* ComingSoonViewController.swift in Sources */,
 				047DA5562224A8CC00ACA52E /* SpecificDecimalPlaces.swift in Sources */,
 				04123CB32249592D0037F83F /* ChooseMonsterViewController.swift in Sources */,
 				04144E9122431DB6001B9ACD /* UserObject.swift in Sources */,
 				04A9D2982225B9A9008D7CCD /* ShakingTextField.swift in Sources */,
 				04B019DB222887A400B75555 /* StringExt.swift in Sources */,
-				044ADAE9222F1D6700BCC21B /* ComingSoonViewController.swift in Sources */,
+				044ADAE9222F1D6700BCC21B /* ViewLogsViewController.swift in Sources */,
 				E5CB85A72241C8C9006113CC /* UserDashboardViewController.swift in Sources */,
 				047DA54C2221CA3800ACA52E /* MathElement.swift in Sources */,
 				04F2348022443836007F9B47 /* QuestionLogCell.swift in Sources */,

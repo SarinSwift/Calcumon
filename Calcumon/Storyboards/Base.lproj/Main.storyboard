@@ -434,24 +434,24 @@
             </objects>
             <point key="canvasLocation" x="1288.8" y="-39.130434782608695"/>
         </scene>
-        <!--Coming Soon View Controller-->
+        <!--View Logs View Controller-->
         <scene sceneID="hUk-Qq-gC0">
             <objects>
-                <viewController storyboardIdentifier="comingSoonId" id="FOA-SY-4He" customClass="ComingSoonViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewLogsvcId" id="FOA-SY-4He" customClass="ViewLogsViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fju-jp-pCY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKQ-qi-jcc">
                                 <rect key="frame" x="160" y="564" width="55" height="55"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.25882352941176473" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="WY2-SW-t5e"/>
                                     <constraint firstAttribute="width" constant="55" id="oLj-1r-Zzc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="X">
-                                    <color key="titleColor" red="0.35686274509999999" green="0.23137254900000001" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="greatBtnTapped:" destination="FOA-SY-4He" eventType="touchUpInside" id="i1m-XL-6eP"/>
@@ -479,7 +479,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVn-1D-3xp">
                                 <rect key="frame" x="157" y="35" width="61" height="39"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="28"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.25882352941176473" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -503,6 +503,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chf-ep-Vdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2095" y="-39"/>
+        </scene>
+        <!--Coming Soon View Controller-->
+        <scene sceneID="qZX-Ow-lrC">
+            <objects>
+                <viewController storyboardIdentifier="comingSoonVCId" id="SNu-S6-R8h" customClass="ComingSoonViewController" customModule="Calcumon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BJI-Qq-fPp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpf-ps-hJW">
+                                <rect key="frame" x="160" y="564" width="55" height="55"/>
+                                <color key="backgroundColor" red="0.33333333329999998" green="0.25882352939999997" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="1Zk-es-FWL"/>
+                                    <constraint firstAttribute="height" constant="55" id="hlH-BS-ZXe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeBtnTapped:" destination="SNu-S6-R8h" eventType="touchUpInside" id="h7j-wx-LD1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJd-JU-dEr">
+                                <rect key="frame" x="15" y="70" width="262.5" height="137"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="50"/>
+                                <color key="textColor" red="0.31764705882352939" green="0.27843137254901962" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="oJd-JU-dEr" firstAttribute="width" secondItem="BJI-Qq-fPp" secondAttribute="width" multiplier="0.7" id="5Fm-Y1-d9m"/>
+                            <constraint firstItem="efo-bX-MIk" firstAttribute="bottom" secondItem="wpf-ps-hJW" secondAttribute="bottom" constant="48" id="LbG-y8-yXZ"/>
+                            <constraint firstItem="wpf-ps-hJW" firstAttribute="centerX" secondItem="efo-bX-MIk" secondAttribute="centerX" id="QFL-zA-Z8v"/>
+                            <constraint firstItem="oJd-JU-dEr" firstAttribute="leading" secondItem="efo-bX-MIk" secondAttribute="leading" constant="15" id="V2w-wD-swW"/>
+                            <constraint firstItem="oJd-JU-dEr" firstAttribute="top" secondItem="efo-bX-MIk" secondAttribute="top" constant="50" id="zQh-iT-RNe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="efo-bX-MIk"/>
+                    </view>
+                    <connections>
+                        <outlet property="xBtn" destination="wpf-ps-hJW" id="R6w-fU-cFG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HjZ-3d-Q5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3104.8000000000002" y="-39.130434782608695"/>
         </scene>
         <!--Custom Alert View Controller-->
         <scene sceneID="nFU-PF-JA5">

@@ -71,7 +71,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func signupBtnTapped(_ sender: UIButton) {
-        // creating the activity indicator
+//         creating the activity indicator
         activityView.center = self.view.center
         self.view.addSubview(activityView)
         activityView.startAnimating()

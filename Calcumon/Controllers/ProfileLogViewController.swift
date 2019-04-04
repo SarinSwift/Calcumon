@@ -87,18 +87,26 @@ class ProfileLogViewController: UIViewController {
     @IBAction func viewLogBtnTapped(_ sender: UIButton) {
         // present coming soon
         let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let comingSoonVC = story.instantiateViewController(withIdentifier: "comingSoonId") as? ComingSoonViewController else { return }
-        comingSoonVC.questionAnswersArrFromProfileVC = questionAnswersArrFromSingleVC
-        comingSoonVC.modalPresentationStyle = .custom
-        comingSoonVC.transitioningDelegate = self
-        self.present(comingSoonVC, animated: true, completion: nil)
+        guard let viewLogsVC = story.instantiateViewController(withIdentifier: "viewLogsvcId") as? ViewLogsViewController else { return }
+        viewLogsVC.questionAnswersArrFromProfileVC = questionAnswersArrFromSingleVC
+        viewLogsVC.modalPresentationStyle = .custom
+        viewLogsVC.transitioningDelegate = self
+        self.present(viewLogsVC, animated: true, completion: nil)
     }
     
     @IBAction func signupBtnTapped(_ sender: UIButton) {
-        let story = UIStoryboard(name: "Login", bundle: Bundle.main)
-        guard let signupVc = story.instantiateViewController(withIdentifier: "signupView") as? SignupViewController else { return }
-        self.present(signupVc, animated: false, completion: nil)
-        self.fadingViewAnimation()
+        // V2
+//        let story = UIStoryboard(name: "Login", bundle: Bundle.main)
+//        guard let signupVc = story.instantiateViewController(withIdentifier: "signupView") as? SignupViewController else { return }
+//        self.present(signupVc, animated: false, completion: nil)
+//        self.fadingViewAnimation()
+        
+        // V1 Singup / login not working yet
+        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let comingSoonVC = story.instantiateViewController(withIdentifier: "comingSoonVCId") as? ComingSoonViewController else { return }
+        comingSoonVC.modalPresentationStyle = .custom
+        comingSoonVC.transitioningDelegate = self
+        self.present(comingSoonVC, animated: true, completion: nil)
     }
 }
 
@@ -107,14 +115,16 @@ extension ProfileLogViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
         transition.startingPoint = CGPoint(x: UIScreen.main.bounds.width/2, y: (UIScreen.main.bounds.height - UIScreen.main.bounds.height/8))
-        transition.circleColor = viewLogBtn.backgroundColor!
+//        transition.circleColor = viewLogBtn.backgroundColor!
+        transition.circleColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         return transition
     }
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
         transition.startingPoint = CGPoint(x: UIScreen.main.bounds.width/2, y: (UIScreen.main.bounds.height - UIScreen.main.bounds.height/8))
-        transition.circleColor = viewLogBtn.backgroundColor!
+//        transition.circleColor = viewLogBtn.backgroundColor!
+        transition.circleColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         return transition
     }

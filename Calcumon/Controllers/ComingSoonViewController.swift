@@ -2,7 +2,7 @@
 //  ComingSoonViewController.swift
 //  Calcumon
 //
-//  Created by Sarin Swift on 3/5/19.
+//  Created by Sarin Swift on 4/4/19.
 //  Copyright © 2019 sarinswift. All rights reserved.
 //
 
@@ -10,40 +10,20 @@ import UIKit
 
 class ComingSoonViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    var questionAnswersArrFromProfileVC = [QuestionAnswer]()
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var greatBtn: UIButton!
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+
+    @IBOutlet weak var xBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greatBtn.layer.cornerRadius = greatBtn.bounds.size.width / 2
+        
+        xBtn.layer.cornerRadius = xBtn.bounds.size.width / 2
     }
-    
-    @IBAction func greatBtnTapped(_ sender: Any) {
+
+    @IBAction func closeBtnTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-
-}
-
-extension ComingSoonViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questionAnswersArrFromProfileVC.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let  cell = tableView.dequeueReusableCell(withIdentifier: "viewLogsCell", for: indexPath) as! ViewLogPressedCell
-        cell.questionLabel.text = questionAnswersArrFromProfileVC[indexPath.row].question
-        cell.answerLabel.text = questionAnswersArrFromProfileVC[indexPath.row].answer
-        cell.answerStateIV.image = questionAnswersArrFromProfileVC[indexPath.row].correctness
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
-    }
 }
