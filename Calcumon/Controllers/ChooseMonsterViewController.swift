@@ -14,7 +14,10 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
     
     let monsterImages = [#imageLiteral(resourceName: "Goob"), #imageLiteral(resourceName: "Zoob")]
     let monsterName = ["Goob", "Zoob"]
-    var selectedIndexPath: IndexPath?
+    
+    var selectedIndexPath = [IndexPath]()
+    var originalCellPoints = [IndexPath: CGRect]()      // will contain: [[0, 1]: (107.0, 330.0, 200.0, 300.0),
+                                                        //                [0, 0]: (107.0, 30.0, 200.0, 300.0)]
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -26,6 +29,9 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
         super.viewDidLoad()
         
         closeBtn.layer.cornerRadius = closeBtn.bounds.size.width / 2
+        
+        collectionView.allowsSelection = true
+        collectionView.allowsMultipleSelection = true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -36,6 +42,13 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "allMonstersCell", for: indexPath) as! AllMonstersCell
         cell.monsterImageView.image = monsterImages[indexPath.row]
         cell.monsterName.text = monsterName[indexPath.row]
+        
+        if selectedIndexPath.contains(indexPath) {
+            print("contains index path")
+        } else {
+            print("does not contain index path yet")
+        }
+        
         return cell
     }
     
@@ -48,11 +61,12 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
 
 extension ChooseMonsterViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 30, left: 50, bottom: 0, right: 50)
+        return UIEdgeInsets(top: 20, left: 50, bottom: 0, right: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 300)
+//        return CGSize(width: 200, height: 300)
+        return CGSize(width: view.bounds.width / 1.5, height: view.bounds.height / 3.1)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -69,11 +83,16 @@ extension ChooseMonsterViewController: UICollectionViewDelegateFlowLayout {
         
         cell?.superview?.bringSubviewToFront(cell!)
         
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: {
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 3, initialSpringVelocity: 0.2, options: [], animations: {
+            // add cell's frame to originalCellPoints dictionary - access later when we want to deselect item
+            if !self.selectedIndexPath.contains(indexPath) {
+                self.originalCellPoints[indexPath] = cell?.frame
+            }
             cell?.frame = collectionView.bounds
+            
         }, completion: nil)
         
-        self.selectedIndexPath = indexPath
+        self.selectedIndexPath.append(indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -81,11 +100,15 @@ extension ChooseMonsterViewController: UICollectionViewDelegateFlowLayout {
         
         cell?.superview?.bringSubviewToFront(cell!)
         
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: {
-            cell?.frame = collectionView.bounds
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 3, initialSpringVelocity: 0.2, options: [], animations: {
+            // grab the correct dictionary key that maps to a cell frame
+            cell?.frame = self.originalCellPoints[indexPath]!
+            
         }, completion: nil)
         
-        self.selectedIndexPath = nil
+        if selectedIndexPath.contains(indexPath) {
+            selectedIndexPath.remove(at: selectedIndexPath.index(of: indexPath)!)
+        }
     }
     
 }

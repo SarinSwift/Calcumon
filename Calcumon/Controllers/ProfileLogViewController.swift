@@ -96,17 +96,17 @@ class ProfileLogViewController: UIViewController {
     
     @IBAction func signupBtnTapped(_ sender: UIButton) {
         // V2
-//        let story = UIStoryboard(name: "Login", bundle: Bundle.main)
-//        guard let signupVc = story.instantiateViewController(withIdentifier: "signupView") as? SignupViewController else { return }
-//        self.present(signupVc, animated: false, completion: nil)
-//        self.fadingViewAnimation()
+        let story = UIStoryboard(name: "Login", bundle: Bundle.main)
+        guard let signupVc = story.instantiateViewController(withIdentifier: "signupView") as? SignupViewController else { return }
+        self.present(signupVc, animated: false, completion: nil)
+        self.fadingViewAnimation()
         
         // V1 Singup / login not working yet
-        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let comingSoonVC = story.instantiateViewController(withIdentifier: "comingSoonVCId") as? ComingSoonViewController else { return }
-        comingSoonVC.modalPresentationStyle = .custom
-        comingSoonVC.transitioningDelegate = self
-        self.present(comingSoonVC, animated: true, completion: nil)
+//        let story = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        guard let comingSoonVC = story.instantiateViewController(withIdentifier: "comingSoonVCId") as? ComingSoonViewController else { return }
+//        comingSoonVC.modalPresentationStyle = .custom
+//        comingSoonVC.transitioningDelegate = self
+//        self.present(comingSoonVC, animated: true, completion: nil)
     }
 }
 
