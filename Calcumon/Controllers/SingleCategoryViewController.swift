@@ -42,7 +42,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         keyboardListenEvents()
         setNegativeSign()
         
-        // Setting the points score
+        // Reading and updating the points score
         let pointsDefault = UserDefaults.standard
         if pointsDefault.value(forKey: "points") != nil {
             pointsResult = pointsDefault.value(forKey: "points") as! Int

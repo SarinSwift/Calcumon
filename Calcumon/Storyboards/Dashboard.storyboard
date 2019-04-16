@@ -163,15 +163,36 @@
                                     <action selector="closeBtnTapped:" destination="1Jy-1t-rdS" eventType="touchUpInside" id="H29-vs-DAm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIH-w1-mzx">
+                                <rect key="frame" x="127.5" y="564" width="120" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Dg6-Sy-7xz"/>
+                                    <constraint firstAttribute="height" constant="55" id="ygz-Nu-qzz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Yes!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="19"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pickCharBtnTapped:" destination="1Jy-1t-rdS" eventType="touchUpInside" id="dOO-07-J6T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="mmz-Q6-J1l" firstAttribute="trailing" secondItem="v12-5e-AyY" secondAttribute="trailing" id="1ve-iT-d4M"/>
                             <constraint firstItem="7ZG-yv-AbR" firstAttribute="top" secondItem="v12-5e-AyY" secondAttribute="top" constant="15" id="Upd-ka-PG4"/>
                             <constraint firstItem="v12-5e-AyY" firstAttribute="bottom" secondItem="Xs6-2e-CQZ" secondAttribute="bottom" constant="48" id="YzV-9f-RE5"/>
                             <constraint firstItem="mmz-Q6-J1l" firstAttribute="top" secondItem="7ZG-yv-AbR" secondAttribute="bottom" id="eff-dF-qIF"/>
+                            <constraint firstItem="v12-5e-AyY" firstAttribute="bottom" secondItem="RIH-w1-mzx" secondAttribute="bottom" constant="48" id="g8c-B5-aBD"/>
                             <constraint firstItem="mmz-Q6-J1l" firstAttribute="bottom" secondItem="nWA-Ir-Q6R" secondAttribute="bottom" id="hlh-Ev-hPm"/>
                             <constraint firstItem="mmz-Q6-J1l" firstAttribute="leading" secondItem="v12-5e-AyY" secondAttribute="leading" id="jZo-zT-oOZ"/>
                             <constraint firstItem="Xs6-2e-CQZ" firstAttribute="centerX" secondItem="mmz-Q6-J1l" secondAttribute="centerX" id="tAq-yh-Aa9"/>
+                            <constraint firstItem="RIH-w1-mzx" firstAttribute="centerX" secondItem="mmz-Q6-J1l" secondAttribute="centerX" id="xyZ-sn-OxE"/>
                             <constraint firstItem="7ZG-yv-AbR" firstAttribute="centerX" secondItem="v12-5e-AyY" secondAttribute="centerX" id="zMn-vd-MCz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="v12-5e-AyY"/>
@@ -179,6 +200,7 @@
                     <connections>
                         <outlet property="closeBtn" destination="Xs6-2e-CQZ" id="sio-h5-0VI"/>
                         <outlet property="collectionView" destination="mmz-Q6-J1l" id="z4x-lb-Nyr"/>
+                        <outlet property="pickCharBtn" destination="RIH-w1-mzx" id="TL2-Pu-UxT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2w-8d-U5z" userLabel="First Responder" sceneMemberID="firstResponder"/>

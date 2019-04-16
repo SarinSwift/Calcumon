@@ -11,6 +11,7 @@ import UIKit
 class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var closeBtn: UIButton!
+    @IBOutlet weak var pickCharBtn: UIButton!
     
     let monsterImages = [#imageLiteral(resourceName: "Goob"), #imageLiteral(resourceName: "Zoob")]
     let monsterName = ["Goob", "Zoob"]
@@ -29,6 +30,8 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
         super.viewDidLoad()
         
         closeBtn.layer.cornerRadius = closeBtn.bounds.size.width / 2
+        pickCharBtn.isHidden = true
+        pickCharBtn.backgroundColor = #colorLiteral(red: 0.3568627451, green: 0.231372549, blue: 0.7176470588, alpha: 1)
         
         collectionView.allowsSelection = true
         collectionView.allowsMultipleSelection = true
@@ -56,6 +59,11 @@ class ChooseMonsterViewController: UIViewController, UICollectionViewDelegate, U
         self.fadingViewAnimation()
         checkIfInNavController()
         // TODO: currently cannot use circular animation on this button yet because is in NAVIGATION STACK!!
+    }
+    
+    @IBAction func pickCharBtnTapped(_ sender: UIButton) {
+        // simply dismisses it
+        checkIfInNavController()
     }
 }
 
@@ -92,6 +100,7 @@ extension ChooseMonsterViewController: UICollectionViewDelegateFlowLayout {
             
         }, completion: nil)
         
+        self.pickCharBtn.isHidden = false
         self.selectedIndexPath.append(indexPath)
     }
     
@@ -109,6 +118,8 @@ extension ChooseMonsterViewController: UICollectionViewDelegateFlowLayout {
         if selectedIndexPath.contains(indexPath) {
             selectedIndexPath.remove(at: selectedIndexPath.index(of: indexPath)!)
         }
+        
+        self.pickCharBtn.isHidden = true
     }
     
 }
