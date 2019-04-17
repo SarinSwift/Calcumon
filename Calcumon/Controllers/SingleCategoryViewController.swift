@@ -120,25 +120,10 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 continueNext()
                 
                 // Animate the pointsLabel
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.plusPoints.alpha = 1
-                    self.plusPoints.text = "+10"
-                    self.plusPoints.textColor = #colorLiteral(red: 0.2745098039, green: 0.4941176471, blue: 0.1411764706, alpha: 1)
-                    self.plusPoints.transform = CGAffineTransform(scaleX: 2, y: 2)
-                }) { (_) in
-                    UIView.animate(withDuration: 0.3, animations: {
-                        self.plusPoints.transform = CGAffineTransform.identity
-                        self.plusPoints.alpha = 0
-                    })
-                }
-                
+                animatePointsPopUp(points: "+10", stateColor: #colorLiteral(red: 0.2745098039, green: 0.4941176471, blue: 0.1411764706, alpha: 1))
                 
                 // Settign data in Userdefaults for the pointsLabel
-                // accessing the core data of our application and storing info inside of there
-                let pointsDefualt = UserDefaults.standard
-                // can grab this data later on with the "points" key
-                pointsDefualt.set(pointsResult, forKey: "points")
-                pointsDefualt.synchronize()
+                UserDefaultsHelp.setPoints(points: pointsResult)
                 
                 numberOfEquations += 1
                 correctAnswers += 1
@@ -154,22 +139,11 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 self.answerTextField.placeholder = "Answer"
                 self.pointsResult -= 5
                 
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.plusPoints.alpha = 1
-                    self.plusPoints.text = "-5"
-                    self.plusPoints.textColor = #colorLiteral(red: 1, green: 0.3294117647, blue: 0.2705882353, alpha: 1)
-                    self.plusPoints.transform = CGAffineTransform(scaleX: 2, y: 2)
-                }) { (_) in
-                    UIView.animate(withDuration: 0.3, animations: {
-                        self.plusPoints.transform = CGAffineTransform.identity
-                        self.plusPoints.alpha = 0
-                    })
-                }
+                // Animate the pointsLabel
+                animatePointsPopUp(points: "-5", stateColor: #colorLiteral(red: 1, green: 0.3294117647, blue: 0.2705882353, alpha: 1))
                 
                 // Setting data in Userdefaults for the pointsLabel
-                let pointsDefualt = UserDefaults.standard
-                pointsDefualt.set(pointsResult, forKey: "points")
-                pointsDefualt.synchronize()
+                UserDefaultsHelp.setPoints(points: pointsResult)
                 
                 numberOfEquations += 1
             }

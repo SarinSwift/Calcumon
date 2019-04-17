@@ -147,4 +147,18 @@ extension SingleCategoryViewController: UITableViewDelegate, UITableViewDataSour
         tableView.endUpdates()
     }
     
+    func animatePointsPopUp(points: String, stateColor: UIColor) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.plusPoints.alpha = 1
+            self.plusPoints.text = points
+            self.plusPoints.textColor = stateColor
+            self.plusPoints.transform = CGAffineTransform(scaleX: 2, y: 2)
+        }) { (_) in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.plusPoints.transform = CGAffineTransform.identity
+                self.plusPoints.alpha = 0
+            })
+        }
+    }
+    
 }

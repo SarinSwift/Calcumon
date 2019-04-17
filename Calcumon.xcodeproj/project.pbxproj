@@ -13,6 +13,7 @@
 		0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */; };
 		0400E972220E5E11009452C1 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400E971220E5E11009452C1 /* Inspirations.xcassets */; };
 		04049D572256822C0035486F /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04049D562256822C0035486F /* ComingSoonViewController.swift */; };
+		0405EBA22267A3F2004EC352 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405EBA12267A3F2004EC352 /* UserDefaults.swift */; };
 		04123CB32249592D0037F83F /* ChooseMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */; };
 		04123CB522495EE10037F83F /* AllMonstersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB422495EE10037F83F /* AllMonstersCell.swift */; };
 		04123CB72249F7AD0037F83F /* ViewLogPressedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04123CB62249F7AD0037F83F /* ViewLogPressedCell.swift */; };
@@ -58,6 +59,7 @@
 		0400E96F220E5CDF009452C1 /* UIImage+Decompression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Decompression.swift"; sourceTree = "<group>"; };
 		0400E971220E5E11009452C1 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
 		04049D562256822C0035486F /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
+		0405EBA12267A3F2004EC352 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		04123CB22249592D0037F83F /* ChooseMonsterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMonsterViewController.swift; sourceTree = "<group>"; };
 		04123CB422495EE10037F83F /* AllMonstersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMonstersCell.swift; sourceTree = "<group>"; };
 		04123CB62249F7AD0037F83F /* ViewLogPressedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLogPressedCell.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				04144E8E22431CA6001B9ACD /* Service.swift */,
 				04144E9022431DB6001B9ACD /* UserObject.swift */,
 				04F23481224443AD007F9B47 /* QuestionAnswer.swift */,
+				0405EBA12267A3F2004EC352 /* UserDefaults.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				048DE5FC22485AF7007372F3 /* CircularTransition.swift in Sources */,
 				047DA5502222677200ACA52E /* CustomAlertViewController.swift in Sources */,
 				0400B9C32217423800720075 /* SingleCategoryViewController.swift in Sources */,
+				0405EBA22267A3F2004EC352 /* UserDefaults.swift in Sources */,
 				0400E970220E5CDF009452C1 /* UIImage+Decompression.swift in Sources */,
 				E5FC5D602242D8B600E15F66 /* SignupViewController.swift in Sources */,
 				047DA54E2221CA4F00ACA52E /* MathOperator.swift in Sources */,
