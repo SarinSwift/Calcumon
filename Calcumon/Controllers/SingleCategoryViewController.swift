@@ -99,18 +99,10 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
         }
         print(result)
         if answerInput == "" {
-            
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
-            vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-            self.addChild(vc)
-            self.view.addSubview(vc.view)
+            self.presentCustomAlert(message: nil)
             
         } else if answerInput.isContainsLetters {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
-            vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-            vc.textBody.text = "Answer must only contain numbers!"
-            self.addChild(vc)
-            self.view.addSubview(vc.view)
+            self.presentCustomAlert(message: "Answer must only contain numbers!")
         }
         else {
             // Checking answer

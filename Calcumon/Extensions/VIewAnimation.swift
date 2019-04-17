@@ -30,4 +30,30 @@ extension UIViewController {
         }
         self.dismiss(animated: false, completion: nil)
     }
+    
+    // saved redundant code in 'SingleCategoryViewController' submitBtnTapped function
+    func presentCustomAlert(message: String?) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
+        vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        if let message = message {
+            vc.textBody.text = message
+        }
+        self.addChild(vc)
+        self.view.addSubview(vc.view)
+    }
+    
+    // saved redundant code in 'Login / Signup ViewController' 
+    func presentCustomAlertFromSignupPages(errorMessage: String?, message: String?) {
+        let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
+        vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        if let errMessage = errorMessage {
+            vc.ohnoLabel.text = errMessage
+        }
+        if let message = message {
+            vc.textBody.text = message
+        }
+        self.addChild(vc)
+        self.view.addSubview(vc.view)
+    }
 }

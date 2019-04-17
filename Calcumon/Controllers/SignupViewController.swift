@@ -82,12 +82,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     func checkTextfields() {
         if emailTextField.text == "" || usernameTextField.text == "" || passwordTextField.text == "" || repeatPassTextField.text == "" {
             self.activityView.stopAnimating()
-            let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
-            vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-            vc.textBody.text = "Make sure to insert all text fields!!"
-            self.addChild(vc)
-            self.view.addSubview(vc.view)
+            self.presentCustomAlertFromSignupPages(errorMessage: nil, message: "Make sure to insert all text fields!!")
         } else {
             
             Service.signupNewUser(router: .newLogin, email: emailTextField.text!, password: passwordTextField.text!, username: usernameTextField.text!)

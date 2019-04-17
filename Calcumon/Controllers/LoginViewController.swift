@@ -77,24 +77,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     func checkTextfields() {
         if usernameTextField.text == "" || passwordTextField.text == "" {
             self.activityView.stopAnimating()
-            let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
-            vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-            vc.textBody.text = "Make sure to insert all text fields!!"
-            self.addChild(vc)
-            self.view.addSubview(vc.view)
+            self.presentCustomAlertFromSignupPages(errorMessage: nil, message: "Make sure to insert all text fields!!")
         } else {
             
             Service.loginOldUser(router: .existingLogin, password: passwordTextField.text!, username: usernameTextField.text!) { result in
                 if result == "Wrong Username or Password" {
                     self.activityView.stopAnimating()
-                    let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
-                    let vc = sb.instantiateViewController(withIdentifier: "CustomAlertViewController") as! CustomAlertViewController
-                    vc.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-                    vc.ohnoLabel.text = "Error!"
-                    vc.textBody.text = "Wrong username or password"
-                    self.addChild(vc)
-                    self.view.addSubview(vc.view)
+                    self.presentCustomAlertFromSignupPages(errorMessage: "Error!", message: "Wrong username or password")
                     return
                     
                 } else if result == "success" {     // Correctly in the database
