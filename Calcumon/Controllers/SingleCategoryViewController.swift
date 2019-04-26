@@ -103,8 +103,7 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
             
         } else if answerInput.isContainsLetters {
             self.presentCustomAlert(message: "Answer must only contain numbers!")
-        }
-        else {
+        } else if let _ = Double(answerInput) {
             // Checking answer
             if answerInput == "\(self.result)" {
                 // Answer was correct
@@ -167,6 +166,9 @@ class SingleCategoryViewController: UIViewController, UITextFieldDelegate {
                 correctAnswers = 0
             }
             
+        } else {
+            // all other types that are invalid inputs ex. -9-, ---
+            self.presentCustomAlert(message: "Invalid Input")
         }
     }
     

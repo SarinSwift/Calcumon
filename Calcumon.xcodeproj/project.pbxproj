@@ -20,6 +20,7 @@
 		04144E8D22431A94001B9ACD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8C22431A94001B9ACD /* Router.swift */; };
 		04144E8F22431CA6001B9ACD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E8E22431CA6001B9ACD /* Service.swift */; };
 		04144E9122431DB6001B9ACD /* UserObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04144E9022431DB6001B9ACD /* UserObject.swift */; };
+		0437E8FB227285B4003EEA31 /* CalcumonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437E8FA227285B4003EEA31 /* CalcumonTests.swift */; };
 		044ADAE9222F1D6700BCC21B /* ViewLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044ADAE8222F1D6700BCC21B /* ViewLogsViewController.swift */; };
 		0452896C222A4D640072D3AC /* SingleCatVCRandomEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */; };
 		0452896E222B02D50072D3AC /* ProfileLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452896D222B02D50072D3AC /* ProfileLogViewController.swift */; };
@@ -52,6 +53,16 @@
 		E5FC5D602242D8B600E15F66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC5D5F2242D8B600E15F66 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0437E8FD227285B4003EEA31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 049956A7220B703300571DDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 049956AE220B703300571DDC;
+			remoteInfo = Calcumon;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0400B9C22217423800720075 /* SingleCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCategoryViewController.swift; sourceTree = "<group>"; };
 		0400E961220E3F90009452C1 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -66,6 +77,9 @@
 		04144E8C22431A94001B9ACD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		04144E8E22431CA6001B9ACD /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		04144E9022431DB6001B9ACD /* UserObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserObject.swift; sourceTree = "<group>"; };
+		0437E8F8227285B4003EEA31 /* CalcumonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcumonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0437E8FA227285B4003EEA31 /* CalcumonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcumonTests.swift; sourceTree = "<group>"; };
+		0437E8FC227285B4003EEA31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044ADAE8222F1D6700BCC21B /* ViewLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLogsViewController.swift; sourceTree = "<group>"; };
 		0452896B222A4D640072D3AC /* SingleCatVCRandomEquations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCatVCRandomEquations.swift; sourceTree = "<group>"; };
 		0452896D222B02D50072D3AC /* ProfileLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLogViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +117,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0437E8F5227285B4003EEA31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		049956AC220B703300571DDC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,6 +183,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0437E8F9227285B4003EEA31 /* CalcumonTests */ = {
+			isa = PBXGroup;
+			children = (
+				0437E8FA227285B4003EEA31 /* CalcumonTests.swift */,
+				0437E8FC227285B4003EEA31 /* Info.plist */,
+			);
+			path = CalcumonTests;
+			sourceTree = "<group>";
+		};
 		047DA54A2221CA1500ACA52E /* MathGenerator */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				049956B1220B703300571DDC /* Calcumon */,
+				0437E8F9227285B4003EEA31 /* CalcumonTests */,
 				049956B0220B703300571DDC /* Products */,
 				0493B6BF33C234E552B5EAF4 /* Pods */,
 				EF8794806D75EC030D47BDD4 /* Frameworks */,
@@ -195,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				049956AF220B703300571DDC /* Calcumon.app */,
+				0437E8F8227285B4003EEA31 /* CalcumonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -258,6 +290,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0437E8F7227285B4003EEA31 /* CalcumonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0437E901227285B4003EEA31 /* Build configuration list for PBXNativeTarget "CalcumonTests" */;
+			buildPhases = (
+				0437E8F4227285B4003EEA31 /* Sources */,
+				0437E8F5227285B4003EEA31 /* Frameworks */,
+				0437E8F6227285B4003EEA31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0437E8FE227285B4003EEA31 /* PBXTargetDependency */,
+			);
+			name = CalcumonTests;
+			productName = CalcumonTests;
+			productReference = 0437E8F8227285B4003EEA31 /* CalcumonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		049956AE220B703300571DDC /* Calcumon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 049956C1220B703400571DDC /* Build configuration list for PBXNativeTarget "Calcumon" */;
@@ -287,6 +337,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = sarinswift;
 				TargetAttributes = {
+					0437E8F7227285B4003EEA31 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 049956AE220B703300571DDC;
+					};
 					049956AE220B703300571DDC = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -306,11 +360,19 @@
 			projectRoot = "";
 			targets = (
 				049956AE220B703300571DDC /* Calcumon */,
+				0437E8F7227285B4003EEA31 /* CalcumonTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0437E8F6227285B4003EEA31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		049956AD220B703300571DDC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +428,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0437E8F4227285B4003EEA31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0437E8FB227285B4003EEA31 /* CalcumonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		049956AB220B703300571DDC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +481,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0437E8FE227285B4003EEA31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 049956AE220B703300571DDC /* Calcumon */;
+			targetProxy = 0437E8FD227285B4003EEA31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		049956B6220B703300571DDC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -431,6 +509,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0437E8FF227285B4003EEA31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C5XTUX6GS;
+				INFOPLIST_FILE = CalcumonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarin.CalcumonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calcumon.app/Calcumon";
+			};
+			name = Debug;
+		};
+		0437E900227285B4003EEA31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7C5XTUX6GS;
+				INFOPLIST_FILE = CalcumonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sarin.CalcumonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Calcumon.app/Calcumon";
+			};
+			name = Release;
+		};
 		049956BF220B703400571DDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -590,6 +708,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0437E901227285B4003EEA31 /* Build configuration list for PBXNativeTarget "CalcumonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0437E8FF227285B4003EEA31 /* Debug */,
+				0437E900227285B4003EEA31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		049956AA220B703300571DDC /* Build configuration list for PBXProject "Calcumon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
